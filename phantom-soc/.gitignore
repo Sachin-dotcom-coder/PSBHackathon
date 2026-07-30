@@ -1,0 +1,13 @@
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# ML Model artifacts (Optional: push only if under 100MB, otherwise ignore heavy pkl files)
+*.pkl
+
+# OS/Editor files
+.DS_Store
+.vscode/
+.idea/
