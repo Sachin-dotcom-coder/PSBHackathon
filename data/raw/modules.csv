@@ -1,0 +1,16 @@
+module_id,module_name,criticality,department
+MOD01,Customer Search,Low,Retail Banking
+MOD02,Loan Approval,High,Loans
+MOD03,Loan Review,High,Loans
+MOD04,Audit Reports,High,Compliance
+MOD05,Compliance Dashboard,High,Compliance
+MOD06,Override Logs,High,Compliance
+MOD07,KYC Portal,Medium,Retail Banking
+MOD08,Cash Operations,High,Operations
+MOD09,Transaction History,Medium,Operations
+MOD10,Treasury,High,Treasury
+MOD11,Risk Dashboard,High,Risk
+MOD12,Account Creation,High,Retail Banking
+MOD13,Account Closure,High,Retail Banking
+MOD14,Locker Management,Medium,Operations
+MOD15,Reports,Medium,Compliance

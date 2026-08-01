@@ -1,0 +1,51 @@
+employee_id,cohort_id,role,branch,experience_bucket,cohort_size
+EMP001,COHORT001,Loan Officer,Ahmedabad,0-3yr,1
+EMP002,COHORT002,Loan Officer,Surat,3-6yr,1
+EMP003,COHORT003,Loan Officer,Delhi,0-3yr,1
+EMP004,COHORT004,Loan Officer,Mumbai,0-3yr,2
+EMP005,COHORT004,Loan Officer,Mumbai,0-3yr,2
+EMP006,COHORT005,Loan Officer,Ahmedabad,6-12yr,1
+EMP007,COHORT006,Loan Officer,Mumbai,12+yr,1
+EMP008,COHORT007,Loan Officer,Mumbai,6-12yr,1
+EMP009,COHORT008,Loan Officer,Surat,0-3yr,1
+EMP010,COHORT009,Branch Manager,Surat,6-12yr,1
+EMP011,COHORT010,Branch Manager,Delhi,3-6yr,1
+EMP012,COHORT011,Branch Manager,Bangalore,6-12yr,1
+EMP013,COHORT012,Branch Manager,Surat,3-6yr,1
+EMP014,COHORT013,Branch Manager,Surat,12+yr,1
+EMP015,COHORT014,Cashier,Delhi,6-12yr,1
+EMP016,COHORT015,Cashier,Ahmedabad,3-6yr,1
+EMP017,COHORT016,Cashier,Surat,12+yr,2
+EMP018,COHORT017,Cashier,Mumbai,6-12yr,1
+EMP019,COHORT018,Cashier,Bangalore,6-12yr,1
+EMP020,COHORT016,Cashier,Surat,12+yr,2
+EMP021,COHORT019,Cashier,Delhi,12+yr,1
+EMP022,COHORT020,Cashier,Bangalore,3-6yr,1
+EMP023,COHORT021,Compliance Officer,Delhi,12+yr,1
+EMP024,COHORT022,Compliance Officer,Mumbai,3-6yr,2
+EMP025,COHORT023,Compliance Officer,Bangalore,3-6yr,1
+EMP026,COHORT024,Compliance Officer,Mumbai,6-12yr,1
+EMP027,COHORT025,Compliance Officer,Surat,6-12yr,1
+EMP028,COHORT022,Compliance Officer,Mumbai,3-6yr,2
+EMP029,COHORT026,Relationship Manager,Delhi,6-12yr,1
+EMP030,COHORT027,Relationship Manager,Bangalore,12+yr,3
+EMP031,COHORT028,Relationship Manager,Surat,12+yr,1
+EMP032,COHORT027,Relationship Manager,Bangalore,12+yr,3
+EMP033,COHORT029,Relationship Manager,Delhi,3-6yr,1
+EMP034,COHORT030,Relationship Manager,Ahmedabad,0-3yr,1
+EMP035,COHORT031,Relationship Manager,Surat,6-12yr,1
+EMP036,COHORT027,Relationship Manager,Bangalore,12+yr,3
+EMP037,COHORT032,Operations Officer,Mumbai,3-6yr,2
+EMP038,COHORT033,Operations Officer,Bangalore,12+yr,1
+EMP039,COHORT034,Operations Officer,Ahmedabad,0-3yr,1
+EMP040,COHORT032,Operations Officer,Mumbai,3-6yr,2
+EMP041,COHORT035,Operations Officer,Delhi,0-3yr,1
+EMP042,COHORT036,Operations Officer,Mumbai,12+yr,1
+EMP043,COHORT037,Treasury Officer,Mumbai,12+yr,2
+EMP044,COHORT038,Treasury Officer,Delhi,12+yr,1
+EMP045,COHORT037,Treasury Officer,Mumbai,12+yr,2
+EMP046,COHORT039,Treasury Officer,Ahmedabad,12+yr,1
+EMP047,COHORT040,Risk Analyst,Mumbai,6-12yr,1
+EMP048,COHORT041,Risk Analyst,Bangalore,6-12yr,1
+EMP049,COHORT042,Risk Analyst,Surat,6-12yr,1
+EMP050,COHORT043,Risk Analyst,Surat,3-6yr,1
