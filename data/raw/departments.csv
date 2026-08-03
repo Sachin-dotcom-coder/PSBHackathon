@@ -1,0 +1,7 @@
+department_id,department_name,head_count,type
+D01,Loans,9,Revenue
+D02,Retail Banking,13,Revenue
+D03,Compliance,6,Control
+D04,Treasury,4,Revenue
+D05,Operations,14,Support
+D06,Risk,4,Control

@@ -3,9 +3,31 @@
     "employee_id": "EMP001",
     "name": "Rajesh Kumar",
     "role": "Branch Manager",
-    "branch": "Mumbai",
+    "branch": "Ahmedabad",
+    "experience_years": 1.9,
     "cohort_id": "COHORT001",
+    "personality": {
+      "work_style": "Fast",
+      "risk_profile": "High",
+      "arrival_time": "08:55",
+      "leave_time": "18:20",
+      "avg_daily_customers": 42,
+      "typing_speed": "High",
+      "break_pattern": "Short",
+      "leave_frequency": "Low"
+    },
     "is_suspicious": 1,
+    "fraud_strategy": "Classic Access Void",
+    "audit_drop_pct": 100.0,
+    "peer_sigma": -0.75,
+    "anomaly_reasons": [
+      "Audit Reports access dropped 100% from baseline (avg 18/day early -> 0/day recent)",
+      "Audit Reports not accessed for 31 consecutive days",
+      "Compliance Dashboard usage declined 100% from baseline (15/day -> 0/day)",
+      "Override Logs usage declined 100% from baseline (8/day -> 0/day)",
+      "Core work (Loan Approval 33/day) remains HIGH while oversight modules near zero — selective avoidance detected",
+      "Fraud strategy signature: Classic Access Void"
+    ],
     "daily_features": [
       {
         "date": "2026-03-18",
@@ -16,8 +38,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 8,
-        "total_accesses": 319
+        "days_since_last_audit": 18,
+        "total_accesses": 167,
+        "audit_trend_slope": -0.5039,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-19",
@@ -28,8 +53,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 9,
-        "total_accesses": 267
+        "days_since_last_audit": 19,
+        "total_accesses": 187,
+        "audit_trend_slope": -0.4336,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-20",
@@ -40,8 +68,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 10,
-        "total_accesses": 315
+        "days_since_last_audit": 20,
+        "total_accesses": 213,
+        "audit_trend_slope": -0.4036,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-21",
@@ -52,8 +83,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 11,
-        "total_accesses": 28
+        "days_since_last_audit": 21,
+        "total_accesses": 75,
+        "audit_trend_slope": -0.3617,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-22",
@@ -64,8 +98,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 12,
-        "total_accesses": 2
+        "days_since_last_audit": 22,
+        "total_accesses": 0,
+        "audit_trend_slope": -0.3146,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-23",
@@ -76,8 +113,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 13,
-        "total_accesses": 258
+        "days_since_last_audit": 23,
+        "total_accesses": 228,
+        "audit_trend_slope": -0.3448,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-24",
@@ -88,8 +128,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 14,
-        "total_accesses": 291
+        "days_since_last_audit": 24,
+        "total_accesses": 244,
+        "audit_trend_slope": -0.3613,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-25",
@@ -100,8 +143,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 15,
-        "total_accesses": 274
+        "days_since_last_audit": 25,
+        "total_accesses": 111,
+        "audit_trend_slope": -0.3907,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-26",
@@ -112,8 +158,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 16,
-        "total_accesses": 272
+        "days_since_last_audit": 26,
+        "total_accesses": 306,
+        "audit_trend_slope": -0.3648,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-27",
@@ -124,8 +173,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 17,
-        "total_accesses": 246
+        "days_since_last_audit": 27,
+        "total_accesses": 273,
+        "audit_trend_slope": -0.0596,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-28",
@@ -136,8 +188,11 @@
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 100.0,
-        "days_since_last_audit": 18,
-        "total_accesses": 25
+        "days_since_last_audit": 28,
+        "total_accesses": 114,
+        "audit_trend_slope": -0.0503,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-29",
@@ -147,9 +202,12 @@
         "override_count": 0,
         "audit_drop_pct": 100.0,
         "compliance_drop_pct": 100.0,
-        "override_drop_pct": 100.0,
-        "days_since_last_audit": 19,
-        "total_accesses": 56
+        "override_drop_pct": 0.0,
+        "days_since_last_audit": 29,
+        "total_accesses": 0,
+        "audit_trend_slope": -0.0125,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-30",
@@ -158,10 +216,13 @@
         "compliance_count": 0,
         "override_count": 0,
         "audit_drop_pct": 100.0,
-        "compliance_drop_pct": 100.0,
-        "override_drop_pct": 100.0,
-        "days_since_last_audit": 20,
-        "total_accesses": 248
+        "compliance_drop_pct": 0.0,
+        "override_drop_pct": 0.0,
+        "days_since_last_audit": 30,
+        "total_accesses": 251,
+        "audit_trend_slope": -0.0065,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-31",
@@ -169,11 +230,14 @@
         "audit_count": 0,
         "compliance_count": 0,
         "override_count": 0,
-        "audit_drop_pct": 100.0,
-        "compliance_drop_pct": 100.0,
-        "override_drop_pct": 100.0,
-        "days_since_last_audit": 21,
-        "total_accesses": 271
+        "audit_drop_pct": 0.0,
+        "compliance_drop_pct": 0.0,
+        "override_drop_pct": 0.0,
+        "days_since_last_audit": 31,
+        "total_accesses": 224,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": -0.748,
+        "peer_percentile": 50.0
       }
     ]
   },
@@ -182,8 +246,23 @@
     "name": "Shweta Iyer",
     "role": "Cashier",
     "branch": "Ahmedabad",
+    "experience_years": 4.2,
     "cohort_id": "COHORT015",
+    "personality": {
+      "work_style": "Medium",
+      "risk_profile": "Low",
+      "arrival_time": "09:20",
+      "leave_time": "17:50",
+      "avg_daily_customers": 36,
+      "typing_speed": "Medium",
+      "break_pattern": "Short",
+      "leave_frequency": "Medium"
+    },
     "is_suspicious": 0,
+    "fraud_strategy": "None",
+    "audit_drop_pct": 0,
+    "peer_sigma": 0,
+    "anomaly_reasons": [],
     "daily_features": [
       {
         "date": "2026-03-18",
@@ -195,7 +274,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 77,
-        "total_accesses": 362
+        "total_accesses": 394,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-19",
@@ -207,7 +289,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 78,
-        "total_accesses": 530
+        "total_accesses": 443,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-20",
@@ -219,7 +304,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 79,
-        "total_accesses": 376
+        "total_accesses": 483,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-21",
@@ -231,7 +319,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 80,
-        "total_accesses": 96
+        "total_accesses": 94,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-22",
@@ -243,7 +334,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 81,
-        "total_accesses": 22
+        "total_accesses": 0,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-23",
@@ -255,7 +349,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 82,
-        "total_accesses": 462
+        "total_accesses": 400,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-24",
@@ -267,7 +364,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 83,
-        "total_accesses": 524
+        "total_accesses": 568,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-25",
@@ -279,7 +379,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 84,
-        "total_accesses": 454
+        "total_accesses": 568,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-26",
@@ -291,7 +394,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 85,
-        "total_accesses": 435
+        "total_accesses": 570,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-27",
@@ -303,7 +409,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 86,
-        "total_accesses": 380
+        "total_accesses": 734,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-28",
@@ -315,7 +424,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 87,
-        "total_accesses": 16
+        "total_accesses": 233,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-29",
@@ -327,7 +439,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 88,
-        "total_accesses": 97
+        "total_accesses": 0,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-30",
@@ -339,7 +454,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 89,
-        "total_accesses": 507
+        "total_accesses": 483,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-31",
@@ -351,7 +469,10 @@
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 90,
-        "total_accesses": 453
+        "total_accesses": 626,
+        "audit_trend_slope": 0.0,
+        "peer_z_score": 0.0,
+        "peer_percentile": 50.0
       }
     ]
   },
@@ -360,48 +481,87 @@
     "name": "Krishna Dubey",
     "role": "Risk Analyst",
     "branch": "Mumbai",
+    "experience_years": 8.9,
     "cohort_id": "COHORT040",
+    "personality": {
+      "work_style": "Fast",
+      "risk_profile": "Low",
+      "arrival_time": "08:50",
+      "leave_time": "18:15",
+      "avg_daily_customers": 42,
+      "typing_speed": "High",
+      "break_pattern": "Short",
+      "leave_frequency": "Low"
+    },
     "is_suspicious": 0,
+    "fraud_strategy": "None",
+    "audit_drop_pct": 0,
+    "peer_sigma": 0,
+    "anomaly_reasons": [],
     "daily_features": [
       {
         "date": "2026-03-18",
         "day_index": 0,
         "audit_count": 57,
-        "compliance_count": 28,
+        "compliance_count": 40,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 245
+        "total_accesses": 304,
+        "audit_trend_slope": 0.1299,
+        "peer_z_score": 0.596,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-19",
         "day_index": 1,
-        "audit_count": 46,
-        "compliance_count": 41,
+        "audit_count": 47,
+        "compliance_count": 35,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 232
+        "total_accesses": 309,
+        "audit_trend_slope": 0.398,
+        "peer_z_score": 0.27,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-20",
         "day_index": 2,
-        "audit_count": 44,
-        "compliance_count": 46,
+        "audit_count": 58,
+        "compliance_count": 60,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 292
+        "total_accesses": 289,
+        "audit_trend_slope": 0.3786,
+        "peer_z_score": 0.629,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-21",
         "day_index": 3,
+        "audit_count": 19,
+        "compliance_count": 8,
+        "override_count": 0,
+        "audit_drop_pct": 47.47,
+        "compliance_drop_pct": 73.77,
+        "override_drop_pct": 0.0,
+        "days_since_last_audit": 1,
+        "total_accesses": 92,
+        "audit_trend_slope": 0.5217,
+        "peer_z_score": -0.644,
+        "peer_percentile": 50.0
+      },
+      {
+        "date": "2026-03-22",
+        "day_index": 4,
         "audit_count": 0,
         "compliance_count": 0,
         "override_count": 0,
@@ -409,91 +569,100 @@
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 1
-      },
-      {
-        "date": "2026-03-22",
-        "day_index": 4,
-        "audit_count": 3,
-        "compliance_count": 3,
-        "override_count": 0,
-        "audit_drop_pct": 90.24,
-        "compliance_drop_pct": 87.57,
-        "override_drop_pct": 0.0,
-        "days_since_last_audit": 2,
-        "total_accesses": 24
+        "total_accesses": 0,
+        "audit_trend_slope": 0.5339,
+        "peer_z_score": -1.264,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-23",
         "day_index": 5,
-        "audit_count": 30,
-        "compliance_count": 45,
+        "audit_count": 25,
+        "compliance_count": 20,
         "override_count": 0,
-        "audit_drop_pct": 0.0,
-        "compliance_drop_pct": 0.0,
+        "audit_drop_pct": 27.26,
+        "compliance_drop_pct": 30.48,
         "override_drop_pct": 0.0,
-        "days_since_last_audit": 1,
-        "total_accesses": 245
+        "days_since_last_audit": 2,
+        "total_accesses": 161,
+        "audit_trend_slope": 0.1978,
+        "peer_z_score": -0.448,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-24",
         "day_index": 6,
-        "audit_count": 45,
-        "compliance_count": 36,
+        "audit_count": 58,
+        "compliance_count": 47,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 233
+        "total_accesses": 339,
+        "audit_trend_slope": -0.0031,
+        "peer_z_score": 0.629,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-25",
         "day_index": 7,
-        "audit_count": 49,
-        "compliance_count": 36,
+        "audit_count": 67,
+        "compliance_count": 103,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 248
+        "total_accesses": 452,
+        "audit_trend_slope": -0.0925,
+        "peer_z_score": 0.923,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-26",
         "day_index": 8,
-        "audit_count": 59,
-        "compliance_count": 26,
+        "audit_count": 98,
+        "compliance_count": 77,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 267
+        "total_accesses": 451,
+        "audit_trend_slope": 0.2641,
+        "peer_z_score": 1.934,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-27",
         "day_index": 9,
-        "audit_count": 44,
-        "compliance_count": 34,
+        "audit_count": 143,
+        "compliance_count": 78,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 274
+        "total_accesses": 471,
+        "audit_trend_slope": 0.8452,
+        "peer_z_score": 3.403,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-28",
         "day_index": 10,
-        "audit_count": 9,
-        "compliance_count": 4,
+        "audit_count": 36,
+        "compliance_count": 29,
         "override_count": 0,
-        "audit_drop_pct": 71.58,
-        "compliance_drop_pct": 84.15,
+        "audit_drop_pct": 11.61,
+        "compliance_drop_pct": 16.02,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 36
+        "total_accesses": 178,
+        "audit_trend_slope": 1.6877,
+        "peer_z_score": -0.089,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-29",
@@ -505,31 +674,40 @@
         "compliance_drop_pct": 100.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 3
+        "total_accesses": 0,
+        "audit_trend_slope": 1.6383,
+        "peer_z_score": -1.264,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-30",
         "day_index": 12,
-        "audit_count": 31,
-        "compliance_count": 29,
+        "audit_count": 128,
+        "compliance_count": 52,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 2,
-        "total_accesses": 224
+        "total_accesses": 390,
+        "audit_trend_slope": 1.4334,
+        "peer_z_score": 2.914,
+        "peer_percentile": 50.0
       },
       {
         "date": "2026-03-31",
         "day_index": 13,
-        "audit_count": 44,
-        "compliance_count": 36,
+        "audit_count": 116,
+        "compliance_count": 50,
         "override_count": 0,
         "audit_drop_pct": 0.0,
         "compliance_drop_pct": 0.0,
         "override_drop_pct": 0.0,
         "days_since_last_audit": 1,
-        "total_accesses": 262
+        "total_accesses": 419,
+        "audit_trend_slope": 1.8347,
+        "peer_z_score": 2.522,
+        "peer_percentile": 50.0
       }
     ]
   }

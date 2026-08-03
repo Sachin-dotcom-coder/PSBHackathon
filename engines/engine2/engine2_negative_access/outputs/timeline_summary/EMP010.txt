@@ -1,0 +1,47 @@
+Employee
+Aarti Iyer (EMP010)
+
+--------------------------------
+Details:
+Role: Branch Manager
+Branch: Surat
+Peer Cohort: COHORT009
+--------------------------------
+
+Normal Behaviour
+Days 1-71
+
+--------------------------------
+Beginning of Avoidance
+Day 72
+
+--------------------------------
+Audit Reports
+↓
+Dropped 0.0% (Baseline avg: 29.1/day -> Recent avg: 34.6/day)
+
+--------------------------------
+Compliance
+↓
+Dropped 0.0%
+
+--------------------------------
+Override
+↓
+Dropped 80.7%
+
+--------------------------------
+Customer Search (Primary Business Activity)
+↓
+Stable (+7.8% shift)
+
+--------------------------------
+Access Void Score
+↓
+Initial: 46.1
+↓
+Final: 53.1
+
+--------------------------------
+Risk
+MEDIUM (Trend: ↑ Increasing)

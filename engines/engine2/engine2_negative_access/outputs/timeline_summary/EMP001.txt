@@ -1,0 +1,47 @@
+Employee
+Rajesh Kumar (EMP001)
+
+--------------------------------
+Details:
+Role: Branch Manager
+Branch: Ahmedabad
+Peer Cohort: COHORT001
+--------------------------------
+
+Normal Behaviour
+Days 1-39
+
+--------------------------------
+Beginning of Avoidance
+Day 40
+
+--------------------------------
+Audit Reports
+↓
+Dropped 100.0% (Baseline avg: 18.4/day -> Recent avg: 0.0/day)
+
+--------------------------------
+Compliance
+↓
+Dropped 100.0%
+
+--------------------------------
+Override
+↓
+Dropped 100.0%
+
+--------------------------------
+Customer Search (Primary Business Activity)
+↓
+Increasing (+68.7% shift)
+
+--------------------------------
+Access Void Score
+↓
+Initial: 38.3
+↓
+Final: 52.7
+
+--------------------------------
+Risk
+MEDIUM (Trend: → Stable)

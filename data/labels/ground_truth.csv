@@ -1,0 +1,51 @@
+employee_id,name,role,fraud_label
+EMP001,Rajesh Kumar,Branch Manager,1
+EMP002,Priya Joshi,Loan Officer,0
+EMP003,Anil Yadav,Loan Officer,0
+EMP004,Sunita Sharma,Loan Officer,0
+EMP005,Vikram Saxena,Loan Officer,0
+EMP006,Meena Joshi,Loan Officer,0
+EMP007,Arjun Sharma,Loan Officer,0
+EMP008,Kavita Nair,Loan Officer,0
+EMP009,Deepak Singh,Loan Officer,0
+EMP010,Aarti Iyer,Branch Manager,1
+EMP011,Sanjay Yadav,Branch Manager,0
+EMP012,Neha Yadav,Branch Manager,0
+EMP013,Ravi Pandey,Branch Manager,0
+EMP014,Pooja Joshi,Branch Manager,0
+EMP015,Amit Singh,Cashier,1
+EMP016,Shweta Iyer,Cashier,0
+EMP017,Rahul Shah,Cashier,0
+EMP018,Anjali Gupta,Cashier,0
+EMP019,Suresh Mishra,Cashier,0
+EMP020,Divya Nair,Cashier,0
+EMP021,Kiran Patel,Cashier,0
+EMP022,Smita Kumar,Cashier,0
+EMP023,Nikhil Mehta,Compliance Officer,1
+EMP024,Rekha Verma,Compliance Officer,0
+EMP025,Manish Yadav,Compliance Officer,0
+EMP026,Pallavi Pandey,Compliance Officer,0
+EMP027,Gaurav Dubey,Compliance Officer,0
+EMP028,Sneha Singh,Compliance Officer,0
+EMP029,Vivek Reddy,Relationship Manager,0
+EMP030,Nisha Saxena,Relationship Manager,0
+EMP031,Ashok Yadav,Relationship Manager,0
+EMP032,Madhuri Singh,Relationship Manager,0
+EMP033,Rohit Nair,Relationship Manager,0
+EMP034,Geeta Mishra,Relationship Manager,0
+EMP035,Harish Gupta,Relationship Manager,0
+EMP036,Lakshmi Rao,Relationship Manager,0
+EMP037,Dinesh Mehta,Operations Officer,0
+EMP038,Usha Dubey,Operations Officer,0
+EMP039,Prakash Tiwari,Operations Officer,0
+EMP040,Rina Rao,Operations Officer,0
+EMP041,Mohan Kumar,Operations Officer,0
+EMP042,Shalini Yadav,Operations Officer,0
+EMP043,Nilesh Tiwari,Treasury Officer,0
+EMP044,Anita Dubey,Treasury Officer,0
+EMP045,Vijay Yadav,Treasury Officer,0
+EMP046,Seema Pillai,Treasury Officer,0
+EMP047,Krishna Dubey,Risk Analyst,0
+EMP048,Tara Kumar,Risk Analyst,0
+EMP049,Ajay Joshi,Risk Analyst,0
+EMP050,Radha Patel,Risk Analyst,0

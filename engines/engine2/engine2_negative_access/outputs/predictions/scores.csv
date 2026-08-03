@@ -1,0 +1,51 @@
+employee_id,name,role,branch,access_void_score,raw_anomaly_score,risk,reasons_text
+EMP027,Gaurav Dubey,Compliance Officer,Surat,70.0,-0.0465,High,Minor deviation from peer cohort baseline — monitoring recommended
+EMP023,Nikhil Mehta,Compliance Officer,Delhi,67.6,-0.039,High,Compliance Dashboard usage dropped 84% (50/day -> 8/day) | Override Logs usage dropped 86% (24/day -> 3/day)
+EMP001,Rajesh Kumar,Branch Manager,Ahmedabad,60.0,-0.0154,Medium,Audit Reports not accessed for 31 consecutive days | Audit Reports usage dropped 100% (avg 18/day early -> 0/day recently) | Compliance Dashboard usage dropped 100% (15/day -> 0/day) | Override Logs usage dropped 100% (8/day -> 0/day) | Compliance Dashboard absent for 32 consecutive days | Override Logs absent for 33 consecutive days | Selective avoidance: core work (Loan Approvals 33/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP026,Pallavi Pandey,Compliance Officer,Mumbai,58.9,-0.012,Medium,Minor deviation from peer cohort baseline — monitoring recommended
+EMP024,Rekha Verma,Compliance Officer,Mumbai,58.3,-0.01,Medium,Minor deviation from peer cohort baseline — monitoring recommended
+EMP028,Sneha Singh,Compliance Officer,Mumbai,53.3,0.0055,Medium,Minor deviation from peer cohort baseline — monitoring recommended
+EMP025,Manish Yadav,Compliance Officer,Bangalore,46.2,0.0278,Medium,Minor deviation from peer cohort baseline — monitoring recommended
+EMP010,Aarti Iyer,Branch Manager,Surat,45.5,0.0297,Medium,Override Logs usage dropped 81% (14/day -> 3/day)
+EMP005,Vikram Saxena,Loan Officer,Mumbai,42.3,0.0399,Medium,Minor deviation from peer cohort baseline — monitoring recommended
+EMP033,Rohit Nair,Relationship Manager,Delhi,38.7,0.051,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP049,Ajay Joshi,Risk Analyst,Surat,38.2,0.0525,Low,Override Logs absent for 90 consecutive days
+EMP012,Neha Yadav,Branch Manager,Bangalore,38.0,0.0531,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP047,Krishna Dubey,Risk Analyst,Mumbai,35.9,0.0597,Low,Override Logs absent for 90 consecutive days
+EMP045,Vijay Yadav,Treasury Officer,Mumbai,35.8,0.0601,Low,Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP043,Nilesh Tiwari,Treasury Officer,Mumbai,35.8,0.0601,Low,Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP011,Sanjay Yadav,Branch Manager,Delhi,35.2,0.0619,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP007,Arjun Sharma,Loan Officer,Mumbai,34.9,0.0629,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP050,Radha Patel,Risk Analyst,Surat,32.8,0.0694,Low,Override Logs absent for 90 consecutive days
+EMP013,Ravi Pandey,Branch Manager,Surat,32.5,0.0704,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP004,Sunita Sharma,Loan Officer,Mumbai,32.5,0.0704,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP048,Tara Kumar,Risk Analyst,Bangalore,31.5,0.0734,Low,Override Logs absent for 90 consecutive days
+EMP014,Pooja Joshi,Branch Manager,Surat,31.1,0.0748,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP008,Kavita Nair,Loan Officer,Mumbai,28.5,0.0829,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP044,Anita Dubey,Treasury Officer,Delhi,27.6,0.0855,Low,Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP046,Seema Pillai,Treasury Officer,Ahmedabad,26.8,0.088,Low,Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP020,Divya Nair,Cashier,Surat,25.0,0.0938,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP032,Madhuri Singh,Relationship Manager,Bangalore,24.9,0.0939,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 38/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP002,Priya Joshi,Loan Officer,Surat,24.6,0.095,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP021,Kiran Patel,Cashier,Delhi,24.2,0.0962,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP006,Meena Joshi,Loan Officer,Ahmedabad,23.6,0.0981,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP030,Nisha Saxena,Relationship Manager,Bangalore,23.5,0.0985,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 40/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP009,Deepak Singh,Loan Officer,Surat,23.4,0.0987,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP017,Rahul Shah,Cashier,Surat,22.3,0.102,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP031,Ashok Yadav,Relationship Manager,Surat,21.5,0.1045,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 42/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP037,Dinesh Mehta,Operations Officer,Mumbai,21.1,0.1057,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP035,Harish Gupta,Relationship Manager,Surat,21.1,0.1059,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 49/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP036,Lakshmi Rao,Relationship Manager,Bangalore,21.0,0.106,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 36/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP003,Anil Yadav,Loan Officer,Delhi,21.0,0.1061,Low,Minor deviation from peer cohort baseline — monitoring recommended
+EMP040,Rina Rao,Operations Officer,Mumbai,20.9,0.1065,Low,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP034,Geeta Mishra,Relationship Manager,Ahmedabad,19.0,0.1124,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 44/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP029,Vivek Reddy,Relationship Manager,Delhi,18.7,0.1133,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days | Selective avoidance: core work (Loan Approvals 49/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance
+EMP039,Prakash Tiwari,Operations Officer,Ahmedabad,18.1,0.1153,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP042,Shalini Yadav,Operations Officer,Mumbai,17.4,0.1173,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP015,Amit Singh,Cashier,Delhi,17.0,0.1186,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP038,Usha Dubey,Operations Officer,Bangalore,16.7,0.1195,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP041,Mohan Kumar,Operations Officer,Delhi,16.4,0.1206,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP018,Anjali Gupta,Cashier,Mumbai,15.7,0.1228,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP022,Smita Kumar,Cashier,Bangalore,15.4,0.1237,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP019,Suresh Mishra,Cashier,Bangalore,15.2,0.1244,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days
+EMP016,Shweta Iyer,Cashier,Ahmedabad,13.5,0.1297,Normal,Audit Reports not accessed for 90 consecutive days | Compliance Dashboard absent for 90 consecutive days | Override Logs absent for 90 consecutive days

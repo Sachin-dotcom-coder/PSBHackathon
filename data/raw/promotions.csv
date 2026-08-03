@@ -1,0 +1,3 @@
+employee_id,employee_name,from_role,from_role_id,to_role,to_role_id,effective_date,effective_day,branch
+EMP005,Vikram Saxena,Loan Officer,R01,Branch Manager,R02,2026-02-20,50,Mumbai
+EMP033,Rohit Nair,Relationship Manager,R05,Branch Manager,R02,2026-02-15,45,Delhi

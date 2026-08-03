@@ -1,0 +1,512 @@
+[
+  {
+    "employee_id": "EMP027",
+    "name": "Gaurav Dubey",
+    "access_void_score": 70.0,
+    "risk": "High",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP023",
+    "name": "Nikhil Mehta",
+    "access_void_score": 67.6,
+    "risk": "High",
+    "reasons": [
+      "Compliance Dashboard usage dropped 84% (50/day -> 8/day)",
+      "Override Logs usage dropped 86% (24/day -> 3/day)"
+    ]
+  },
+  {
+    "employee_id": "EMP001",
+    "name": "Rajesh Kumar",
+    "access_void_score": 60.0,
+    "risk": "Medium",
+    "reasons": [
+      "Audit Reports not accessed for 31 consecutive days",
+      "Audit Reports usage dropped 100% (avg 18/day early -> 0/day recently)",
+      "Compliance Dashboard usage dropped 100% (15/day -> 0/day)",
+      "Override Logs usage dropped 100% (8/day -> 0/day)",
+      "Compliance Dashboard absent for 32 consecutive days",
+      "Override Logs absent for 33 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 33/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP026",
+    "name": "Pallavi Pandey",
+    "access_void_score": 58.9,
+    "risk": "Medium",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP024",
+    "name": "Rekha Verma",
+    "access_void_score": 58.3,
+    "risk": "Medium",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP028",
+    "name": "Sneha Singh",
+    "access_void_score": 53.3,
+    "risk": "Medium",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP025",
+    "name": "Manish Yadav",
+    "access_void_score": 46.2,
+    "risk": "Medium",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP010",
+    "name": "Aarti Iyer",
+    "access_void_score": 45.5,
+    "risk": "Medium",
+    "reasons": [
+      "Override Logs usage dropped 81% (14/day -> 3/day)"
+    ]
+  },
+  {
+    "employee_id": "EMP005",
+    "name": "Vikram Saxena",
+    "access_void_score": 42.3,
+    "risk": "Medium",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP033",
+    "name": "Rohit Nair",
+    "access_void_score": 38.7,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP049",
+    "name": "Ajay Joshi",
+    "access_void_score": 38.2,
+    "risk": "Low",
+    "reasons": [
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP012",
+    "name": "Neha Yadav",
+    "access_void_score": 38.0,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP047",
+    "name": "Krishna Dubey",
+    "access_void_score": 35.9,
+    "risk": "Low",
+    "reasons": [
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP045",
+    "name": "Vijay Yadav",
+    "access_void_score": 35.8,
+    "risk": "Low",
+    "reasons": [
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP043",
+    "name": "Nilesh Tiwari",
+    "access_void_score": 35.8,
+    "risk": "Low",
+    "reasons": [
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP011",
+    "name": "Sanjay Yadav",
+    "access_void_score": 35.2,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP007",
+    "name": "Arjun Sharma",
+    "access_void_score": 34.9,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP050",
+    "name": "Radha Patel",
+    "access_void_score": 32.8,
+    "risk": "Low",
+    "reasons": [
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP013",
+    "name": "Ravi Pandey",
+    "access_void_score": 32.5,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP004",
+    "name": "Sunita Sharma",
+    "access_void_score": 32.5,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP048",
+    "name": "Tara Kumar",
+    "access_void_score": 31.5,
+    "risk": "Low",
+    "reasons": [
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP014",
+    "name": "Pooja Joshi",
+    "access_void_score": 31.1,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP008",
+    "name": "Kavita Nair",
+    "access_void_score": 28.5,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP044",
+    "name": "Anita Dubey",
+    "access_void_score": 27.6,
+    "risk": "Low",
+    "reasons": [
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP046",
+    "name": "Seema Pillai",
+    "access_void_score": 26.8,
+    "risk": "Low",
+    "reasons": [
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP020",
+    "name": "Divya Nair",
+    "access_void_score": 25.0,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP032",
+    "name": "Madhuri Singh",
+    "access_void_score": 24.9,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 38/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP002",
+    "name": "Priya Joshi",
+    "access_void_score": 24.6,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP021",
+    "name": "Kiran Patel",
+    "access_void_score": 24.2,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP006",
+    "name": "Meena Joshi",
+    "access_void_score": 23.6,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP030",
+    "name": "Nisha Saxena",
+    "access_void_score": 23.5,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 40/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP009",
+    "name": "Deepak Singh",
+    "access_void_score": 23.4,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP017",
+    "name": "Rahul Shah",
+    "access_void_score": 22.3,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP031",
+    "name": "Ashok Yadav",
+    "access_void_score": 21.5,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 42/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP037",
+    "name": "Dinesh Mehta",
+    "access_void_score": 21.1,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP035",
+    "name": "Harish Gupta",
+    "access_void_score": 21.1,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 49/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP036",
+    "name": "Lakshmi Rao",
+    "access_void_score": 21.0,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 36/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP003",
+    "name": "Anil Yadav",
+    "access_void_score": 21.0,
+    "risk": "Low",
+    "reasons": [
+      "Minor deviation from peer cohort baseline — monitoring recommended"
+    ]
+  },
+  {
+    "employee_id": "EMP040",
+    "name": "Rina Rao",
+    "access_void_score": 20.9,
+    "risk": "Low",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP034",
+    "name": "Geeta Mishra",
+    "access_void_score": 19.0,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 44/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP029",
+    "name": "Vivek Reddy",
+    "access_void_score": 18.7,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 49/day) remains HIGH while oversight modules near zero — indicates deliberate avoidance"
+    ]
+  },
+  {
+    "employee_id": "EMP039",
+    "name": "Prakash Tiwari",
+    "access_void_score": 18.1,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP042",
+    "name": "Shalini Yadav",
+    "access_void_score": 17.4,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP015",
+    "name": "Amit Singh",
+    "access_void_score": 17.0,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP038",
+    "name": "Usha Dubey",
+    "access_void_score": 16.7,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP041",
+    "name": "Mohan Kumar",
+    "access_void_score": 16.4,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP018",
+    "name": "Anjali Gupta",
+    "access_void_score": 15.7,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP022",
+    "name": "Smita Kumar",
+    "access_void_score": 15.4,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP019",
+    "name": "Suresh Mishra",
+    "access_void_score": 15.2,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  },
+  {
+    "employee_id": "EMP016",
+    "name": "Shweta Iyer",
+    "access_void_score": 13.5,
+    "risk": "Normal",
+    "reasons": [
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days"
+    ]
+  }
+]

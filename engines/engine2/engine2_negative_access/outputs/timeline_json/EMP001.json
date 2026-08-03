@@ -1,0 +1,849 @@
+{
+  "employee_id": "EMP001",
+  "name": "Rajesh Kumar",
+  "role": "Branch Manager",
+  "branch": "Ahmedabad",
+  "peer_cohort_id": "COHORT001",
+  "primary_module_name": "Customer Search",
+  "current_score": 60.0,
+  "risk_level": "Medium",
+  "trend": "→ Stable",
+  "events": [
+    {
+      "day": 40,
+      "type": "decline_start",
+      "label": "Beginning of Avoidance",
+      "color": "blue"
+    },
+    {
+      "day": 23,
+      "type": "audit_zero",
+      "label": "Audit Reports Reached Zero",
+      "color": "red"
+    },
+    {
+      "day": 23,
+      "type": "compliance_zero",
+      "label": "Compliance Dashboard Reached Zero",
+      "color": "orange"
+    },
+    {
+      "day": 67,
+      "type": "risk_escalation",
+      "label": "Access Void Score Exceeded 60 (High Risk)",
+      "color": "crimson"
+    }
+  ],
+  "timeline": [
+    {
+      "day": 0,
+      "date": "2026-01-01",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 38.3
+    },
+    {
+      "day": 1,
+      "date": "2026-01-02",
+      "primary_activity": 42,
+      "audit": 33,
+      "compliance": 26,
+      "override": 7,
+      "access_void_score": 34.3
+    },
+    {
+      "day": 2,
+      "date": "2026-01-03",
+      "primary_activity": 15,
+      "audit": 6,
+      "compliance": 11,
+      "override": 6,
+      "access_void_score": 33.3
+    },
+    {
+      "day": 3,
+      "date": "2026-01-04",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 39.9
+    },
+    {
+      "day": 4,
+      "date": "2026-01-05",
+      "primary_activity": 28,
+      "audit": 23,
+      "compliance": 30,
+      "override": 11,
+      "access_void_score": 38.2
+    },
+    {
+      "day": 5,
+      "date": "2026-01-06",
+      "primary_activity": 22,
+      "audit": 24,
+      "compliance": 22,
+      "override": 13,
+      "access_void_score": 37.8
+    },
+    {
+      "day": 6,
+      "date": "2026-01-07",
+      "primary_activity": 12,
+      "audit": 19,
+      "compliance": 11,
+      "override": 3,
+      "access_void_score": 38.7
+    },
+    {
+      "day": 7,
+      "date": "2026-01-08",
+      "primary_activity": 36,
+      "audit": 22,
+      "compliance": 24,
+      "override": 6,
+      "access_void_score": 37.5
+    },
+    {
+      "day": 8,
+      "date": "2026-01-09",
+      "primary_activity": 20,
+      "audit": 18,
+      "compliance": 15,
+      "override": 6,
+      "access_void_score": 37.5
+    },
+    {
+      "day": 9,
+      "date": "2026-01-10",
+      "primary_activity": 13,
+      "audit": 11,
+      "compliance": 7,
+      "override": 7,
+      "access_void_score": 38.0
+    },
+    {
+      "day": 10,
+      "date": "2026-01-11",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 35.6
+    },
+    {
+      "day": 11,
+      "date": "2026-01-12",
+      "primary_activity": 39,
+      "audit": 22,
+      "compliance": 17,
+      "override": 8,
+      "access_void_score": 34.4
+    },
+    {
+      "day": 12,
+      "date": "2026-01-13",
+      "primary_activity": 35,
+      "audit": 30,
+      "compliance": 27,
+      "override": 22,
+      "access_void_score": 33.1
+    },
+    {
+      "day": 13,
+      "date": "2026-01-14",
+      "primary_activity": 39,
+      "audit": 19,
+      "compliance": 16,
+      "override": 8,
+      "access_void_score": 30.0
+    },
+    {
+      "day": 14,
+      "date": "2026-01-15",
+      "primary_activity": 24,
+      "audit": 33,
+      "compliance": 18,
+      "override": 15,
+      "access_void_score": 29.5
+    },
+    {
+      "day": 15,
+      "date": "2026-01-16",
+      "primary_activity": 36,
+      "audit": 39,
+      "compliance": 21,
+      "override": 13,
+      "access_void_score": 29.1
+    },
+    {
+      "day": 16,
+      "date": "2026-01-17",
+      "primary_activity": 16,
+      "audit": 8,
+      "compliance": 6,
+      "override": 4,
+      "access_void_score": 30.0
+    },
+    {
+      "day": 17,
+      "date": "2026-01-18",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 30.0
+    },
+    {
+      "day": 18,
+      "date": "2026-01-19",
+      "primary_activity": 43,
+      "audit": 30,
+      "compliance": 22,
+      "override": 17,
+      "access_void_score": 30.2
+    },
+    {
+      "day": 19,
+      "date": "2026-01-20",
+      "primary_activity": 51,
+      "audit": 32,
+      "compliance": 23,
+      "override": 16,
+      "access_void_score": 29.9
+    },
+    {
+      "day": 20,
+      "date": "2026-01-21",
+      "primary_activity": 34,
+      "audit": 31,
+      "compliance": 31,
+      "override": 13,
+      "access_void_score": 29.8
+    },
+    {
+      "day": 21,
+      "date": "2026-01-22",
+      "primary_activity": 42,
+      "audit": 33,
+      "compliance": 20,
+      "override": 7,
+      "access_void_score": 29.5
+    },
+    {
+      "day": 22,
+      "date": "2026-01-23",
+      "primary_activity": 57,
+      "audit": 41,
+      "compliance": 19,
+      "override": 13,
+      "access_void_score": 29.6
+    },
+    {
+      "day": 23,
+      "date": "2026-01-24",
+      "primary_activity": 1,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 30.4
+    },
+    {
+      "day": 24,
+      "date": "2026-01-25",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 30.9
+    },
+    {
+      "day": 25,
+      "date": "2026-01-26",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 34.5
+    },
+    {
+      "day": 26,
+      "date": "2026-01-27",
+      "primary_activity": 46,
+      "audit": 39,
+      "compliance": 29,
+      "override": 16,
+      "access_void_score": 35.5
+    },
+    {
+      "day": 27,
+      "date": "2026-01-28",
+      "primary_activity": 19,
+      "audit": 15,
+      "compliance": 7,
+      "override": 3,
+      "access_void_score": 37.2
+    },
+    {
+      "day": 28,
+      "date": "2026-01-29",
+      "primary_activity": 58,
+      "audit": 64,
+      "compliance": 25,
+      "override": 19,
+      "access_void_score": 38.8
+    },
+    {
+      "day": 29,
+      "date": "2026-01-30",
+      "primary_activity": 72,
+      "audit": 49,
+      "compliance": 20,
+      "override": 14,
+      "access_void_score": 39.1
+    },
+    {
+      "day": 30,
+      "date": "2026-01-31",
+      "primary_activity": 13,
+      "audit": 10,
+      "compliance": 6,
+      "override": 6,
+      "access_void_score": 37.4
+    },
+    {
+      "day": 31,
+      "date": "2026-02-01",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 37.0
+    },
+    {
+      "day": 32,
+      "date": "2026-02-02",
+      "primary_activity": 62,
+      "audit": 48,
+      "compliance": 29,
+      "override": 21,
+      "access_void_score": 34.6
+    },
+    {
+      "day": 33,
+      "date": "2026-02-03",
+      "primary_activity": 77,
+      "audit": 35,
+      "compliance": 28,
+      "override": 22,
+      "access_void_score": 34.5
+    },
+    {
+      "day": 34,
+      "date": "2026-02-04",
+      "primary_activity": 47,
+      "audit": 26,
+      "compliance": 22,
+      "override": 14,
+      "access_void_score": 32.8
+    },
+    {
+      "day": 35,
+      "date": "2026-02-05",
+      "primary_activity": 47,
+      "audit": 28,
+      "compliance": 16,
+      "override": 13,
+      "access_void_score": 30.9
+    },
+    {
+      "day": 36,
+      "date": "2026-02-06",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 32.9
+    },
+    {
+      "day": 37,
+      "date": "2026-02-07",
+      "primary_activity": 18,
+      "audit": 10,
+      "compliance": 8,
+      "override": 5,
+      "access_void_score": 33.2
+    },
+    {
+      "day": 38,
+      "date": "2026-02-08",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 33.0
+    },
+    {
+      "day": 39,
+      "date": "2026-02-09",
+      "primary_activity": 47,
+      "audit": 24,
+      "compliance": 19,
+      "override": 7,
+      "access_void_score": 31.8
+    },
+    {
+      "day": 40,
+      "date": "2026-02-10",
+      "primary_activity": 47,
+      "audit": 21,
+      "compliance": 21,
+      "override": 9,
+      "access_void_score": 30.6
+    },
+    {
+      "day": 41,
+      "date": "2026-02-11",
+      "primary_activity": 46,
+      "audit": 13,
+      "compliance": 36,
+      "override": 8,
+      "access_void_score": 31.1
+    },
+    {
+      "day": 42,
+      "date": "2026-02-12",
+      "primary_activity": 41,
+      "audit": 18,
+      "compliance": 11,
+      "override": 8,
+      "access_void_score": 31.6
+    },
+    {
+      "day": 43,
+      "date": "2026-02-13",
+      "primary_activity": 72,
+      "audit": 17,
+      "compliance": 15,
+      "override": 6,
+      "access_void_score": 29.1
+    },
+    {
+      "day": 44,
+      "date": "2026-02-14",
+      "primary_activity": 13,
+      "audit": 4,
+      "compliance": 4,
+      "override": 4,
+      "access_void_score": 29.4
+    },
+    {
+      "day": 45,
+      "date": "2026-02-15",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 29.5
+    },
+    {
+      "day": 46,
+      "date": "2026-02-16",
+      "primary_activity": 56,
+      "audit": 18,
+      "compliance": 13,
+      "override": 9,
+      "access_void_score": 29.5
+    },
+    {
+      "day": 47,
+      "date": "2026-02-17",
+      "primary_activity": 58,
+      "audit": 11,
+      "compliance": 10,
+      "override": 5,
+      "access_void_score": 30.9
+    },
+    {
+      "day": 48,
+      "date": "2026-02-18",
+      "primary_activity": 66,
+      "audit": 12,
+      "compliance": 9,
+      "override": 3,
+      "access_void_score": 32.5
+    },
+    {
+      "day": 49,
+      "date": "2026-02-19",
+      "primary_activity": 62,
+      "audit": 12,
+      "compliance": 10,
+      "override": 4,
+      "access_void_score": 33.6
+    },
+    {
+      "day": 50,
+      "date": "2026-02-20",
+      "primary_activity": 3,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 36.7
+    },
+    {
+      "day": 51,
+      "date": "2026-02-21",
+      "primary_activity": 23,
+      "audit": 2,
+      "compliance": 2,
+      "override": 1,
+      "access_void_score": 37.8
+    },
+    {
+      "day": 52,
+      "date": "2026-02-22",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 38.3
+    },
+    {
+      "day": 53,
+      "date": "2026-02-23",
+      "primary_activity": 41,
+      "audit": 8,
+      "compliance": 6,
+      "override": 5,
+      "access_void_score": 39.7
+    },
+    {
+      "day": 54,
+      "date": "2026-02-24",
+      "primary_activity": 68,
+      "audit": 48,
+      "compliance": 7,
+      "override": 3,
+      "access_void_score": 41.4
+    },
+    {
+      "day": 55,
+      "date": "2026-02-25",
+      "primary_activity": 26,
+      "audit": 2,
+      "compliance": 1,
+      "override": 1,
+      "access_void_score": 42.5
+    },
+    {
+      "day": 56,
+      "date": "2026-02-26",
+      "primary_activity": 58,
+      "audit": 6,
+      "compliance": 4,
+      "override": 3,
+      "access_void_score": 44.1
+    },
+    {
+      "day": 57,
+      "date": "2026-02-27",
+      "primary_activity": 27,
+      "audit": 1,
+      "compliance": 1,
+      "override": 0,
+      "access_void_score": 44.1
+    },
+    {
+      "day": 58,
+      "date": "2026-02-28",
+      "primary_activity": 17,
+      "audit": 1,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 44.6
+    },
+    {
+      "day": 59,
+      "date": "2026-03-01",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 45.1
+    },
+    {
+      "day": 60,
+      "date": "2026-03-02",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 47.9
+    },
+    {
+      "day": 61,
+      "date": "2026-03-03",
+      "primary_activity": 50,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 50.4
+    },
+    {
+      "day": 62,
+      "date": "2026-03-04",
+      "primary_activity": 46,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 52.7
+    },
+    {
+      "day": 63,
+      "date": "2026-03-05",
+      "primary_activity": 32,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 55.1
+    },
+    {
+      "day": 64,
+      "date": "2026-03-06",
+      "primary_activity": 67,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 57.2
+    },
+    {
+      "day": 65,
+      "date": "2026-03-07",
+      "primary_activity": 16,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 58.7
+    },
+    {
+      "day": 66,
+      "date": "2026-03-08",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 59.7
+    },
+    {
+      "day": 67,
+      "date": "2026-03-09",
+      "primary_activity": 46,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 61.1
+    },
+    {
+      "day": 68,
+      "date": "2026-03-10",
+      "primary_activity": 75,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 61.7
+    },
+    {
+      "day": 69,
+      "date": "2026-03-11",
+      "primary_activity": 72,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.3
+    },
+    {
+      "day": 70,
+      "date": "2026-03-12",
+      "primary_activity": 49,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 63.0
+    },
+    {
+      "day": 71,
+      "date": "2026-03-13",
+      "primary_activity": 43,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 63.4
+    },
+    {
+      "day": 72,
+      "date": "2026-03-14",
+      "primary_activity": 20,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 63.7
+    },
+    {
+      "day": 73,
+      "date": "2026-03-15",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 64.2
+    },
+    {
+      "day": 74,
+      "date": "2026-03-16",
+      "primary_activity": 51,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 64.2
+    },
+    {
+      "day": 75,
+      "date": "2026-03-17",
+      "primary_activity": 52,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 64.2
+    },
+    {
+      "day": 76,
+      "date": "2026-03-18",
+      "primary_activity": 32,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 64.0
+    },
+    {
+      "day": 77,
+      "date": "2026-03-19",
+      "primary_activity": 38,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 63.6
+    },
+    {
+      "day": 78,
+      "date": "2026-03-20",
+      "primary_activity": 49,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 63.1
+    },
+    {
+      "day": 79,
+      "date": "2026-03-21",
+      "primary_activity": 18,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.8
+    },
+    {
+      "day": 80,
+      "date": "2026-03-22",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.6
+    },
+    {
+      "day": 81,
+      "date": "2026-03-23",
+      "primary_activity": 56,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.5
+    },
+    {
+      "day": 82,
+      "date": "2026-03-24",
+      "primary_activity": 64,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.4
+    },
+    {
+      "day": 83,
+      "date": "2026-03-25",
+      "primary_activity": 30,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.0
+    },
+    {
+      "day": 84,
+      "date": "2026-03-26",
+      "primary_activity": 81,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.0
+    },
+    {
+      "day": 85,
+      "date": "2026-03-27",
+      "primary_activity": 62,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 62.0
+    },
+    {
+      "day": 86,
+      "date": "2026-03-28",
+      "primary_activity": 28,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 61.9
+    },
+    {
+      "day": 87,
+      "date": "2026-03-29",
+      "primary_activity": 0,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 60.6
+    },
+    {
+      "day": 88,
+      "date": "2026-03-30",
+      "primary_activity": 55,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 57.4
+    },
+    {
+      "day": 89,
+      "date": "2026-03-31",
+      "primary_activity": 60,
+      "audit": 0,
+      "compliance": 0,
+      "override": 0,
+      "access_void_score": 52.7
+    }
+  ]
+}

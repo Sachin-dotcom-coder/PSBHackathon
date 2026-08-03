@@ -1,0 +1,47 @@
+Employee
+Amit Singh (EMP015)
+
+--------------------------------
+Details:
+Role: Cashier
+Branch: Delhi
+Peer Cohort: COHORT014
+--------------------------------
+
+Normal Behaviour
+Days 1-90
+
+--------------------------------
+Beginning of Avoidance
+Day N/A (No significant shift)
+
+--------------------------------
+Audit Reports
+↓
+Dropped 0.0% (Baseline avg: 0.0/day -> Recent avg: 0.0/day)
+
+--------------------------------
+Compliance
+↓
+Dropped 0.0%
+
+--------------------------------
+Override
+↓
+Dropped 0.0%
+
+--------------------------------
+Cash Operations (Primary Business Activity)
+↓
+Stable (-0.3% shift)
+
+--------------------------------
+Access Void Score
+↓
+Initial: 23.5
+↓
+Final: 22.4
+
+--------------------------------
+Risk
+NORMAL (Trend: → Stable)

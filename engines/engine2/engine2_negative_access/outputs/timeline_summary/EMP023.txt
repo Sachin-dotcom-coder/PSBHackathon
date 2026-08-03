@@ -1,0 +1,47 @@
+Employee
+Nikhil Mehta (EMP023)
+
+--------------------------------
+Details:
+Role: Compliance Officer
+Branch: Delhi
+Peer Cohort: COHORT021
+--------------------------------
+
+Normal Behaviour
+Days 1-52
+
+--------------------------------
+Beginning of Avoidance
+Day 53
+
+--------------------------------
+Audit Reports
+↓
+Dropped 0.0% (Baseline avg: 85.6/day -> Recent avg: 94.7/day)
+
+--------------------------------
+Compliance
+↓
+Dropped 83.9%
+
+--------------------------------
+Override
+↓
+Dropped 85.8%
+
+--------------------------------
+Transaction History (Primary Business Activity)
+↓
+Increasing (+17.2% shift)
+
+--------------------------------
+Access Void Score
+↓
+Initial: 43.5
+↓
+Final: 74.6
+
+--------------------------------
+Risk
+HIGH (Trend: ↑ Increasing)

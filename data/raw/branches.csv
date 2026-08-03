@@ -1,0 +1,6 @@
+branch_id,name,city,state,region,tier
+BR01,Surat,Surat,Gujarat,West,Tier-2
+BR02,Mumbai,Mumbai,Maharashtra,West,Tier-1
+BR03,Ahmedabad,Ahmedabad,Gujarat,West,Tier-2
+BR04,Delhi,Delhi,Delhi,North,Tier-1
+BR05,Bangalore,Bangalore,Karnataka,South,Tier-1

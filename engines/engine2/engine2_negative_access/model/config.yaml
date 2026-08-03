@@ -1,0 +1,41 @@
+model:
+  n_estimators: 300
+  contamination: 0.08
+  max_samples: auto
+  max_features: 1.0
+  bootstrap: false
+  random_state: 42
+
+scoring:
+  risk_thresholds:
+    normal: 20
+    low: 40
+    medium: 60
+    high: 80
+    critical: 100
+
+features:
+  # Columns to drop before training (identifiers, not features)
+  drop_columns:
+    - employee_id
+    - date
+  # These must stay non-negative
+  non_negative:
+    - loan_access_count
+    - customer_search_count
+    - audit_access_count
+    - compliance_access_count
+    - override_access_count
+    - total_daily_accesses
+    - days_since_last_audit
+    - days_since_last_compliance
+    - days_since_last_override
+    - critical_module_missing_pct
+    - expected_modules_accessed
+    - expected_modules_missing
+
+output:
+  model_path: "outputs/models/isolation_forest.pkl"
+  predictions_path: "outputs/predictions/scores.csv"
+  daily_scores_path: "outputs/predictions/daily_scores.csv"
+  plots_path: "outputs/plots/"
