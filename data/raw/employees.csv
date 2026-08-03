@@ -1,0 +1,51 @@
+employee_id,name,role,role_id,department,branch,experience_years,joining_date,manager,status
+EMP001,Rajesh Singh,Loan Officer,R01,Loans,Ahmedabad,1.9,2022-06-23,EMP010,Active
+EMP002,Priya Joshi,Loan Officer,R01,Loans,Surat,3.8,2022-12-30,EMP014,Active
+EMP003,Anil Yadav,Loan Officer,R01,Loans,Delhi,2.9,2020-04-13,EMP011,Active
+EMP004,Sunita Sharma,Loan Officer,R01,Loans,Mumbai,3.0,2022-11-01,EMP012,Active
+EMP005,Vikram Saxena,Loan Officer,R01,Loans,Mumbai,1.9,2023-06-16,EMP013,Active
+EMP006,Meena Joshi,Loan Officer,R01,Loans,Ahmedabad,8.9,2023-03-09,EMP011,Active
+EMP007,Arjun Sharma,Loan Officer,R01,Loans,Mumbai,14.0,2018-06-28,EMP014,Active
+EMP008,Kavita Nair,Loan Officer,R01,Loans,Mumbai,6.1,2020-09-05,EMP011,Active
+EMP009,Deepak Singh,Loan Officer,R01,Loans,Surat,3.0,2022-01-06,EMP014,Active
+EMP010,Aarti Iyer,Branch Manager,R02,Retail Banking,Surat,11.5,2021-10-24,EMP011,Active
+EMP011,Sanjay Yadav,Branch Manager,R02,Retail Banking,Delhi,3.6,2019-11-05,EMP010,Active
+EMP012,Neha Yadav,Branch Manager,R02,Retail Banking,Bangalore,6.3,2020-10-05,EMP010,Active
+EMP013,Ravi Pandey,Branch Manager,R02,Retail Banking,Surat,4.7,2018-10-26,EMP010,Active
+EMP014,Pooja Joshi,Branch Manager,R02,Retail Banking,Surat,14.3,2013-12-07,EMP010,Active
+EMP015,Amit Singh,Cashier,R03,Operations,Delhi,7.8,2022-05-02,EMP011,Active
+EMP016,Shweta Iyer,Cashier,R03,Operations,Ahmedabad,4.2,2019-12-24,EMP011,Active
+EMP017,Rahul Shah,Cashier,R03,Operations,Surat,13.1,2023-07-29,EMP013,Active
+EMP018,Anjali Gupta,Cashier,R03,Operations,Mumbai,10.3,2016-05-16,EMP013,Active
+EMP019,Suresh Mishra,Cashier,R03,Operations,Bangalore,7.8,2017-09-01,EMP012,Active
+EMP020,Divya Nair,Cashier,R03,Operations,Surat,15.4,2012-09-30,EMP010,Active
+EMP021,Kiran Patel,Cashier,R03,Operations,Delhi,14.8,2014-03-20,EMP011,Active
+EMP022,Smita Kumar,Cashier,R03,Operations,Bangalore,5.0,2021-07-13,EMP012,Active
+EMP023,Nikhil Mehta,Compliance Officer,R04,Compliance,Delhi,12.3,2020-12-31,EMP011,Active
+EMP024,Rekha Verma,Compliance Officer,R04,Compliance,Mumbai,5.9,2023-05-27,EMP013,Active
+EMP025,Manish Yadav,Compliance Officer,R04,Compliance,Bangalore,5.8,2022-01-03,EMP012,Active
+EMP026,Pallavi Pandey,Compliance Officer,R04,Compliance,Mumbai,8.1,2016-06-16,EMP013,Active
+EMP027,Gaurav Dubey,Compliance Officer,R04,Compliance,Surat,9.6,2023-01-24,EMP014,Active
+EMP028,Sneha Singh,Compliance Officer,R04,Compliance,Mumbai,4.0,2023-06-12,EMP010,Active
+EMP029,Vivek Reddy,Relationship Manager,R05,Retail Banking,Delhi,11.3,2020-04-08,EMP011,Active
+EMP030,Nisha Saxena,Relationship Manager,R05,Retail Banking,Bangalore,17.9,2010-10-02,EMP012,Active
+EMP031,Ashok Yadav,Relationship Manager,R05,Retail Banking,Surat,15.7,2022-07-27,EMP013,Active
+EMP032,Madhuri Singh,Relationship Manager,R05,Retail Banking,Bangalore,12.7,2016-04-17,EMP012,Active
+EMP033,Rohit Nair,Relationship Manager,R05,Retail Banking,Delhi,3.3,2020-08-03,EMP011,Active
+EMP034,Geeta Mishra,Relationship Manager,R05,Retail Banking,Ahmedabad,1.6,2022-10-21,EMP011,Active
+EMP035,Harish Gupta,Relationship Manager,R05,Retail Banking,Surat,9.9,2022-11-14,EMP010,Active
+EMP036,Lakshmi Rao,Relationship Manager,R05,Retail Banking,Bangalore,15.4,2021-04-08,EMP012,Active
+EMP037,Dinesh Mehta,Operations Officer,R06,Operations,Mumbai,4.0,2022-01-10,EMP014,Active
+EMP038,Usha Dubey,Operations Officer,R06,Operations,Bangalore,16.7,2013-08-01,EMP012,Active
+EMP039,Prakash Tiwari,Operations Officer,R06,Operations,Ahmedabad,1.8,2023-08-31,EMP011,Active
+EMP040,Rina Rao,Operations Officer,R06,Operations,Mumbai,5.5,2023-11-13,EMP013,Active
+EMP041,Mohan Kumar,Operations Officer,R06,Operations,Delhi,2.9,2020-06-28,EMP011,Active
+EMP042,Shalini Yadav,Operations Officer,R06,Operations,Mumbai,14.1,2023-09-16,EMP012,Active
+EMP043,Nilesh Tiwari,Treasury Officer,R07,Treasury,Mumbai,17.1,2011-11-10,EMP013,Active
+EMP044,Anita Dubey,Treasury Officer,R07,Treasury,Delhi,15.9,2011-11-12,EMP011,Active
+EMP045,Vijay Yadav,Treasury Officer,R07,Treasury,Mumbai,14.0,2016-01-01,EMP010,Active
+EMP046,Seema Pillai,Treasury Officer,R07,Treasury,Ahmedabad,17.9,2014-12-09,EMP013,Active
+EMP047,Krishna Dubey,Risk Analyst,R08,Risk,Mumbai,8.9,2016-08-17,EMP014,Active
+EMP048,Tara Kumar,Risk Analyst,R08,Risk,Bangalore,7.1,2022-02-12,EMP012,Active
+EMP049,Ajay Joshi,Risk Analyst,R08,Risk,Surat,11.2,2013-05-26,EMP010,Active
+EMP050,Radha Patel,Risk Analyst,R08,Risk,Surat,5.3,2021-05-30,EMP014,Active

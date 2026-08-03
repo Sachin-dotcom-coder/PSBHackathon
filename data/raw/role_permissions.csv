@@ -1,0 +1,47 @@
+role_id,role_name,department,module_name,module_id
+R01,Loan Officer,Loans,Customer Search,MOD01
+R01,Loan Officer,Loans,Loan Approval,MOD02
+R01,Loan Officer,Loans,Loan Review,MOD03
+R01,Loan Officer,Loans,Audit Reports,MOD04
+R01,Loan Officer,Loans,Compliance Dashboard,MOD05
+R01,Loan Officer,Loans,Override Logs,MOD06
+R02,Branch Manager,Retail Banking,Customer Search,MOD01
+R02,Branch Manager,Retail Banking,Loan Approval,MOD02
+R02,Branch Manager,Retail Banking,Loan Review,MOD03
+R02,Branch Manager,Retail Banking,Audit Reports,MOD04
+R02,Branch Manager,Retail Banking,Compliance Dashboard,MOD05
+R02,Branch Manager,Retail Banking,Override Logs,MOD06
+R02,Branch Manager,Retail Banking,Account Creation,MOD12
+R02,Branch Manager,Retail Banking,Account Closure,MOD13
+R02,Branch Manager,Retail Banking,Reports,MOD15
+R02,Branch Manager,Retail Banking,Risk Dashboard,MOD11
+R03,Cashier,Operations,Cash Operations,MOD08
+R03,Cashier,Operations,Transaction History,MOD09
+R03,Cashier,Operations,Customer Search,MOD01
+R03,Cashier,Operations,Account Creation,MOD12
+R03,Cashier,Operations,KYC Portal,MOD07
+R04,Compliance Officer,Compliance,Audit Reports,MOD04
+R04,Compliance Officer,Compliance,Compliance Dashboard,MOD05
+R04,Compliance Officer,Compliance,Override Logs,MOD06
+R04,Compliance Officer,Compliance,Reports,MOD15
+R04,Compliance Officer,Compliance,Transaction History,MOD09
+R05,Relationship Manager,Retail Banking,Customer Search,MOD01
+R05,Relationship Manager,Retail Banking,Loan Approval,MOD02
+R05,Relationship Manager,Retail Banking,KYC Portal,MOD07
+R05,Relationship Manager,Retail Banking,Account Creation,MOD12
+R05,Relationship Manager,Retail Banking,Account Closure,MOD13
+R06,Operations Officer,Operations,Cash Operations,MOD08
+R06,Operations Officer,Operations,Transaction History,MOD09
+R06,Operations Officer,Operations,Locker Management,MOD14
+R06,Operations Officer,Operations,Account Creation,MOD12
+R06,Operations Officer,Operations,Account Closure,MOD13
+R06,Operations Officer,Operations,KYC Portal,MOD07
+R07,Treasury Officer,Treasury,Treasury,MOD10
+R07,Treasury Officer,Treasury,Reports,MOD15
+R07,Treasury Officer,Treasury,Risk Dashboard,MOD11
+R07,Treasury Officer,Treasury,Audit Reports,MOD04
+R08,Risk Analyst,Risk,Risk Dashboard,MOD11
+R08,Risk Analyst,Risk,Audit Reports,MOD04
+R08,Risk Analyst,Risk,Compliance Dashboard,MOD05
+R08,Risk Analyst,Risk,Reports,MOD15
+R08,Risk Analyst,Risk,Transaction History,MOD09
