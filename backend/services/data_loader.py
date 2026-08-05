@@ -79,9 +79,14 @@ def fast_collusion_events(logs_path: pathlib.Path, sample_days: int = 30) -> Lis
     return events
 
 
+# Global derived metrics computed from real data
+TOTAL_LOG_EVENTS: int = 0
+LAST_SCAN_DATE: str = "—"
+
+
 def compute_chain_scores() -> None:
     """Computes Engine 1 temporal sequence scores for all employees on the latest log date."""
-    global CHAIN_SCORES
+    global CHAIN_SCORES, TOTAL_LOG_EVENTS, LAST_SCAN_DATE
     if not ACCESS_LOGS_CSV.exists():
         return
     try:
@@ -90,6 +95,10 @@ def compute_chain_scores() -> None:
         df["date"] = df["timestamp"].str[:10]
         max_date = df["date"].max()
         df_last = df[df["date"] == max_date]
+
+        # Derive real metrics from actual data
+        TOTAL_LOG_EVENTS = len(df)
+        LAST_SCAN_DATE = str(max_date)
 
         grouped = df_last.groupby("employee_id")["module"].apply(list)
         emp_ids = EMPLOYEES_DF["employee_id"].tolist() if not EMPLOYEES_DF.empty else []
@@ -102,6 +111,7 @@ def compute_chain_scores() -> None:
                 score = 0
             CHAIN_SCORES[eid] = int(score)
         print(f"[PHANTOM] Chain scores ready for {len(CHAIN_SCORES)} employees (date: {max_date}).")
+        print(f"[PHANTOM] Real metrics — total log events: {TOTAL_LOG_EVENTS:,}, last scan: {LAST_SCAN_DATE}")
     except Exception as e:
         print(f"[PHANTOM] Chain score computation error: {e}")
 
@@ -166,8 +176,8 @@ def load_all_data() -> None:
         "flagged_high": risk_breakdown.get("High", 0) + risk_breakdown.get("Critical", 0),
         "flagged_medium": risk_breakdown.get("Medium", 0),
         "flagged_low": risk_breakdown.get("Low", 0),
-        "last_scan": "2026-03-31",
-        "total_events": 977000,
+        "last_scan": LAST_SCAN_DATE,       # real max date from access_logs.csv
+        "total_events": TOTAL_LOG_EVENTS,  # real count from access_logs.csv
         "risk_breakdown": risk_breakdown,
     }
 

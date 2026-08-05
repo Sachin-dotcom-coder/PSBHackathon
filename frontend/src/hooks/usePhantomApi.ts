@@ -25,9 +25,23 @@ export interface EmployeeSummary {
   reasons: string[];
 }
 
+export interface NLPDetails {
+  language_score: number;
+  vagueness?: number;
+  urgency?: number;
+  authority?: number;
+  policy_bypass?: number;
+  responsibility_shift?: number;
+  top_keywords?: string[];
+  category_scores?: Record<string, number>;
+  status?: string;
+  message?: string;
+}
+
 export interface EmployeeDetail extends EmployeeSummary {
   experience_years?: number;
   cohort_id?: string;
+  nlp_details?: NLPDetails;
   personality?: {
     work_style?: string;
     risk_profile?: string;
@@ -92,6 +106,103 @@ export interface SystemStats {
   last_scan: string;
   total_events: number;
   risk_breakdown: Record<string, number>;
+}
+
+// Graph types
+export interface GraphDayNode {
+  id: string;
+  label: string;
+  date: string;
+  day_index: number;
+  total_accesses: number;
+  active_employees: number;
+  threat_count: number;
+  risk_level: "Critical" | "High" | "Normal";
+}
+
+export interface GraphLink {
+  source: string;
+  target: string;
+  type?: string;
+}
+
+export interface TimelineGraph {
+  total_days: number;
+  start_date: string;
+  end_date: string;
+  nodes: GraphDayNode[];
+  links: GraphLink[];
+}
+
+export interface NetworkNode {
+  id: string;
+  label: string;
+  employee_id: string;
+  role: string;
+  branch: string;
+  department: string;
+  risk_level: string;
+  access_void_score: number;
+}
+
+export interface NetworkLink {
+  source: string;
+  target: string;
+  shared_modules: string[];
+  co_access_count: number;
+  is_suspected_collusion: boolean;
+  weight: number;
+}
+
+export interface DayNetworkGraph {
+  date: string;
+  total_active_employees: number;
+  total_co_access_links: number;
+  nodes: NetworkNode[];
+  links: NetworkLink[];
+}
+
+export interface ActionItem {
+  timestamp: string;
+  module: string;
+  action: string;
+  session_id: string;
+}
+
+export interface EmployeeDayActions {
+  employee_id: string;
+  employee_name: string;
+  role: string;
+  date: string;
+  total_actions: number;
+  chain_score: number;
+  sequence_tokens: string[];
+  actions: ActionItem[];
+  graph: {
+    nodes: Array<{ id: string; label: string; type: string; group: number }>;
+    links: Array<{ source: string; target: string; action: string; session_id: string; timestamp: string }>;
+  };
+}
+
+export interface EvaluateRequest {
+  employee_id: string;
+  log_actions: string[];
+  co_access_events?: Array<Record<string, unknown>>;
+  override_note?: string;
+  access_void_score?: number;
+}
+
+export interface EvaluateResult {
+  employee_id: string;
+  dits_score: number;
+  risk_level: RiskLevel;
+  engine_scores: {
+    engine1_chain_score: number;
+    engine2_avoidance_score: number;
+    engine3_collusion_score: number;
+    engine4_language_score: number | null;
+  };
+  nlp_details: NLPDetails;
 }
 
 // ---------------------------------------------------------------------------
@@ -162,17 +273,56 @@ export function useStats() {
   });
 }
 
+export function useGraphTimeline(days = 15) {
+  return useQuery<TimelineGraph>({
+    queryKey: ["graph-timeline", days],
+    queryFn: () => apiFetch<TimelineGraph>(`/api/graph/timeline?days=${days}`),
+    staleTime: STALE_60S,
+    retry: 2,
+  });
+}
+
+export function useGraphDay(date: string | null) {
+  return useQuery<DayNetworkGraph>({
+    queryKey: ["graph-day", date],
+    queryFn: () => apiFetch<DayNetworkGraph>(`/api/graph/day/${date}`),
+    staleTime: STALE_60S,
+    enabled: !!date,
+    retry: 2,
+  });
+}
+
+export function useEmployeeDayActions(date: string | null, employeeId: string | null) {
+  return useQuery<EmployeeDayActions>({
+    queryKey: ["emp-day-actions", date, employeeId],
+    queryFn: () =>
+      apiFetch<EmployeeDayActions>(
+        `/api/graph/employee-day-actions?date=${date}&employee_id=${employeeId}`,
+      ),
+    staleTime: STALE_60S,
+    enabled: !!date && !!employeeId,
+    retry: 2,
+  });
+}
+
 export function useScoreText() {
-  return useMutation<
-    { language_score: null; status: string; message: string },
-    Error,
-    string
-  >({
+  return useMutation<NLPDetails, Error, string>({
     mutationFn: (text: string) =>
       apiFetch("/api/score-text", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),
+      }),
+  });
+}
+
+export function useEvaluate() {
+  return useMutation<EvaluateResult, Error, EvaluateRequest>({
+    mutationFn: (req: EvaluateRequest) =>
+      apiFetch("/api/evaluate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(req),
       }),
   });
 }

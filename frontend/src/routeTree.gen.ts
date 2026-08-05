@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SimulatorRouteImport } from './routes/simulator'
 import { Route as LeaderboardRouteImport } from './routes/leaderboard'
 import { Route as InvestigationRouteImport } from './routes/investigation'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmployeeIdRouteImport } from './routes/employee/$id'
 
+const SimulatorRoute = SimulatorRouteImport.update({
+  id: '/simulator',
+  path: '/simulator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LeaderboardRoute = LeaderboardRouteImport.update({
   id: '/leaderboard',
   path: '/leaderboard',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/investigation': typeof InvestigationRoute
   '/leaderboard': typeof LeaderboardRoute
+  '/simulator': typeof SimulatorRoute
   '/employee/$id': typeof EmployeeIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/investigation': typeof InvestigationRoute
   '/leaderboard': typeof LeaderboardRoute
+  '/simulator': typeof SimulatorRoute
   '/employee/$id': typeof EmployeeIdRoute
 }
 export interface FileRoutesById {
@@ -52,25 +60,45 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/investigation': typeof InvestigationRoute
   '/leaderboard': typeof LeaderboardRoute
+  '/simulator': typeof SimulatorRoute
   '/employee/$id': typeof EmployeeIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/investigation' | '/leaderboard' | '/employee/$id'
+  fullPaths:
+    | '/'
+    | '/investigation'
+    | '/leaderboard'
+    | '/simulator'
+    | '/employee/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/investigation' | '/leaderboard' | '/employee/$id'
-  id: '__root__' | '/' | '/investigation' | '/leaderboard' | '/employee/$id'
+  to: '/' | '/investigation' | '/leaderboard' | '/simulator' | '/employee/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/investigation'
+    | '/leaderboard'
+    | '/simulator'
+    | '/employee/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   InvestigationRoute: typeof InvestigationRoute
   LeaderboardRoute: typeof LeaderboardRoute
+  SimulatorRoute: typeof SimulatorRoute
   EmployeeIdRoute: typeof EmployeeIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/simulator': {
+      id: '/simulator'
+      path: '/simulator'
+      fullPath: '/simulator'
+      preLoaderRoute: typeof SimulatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leaderboard': {
       id: '/leaderboard'
       path: '/leaderboard'
@@ -106,6 +134,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   InvestigationRoute: InvestigationRoute,
   LeaderboardRoute: LeaderboardRoute,
+  SimulatorRoute: SimulatorRoute,
   EmployeeIdRoute: EmployeeIdRoute,
 }
 export const routeTree = rootRouteImport

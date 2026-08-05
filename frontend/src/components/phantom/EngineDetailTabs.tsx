@@ -136,7 +136,7 @@ export function EngineDetailTabs({
           </div>
         )}
 
-        {activeTab === "language" && <NLPScorer />}
+        {activeTab === "language" && <NLPScorer employeeId={employee.employee_id} />}
       </div>
     </div>
   );

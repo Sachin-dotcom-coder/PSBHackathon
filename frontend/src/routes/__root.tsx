@@ -4,12 +4,20 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { SplashScreen } from "../components/phantom/SplashScreen";
+import { PhantomLogo } from "../components/phantom/PhantomLogo";
+import {
+  LayoutDashboard,
+  Users,
+  Network,
+  Terminal,
+} from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -79,14 +87,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PHANTOM — Insider Threat Detection & Autonomous Trust Engine" },
-      { name: "description", content: "AI-powered insider threat detection for enterprise banking. Detect malicious intent before fraud occurs." },
+      { title: "PHANTOM — Autonomous Trust & Threat Engine" },
+      { name: "description", content: "AI-powered insider threat detection for enterprise banking." },
       { name: "author", content: "PHANTOM" },
-      { property: "og:title", content: "PHANTOM — Insider Threat Detection" },
-      { property: "og:description", content: "AI-powered insider threat detection for enterprise banking." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -115,6 +118,67 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+const NAV_ITEMS = [
+  { to: "/", label: "SOC Overview", icon: LayoutDashboard },
+  { to: "/leaderboard", label: "Leaderboard", icon: Users },
+  { to: "/investigation", label: "Graph Viz", icon: Network },
+  { to: "/simulator", label: "Simulator", icon: Terminal },
+] as const;
+
+function GlobalNav() {
+  const routerState = useRouterState();
+  const currentPath = routerState.location.pathname;
+
+  return (
+    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-background/95 px-8 py-3 backdrop-blur-md">
+      {/* Brand */}
+      <Link to="/" className="flex items-center gap-3 group">
+        <PhantomLogo className="h-7 w-7 text-white" />
+        <span className="text-mono text-[14px] font-extrabold tracking-[0.2em] text-white">
+          PHANTOM
+        </span>
+      </Link>
+
+      {/* Nav Links */}
+      <div className="flex items-center gap-1">
+        {NAV_ITEMS.map(({ to, label, icon: Icon }) => {
+          const isActive = currentPath === to || (to !== "/" && currentPath.startsWith(to));
+          return (
+            <Link
+              key={to}
+              to={to}
+              className={`relative flex items-center gap-2 rounded-md px-3.5 py-1.5 text-[13px] font-medium transition-all ${
+                isActive
+                  ? "bg-surface-2 text-white"
+                  : "text-muted-foreground hover:text-white hover:bg-surface/50"
+              }`}
+            >
+              <Icon className={`h-3.5 w-3.5 ${isActive ? "text-[color:var(--cyan)]" : ""}`} />
+              <span className="hidden sm:block">{label}</span>
+              {isActive && (
+                <motion.div
+                  layoutId="nav-indicator"
+                  className="absolute inset-0 rounded-md border border-[color:var(--cyan)]/30"
+                  transition={{ duration: 0.2 }}
+                />
+              )}
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Status */}
+      <div className="flex items-center gap-2 text-mono text-[11px] text-muted-foreground">
+        <span className="relative flex h-1.5 w-1.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--emerald)]/60" />
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[color:var(--emerald)]" />
+        </span>
+        <span className="hidden sm:block uppercase tracking-widest font-semibold text-emerald-400">Live</span>
+      </div>
+    </nav>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const [showSplash, setShowSplash] = useState(false);
@@ -137,7 +201,7 @@ function RootComponent() {
           />
         )}
       </AnimatePresence>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <GlobalNav />
       <Outlet />
     </QueryClientProvider>
   );

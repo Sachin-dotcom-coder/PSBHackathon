@@ -1,208 +1,483 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, ShieldCheck, Activity, Network } from "lucide-react";
-import { NetworkBackground } from "@/components/phantom/NetworkBackground";
+import {
+  AlertTriangle,
+  Activity,
+  Network,
+  Users,
+  Zap,
+  Shield,
+  ArrowUpRight,
+  Terminal,
+  CheckCircle2,
+  TrendingUp,
+  Clock,
+} from "lucide-react";
+import { useStats, useLeaderboard } from "@/hooks/usePhantomApi";
+import { RiskBadge } from "@/components/phantom/RiskBadge";
+import { SkeletonCard } from "@/components/phantom/LoadingSkeleton";
+import { BarChart, Bar, XAxis, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")(  {
   head: () => ({
     meta: [
-      { title: "PHANTOM — AI Insider Threat Detection for Banking" },
-      { name: "description", content: "Detecting malicious intent before fraud occurs. An autonomous trust engine for privileged-access monitoring." },
+      { title: "SOC Overview — PHANTOM" },
+      { name: "description", content: "Primary SOC command center for live insider threat monitoring." },
     ],
   }),
-  component: Landing,
+  component: SOCDashboard,
 });
 
-function Landing() {
+// ─── Shared ───────────────────────────────────────────────────────────────────
+
+const RISK_COLORS: Record<string, string> = {
+  Critical: "#E5484D",
+  High:     "#f97316",
+  Medium:   "#facc15",
+  Low:      "#737373",
+  Normal:   "#404040",
+};
+
+const RISK_ORDER = ["Critical", "High", "Medium", "Low", "Normal"];
+
+/** Format large numbers: 415788 → "415,788" */
+function fmt(n: number): string {
+  return n.toLocaleString("en-IN");
+}
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function MetricCell({ label, value, accent, loading }: {
+  label: string;
+  value: string | number;
+  accent?: string;
+  loading?: boolean;
+}) {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      {/* top bar */}
-      <header className="relative z-20 flex items-center justify-between border-b border-border/60 px-8 py-5">
-        <div className="flex items-center gap-2.5">
-          <div className="grid h-7 w-7 place-items-center rounded-sm border border-border bg-surface-2">
-            <div className="h-2 w-2 rounded-full bg-foreground" />
-          </div>
-          <span className="text-mono text-[13px] font-semibold tracking-[0.2em]">PHANTOM</span>
+    <div className="border-r border-border last:border-r-0 px-5 py-4">
+      <div className="text-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground mb-1">
+        {label}
+      </div>
+      {loading ? (
+        <div className="h-7 w-16 animate-pulse rounded bg-surface" />
+      ) : (
+        <div
+          className="text-mono text-[26px] font-bold tabular-nums leading-none"
+          style={{ color: accent ?? "var(--foreground)" }}
+        >
+          {value}
         </div>
-        <div className="flex items-center gap-8 text-[12px] text-muted-foreground">
-          <span className="text-mono tracking-widest">v1.0 · ENTERPRISE</span>
-          <span className="hidden items-center gap-2 sm:flex">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground/40" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-foreground/80" />
-            </span>
-            System nominal
+      )}
+    </div>
+  );
+}
+
+function EngineStatusRow({ index, name, method, status }: {
+  index: string;
+  name: string;
+  method: string;
+  status: "online" | "computing" | "offline";
+}) {
+  const dot = status === "online" ? "var(--emerald)" : status === "computing" ? "#facc15" : "#E5484D";
+  const label = status === "online" ? "ONLINE" : status === "computing" ? "COMPUTING" : "OFFLINE";
+  return (
+    <tr className="border-b border-border/60 hover:bg-surface/30 transition-colors">
+      <td className="text-mono py-3 pl-4 pr-3 text-[12px] text-muted-foreground">{index}</td>
+      <td className="py-3 pr-4">
+        <div className="text-[14px] font-semibold text-foreground">{name}</div>
+        <div className="text-mono text-[11px] text-muted-foreground">{method}</div>
+      </td>
+      <td className="py-3 pr-4">
+        <div className="flex items-center gap-1.5">
+          <span
+            className="h-1.5 w-1.5 rounded-full"
+            style={{ background: dot, boxShadow: `0 0 5px ${dot}80` }}
+          />
+          <span className="text-mono text-[11px] uppercase tracking-widest" style={{ color: dot }}>
+            {label}
           </span>
         </div>
-      </header>
+      </td>
+    </tr>
+  );
+}
 
-      {/* network background */}
-      <div className="pointer-events-none absolute inset-0 z-0 opacity-60">
-        <NetworkBackground density={55} />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0A0A0A_75%)]" />
+// ─── Main ─────────────────────────────────────────────────────────────────────
+
+function SOCDashboard() {
+  const { data: stats, isLoading: statsLoading } = useStats();
+  const { data: leaderboard, isLoading: lbLoading } = useLeaderboard();
+
+  // All derived from real API data
+  const criticalCount = stats?.risk_breakdown?.["Critical"] ?? 0;
+  const highCount     = stats?.risk_breakdown?.["High"]     ?? 0;
+  const critHighTotal = criticalCount + highCount;
+
+  const threatLevel = useMemo(() => {
+    if (criticalCount >= 1) return "CRITICAL";
+    if (highCount >= 3)     return "HIGH";
+    if (highCount >= 1)     return "ELEVATED";
+    return "NOMINAL";
+  }, [criticalCount, highCount]);
+
+  const threatColor = useMemo(() => {
+    if (threatLevel === "CRITICAL") return "#E5484D";
+    if (threatLevel === "HIGH")     return "#f97316";
+    if (threatLevel === "ELEVATED") return "#facc15";
+    return "var(--emerald)";
+  }, [threatLevel]);
+
+  // Alert feed: top-risk employees from real leaderboard API
+  const alertFeed = useMemo(() =>
+    (leaderboard ?? [])
+      .filter(e => e.risk === "Critical" || e.risk === "High" || e.risk === "Medium")
+      .slice(0, 10),
+    [leaderboard]
+  );
+
+  // Risk breakdown chart from real stats API
+  const chartData = useMemo(() =>
+    RISK_ORDER
+      .filter(r => (stats?.risk_breakdown?.[r] ?? 0) > 0)
+      .map(r => ({ name: r, value: stats!.risk_breakdown![r], fill: RISK_COLORS[r] })),
+    [stats]
+  );
+
+  return (
+    <main className="min-h-[calc(100vh-53px)] bg-background text-foreground">
+
+      {/* ── Top metrics strip ── */}
+      <div className="border-b border-border bg-surface/20">
+        <div className="w-full px-8">
+          <div className="flex flex-wrap items-stretch divide-x divide-border">
+            <MetricCell
+              label="Monitored Employees"
+              value={stats?.total_employees ?? "—"}
+              accent="var(--foreground)"
+              loading={statsLoading}
+            />
+            <MetricCell
+              label="Critical / High Risk"
+              value={statsLoading ? "—" : critHighTotal}
+              accent={critHighTotal > 0 ? "#E5484D" : "var(--emerald)"}
+              loading={statsLoading}
+            />
+            <MetricCell
+              label="Medium Risk"
+              value={stats?.flagged_medium ?? "—"}
+              accent="#facc15"
+              loading={statsLoading}
+            />
+            <MetricCell
+              label="Log Events Analysed"
+              value={statsLoading ? "—" : fmt(stats?.total_events ?? 0)}
+              accent="var(--foreground)"
+              loading={statsLoading}
+            />
+            <div className="px-5 py-4 flex items-center gap-4 ml-auto">
+              {/* Threat level — derived from real stats */}
+              <div className="flex items-center gap-2">
+                <span
+                  className="relative flex h-2.5 w-2.5"
+                  style={{ "--tc": threatColor } as React.CSSProperties}
+                >
+                  <span
+                    className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-50"
+                    style={{ background: threatColor }}
+                  />
+                  <span
+                    className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                    style={{ background: threatColor }}
+                  />
+                </span>
+                <div>
+                  <div className="text-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground leading-none mb-0.5">
+                    Threat Level
+                  </div>
+                  <div
+                    className="text-mono text-[13px] font-bold uppercase tracking-widest leading-none"
+                    style={{ color: threatColor }}
+                  >
+                    {threatLevel}
+                  </div>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-border" />
+              {/* Last scan from real data */}
+              <div>
+                <div className="text-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground leading-none mb-0.5">
+                  Last Scan
+                </div>
+                <div className="text-mono text-[13px] font-medium text-foreground leading-none">
+                  {stats?.last_scan ?? "—"}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* hero */}
-      <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pt-24 pb-20 text-center sm:pt-32">
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-mono mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur"
-        >
-          <span className="h-1 w-1 rounded-full bg-foreground/80" />
-          Banking Fraud Prevention · AI-Powered
-        </motion.div>
+      {/* ── Main layout ── */}
+      <div className="w-full px-8 py-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_400px]">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.05 }}
-          className="font-display text-[68px] font-bold leading-[0.95] tracking-[-0.04em] sm:text-[112px]"
-        >
-          PHANTOM
-        </motion.h1>
+          {/* ── LEFT: Alert feed + Engine status ── */}
+          <div className="space-y-5">
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="mt-6 max-w-2xl text-balance text-lg text-muted-foreground sm:text-xl"
-        >
-          AI that spots suspicious employee activity before money leaves the bank.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-3 text-sm text-muted-foreground/80"
-        >
-          Catches the warning signs <span className="text-foreground">before</span> a fraud happens.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
-        >
-          <Link
-            to="/investigation"
-            className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
-          >
-            Launch Investigation
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <a
-            href="#capabilities"
-            className="inline-flex items-center gap-2 rounded-md border border-border bg-surface/60 px-5 py-2.5 text-sm text-foreground transition hover:bg-surface-2"
-          >
-            See How It Works
-          </a>
-        </motion.div>
-
-        {/* trust strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.55 }}
-          className="text-mono mt-20 grid w-full max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border/60 sm:grid-cols-4"
-        >
-          {[
-            ["₹17.5 Cr", "Average fraud blocked per incident"],
-            ["< 30s", "Risk score updates in real time"],
-            ["0.4%", "False alarm rate"],
-            ["4", "AI detection layers running in parallel"],
-          ].map(([v, l]) => (
-            <div key={l} className="bg-background px-5 py-5 text-left">
-              <div className="text-[22px] font-semibold tracking-tight text-foreground">{v}</div>
-              <div className="mt-1 text-[10.5px] uppercase tracking-widest text-muted-foreground">{l}</div>
-            </div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* capabilities */}
-      <section id="capabilities" className="relative z-10 border-t border-border/60 bg-surface/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="mb-12 flex items-end justify-between gap-6">
-            <div>
-              <div className="text-mono mb-3 text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground">
-                Four Detection Layers
-              </div>
-              <h2 className="max-w-xl text-[34px] font-semibold leading-tight tracking-tight">
-                Four AI models. One clear risk score.
-              </h2>
-            </div>
-            <p className="hidden max-w-sm text-sm text-muted-foreground md:block">
-              Each layer looks at a different signal — access patterns, behavior sequences, team connections, and language. They combine into one live trust score from 0 to 100.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border/60 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { t: "Behavior Sequence Tracker", s: "Pattern-matching AI", d: "Watches the order of actions to spot someone scouting sensitive accounts before a theft." },
-              { t: "Audit Avoidance Detector", s: "Anomaly detection AI", d: "Flags when an employee starts skipping monitored workflows that would normally leave a trail." },
-              { t: "Team Collusion Mapper", s: "Relationship AI", d: "Maps who is accessing what together to uncover coordinated fraud rings inside the bank." },
-              { t: "Language Risk Scanner", s: "Natural language AI", d: "Reads internal notes and tickets for urgency tricks, copy-paste excuses, and policy-bypass language." },
-            ].map((c, i) => (
-              <motion.div
-                key={c.t}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group relative bg-background p-6"
-              >
-                <div className="text-mono mb-4 text-[10.5px] uppercase tracking-widest text-muted-foreground">
-                  0{i + 1} / 04
+            {/* High-Risk Alert Feed */}
+            <div className="rounded-lg border border-border overflow-hidden">
+              <div className="flex items-center justify-between border-b border-border bg-surface/40 px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="h-3.5 w-3.5 text-[color:var(--critical)]" />
+                  <span className="text-[13px] font-semibold text-foreground">
+                    Active Threat Feed
+                  </span>
+                  <span className="text-mono text-[10px] text-muted-foreground ml-1">
+                    — sorted by DITS score · live
+                  </span>
                 </div>
-                <div className="text-base font-semibold text-foreground">{c.t}</div>
-                <div className="text-mono mt-1 text-[11px] tracking-wider text-muted-foreground">{c.s}</div>
-                <p className="mt-6 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-                <div className="mt-8 h-px w-8 bg-foreground/40 transition-all duration-500 group-hover:w-full group-hover:bg-foreground" />
-              </motion.div>
-            ))}
-          </div>
+                <Link
+                  to="/leaderboard"
+                  className="flex items-center gap-1 text-mono text-[11px] text-muted-foreground uppercase tracking-widest hover:text-foreground transition"
+                >
+                  All 50 <ArrowUpRight className="h-3 w-3" />
+                </Link>
+              </div>
 
-          {/* pipeline */}
-          <div className="mt-12 rounded-xl border border-border bg-background p-8">
-            <div className="text-mono mb-6 text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground">
-              How It Works
-            </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-4">
-              {[
-                { i: <Activity className="h-4 w-4" />, t: "Collect Signals", d: "Access logs, session data, internal tickets, and keystroke patterns." },
-                { i: <Network className="h-4 w-4" />, t: "AI Analysis", d: "Four AI layers score risk every 30 seconds in real time." },
-                { i: <ShieldCheck className="h-4 w-4" />, t: "Trust Score", d: "One live 0–100 score shows how risky each employee looks right now." },
-                { i: <ArrowRight className="h-4 w-4" />, t: "Auto Response", d: "Escalates from quiet logging to session freeze when the score drops too low." },
-              ].map((s, i) => (
-                <div key={s.t} className="relative">
-                  <div className="mb-4 inline-flex items-center gap-2 text-mono text-[10.5px] uppercase tracking-widest text-muted-foreground">
-                    <span className="grid h-6 w-6 place-items-center rounded-sm border border-border bg-surface-2 text-foreground">
-                      {s.i}
-                    </span>
-                    Layer {i + 1}
-                  </div>
-                  <div className="text-sm font-semibold text-foreground">{s.t}</div>
-                  <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{s.d}</p>
-                  {i < 3 && (
-                    <div className="pointer-events-none absolute right-0 top-1 hidden h-px w-6 bg-border sm:block" />
+              {/* Table header */}
+              <div className="grid grid-cols-[2.5rem_1fr_0.7fr_0.5fr_4.5rem_5rem] items-center gap-2 border-b border-border/60 bg-surface/20 px-4 py-2">
+                {["#", "Employee", "Role", "Branch", "DITS", "Status"].map(h => (
+                  <div key={h} className="text-mono text-[10px] uppercase tracking-widest text-muted-foreground">{h}</div>
+                ))}
+              </div>
+
+              {lbLoading ? (
+                <div className="space-y-px">
+                  {[...Array(6)].map((_, i) => <SkeletonCard key={i} className="h-14 rounded-none" />)}
+                </div>
+              ) : (
+                <div>
+                  {alertFeed.map((emp, i) => {
+                    const isCrit = emp.risk === "Critical";
+                    const isHigh = emp.risk === "High";
+                    const dotColor = RISK_COLORS[emp.risk] ?? "#737373";
+                    // Use real DITS from API (access_void_score is the primary risk score)
+                    const score = emp.access_void_score.toFixed(0);
+                    return (
+                      <motion.div
+                        key={emp.employee_id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.2, delay: i * 0.03 }}
+                      >
+                        <Link
+                          to="/employee/$id"
+                          params={{ id: emp.employee_id }}
+                          className="grid grid-cols-[2.5rem_1fr_0.7fr_0.5fr_4.5rem_5rem] items-center gap-2 border-b border-border/40 px-4 py-2.5 transition hover:bg-surface/50 last:border-0 group"
+                          style={isCrit ? { background: "rgba(229,72,77,0.025)" } : undefined}
+                        >
+                          <span className="text-mono text-[12px] tabular-nums text-muted-foreground">{i + 1}</span>
+                          <div className="min-w-0">
+                            <div className="text-[14px] font-semibold text-foreground group-hover:text-[color:var(--cyan)] transition-colors truncate">
+                              {emp.name}
+                            </div>
+                            <div className="text-mono text-[11px] text-muted-foreground">{emp.employee_id}</div>
+                          </div>
+                          <div className="text-[12px] text-muted-foreground truncate">{emp.role}</div>
+                          <div className="text-[12px] text-muted-foreground truncate">{emp.branch}</div>
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              className="text-mono text-[15px] font-bold tabular-nums"
+                              style={{ color: dotColor }}
+                            >
+                              {score}
+                            </span>
+                          </div>
+                          <RiskBadge risk={emp.risk} size="xs" />
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
+                  {alertFeed.length === 0 && !lbLoading && (
+                    <div className="flex items-center justify-center gap-2 py-10 text-[13px] text-[color:var(--emerald)]">
+                      <CheckCircle2 className="h-4 w-4" />
+                      No high-risk threats detected
+                    </div>
                   )}
                 </div>
-              ))}
+              )}
+            </div>
+
+            {/* 4-Engine Status Table */}
+            <div className="rounded-lg border border-border overflow-hidden">
+              <div className="flex items-center justify-between border-b border-border bg-surface/40 px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Terminal className="h-3.5 w-3.5 text-[color:var(--cyan)]" />
+                  <span className="text-[13px] font-semibold text-foreground">Detection Engine Matrix</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span
+                    className="h-1.5 w-1.5 rounded-full bg-[color:var(--emerald)]"
+                    style={{ animation: "blink-dot 2s ease-in-out infinite" }}
+                  />
+                  <span className="text-mono text-[11px] uppercase tracking-widest text-[color:var(--emerald)]">
+                    4 / 4 Online
+                  </span>
+                </div>
+              </div>
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-border/60 bg-surface/20">
+                    {["ID", "Engine", "Status"].map(h => (
+                      <th key={h} className="text-mono py-2 px-4 text-left text-[10px] uppercase tracking-widest text-muted-foreground font-normal">
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  <EngineStatusRow index="E-01" name="Temporal Chain Analyser" method="LSTM sequence scoring" status="online" />
+                  <EngineStatusRow index="E-02" name="Access Void Profiler"    method="Isolation Forest (ML)" status="online" />
+                  <EngineStatusRow index="E-03" name="Collusion Graph Engine"  method="Co-access pair detection" status="online" />
+                  <EngineStatusRow index="E-04" name="NLP Justification Scanner" method="IndicBERT language model" status="online" />
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* ── RIGHT: Risk breakdown + quick nav ── */}
+          <div className="space-y-5">
+
+            {/* Risk Distribution */}
+            <div className="rounded-lg border border-border overflow-hidden">
+              <div className="border-b border-border bg-surface/40 px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-3.5 w-3.5 text-muted-foreground" />
+                  <span className="text-[13px] font-semibold text-foreground">Risk Distribution</span>
+                  <span className="text-mono text-[10px] text-muted-foreground ml-1">— real-time</span>
+                </div>
+              </div>
+              <div className="p-4">
+                {statsLoading ? (
+                  <SkeletonCard className="h-32" />
+                ) : (
+                  <>
+                    {/* Stacked bar */}
+                    <div className="mb-4 h-3 overflow-hidden rounded-full bg-surface flex gap-px">
+                      {RISK_ORDER.map(r => {
+                        const count = stats?.risk_breakdown?.[r] ?? 0;
+                        const total = stats?.total_employees ?? 1;
+                        const pct = (count / total) * 100;
+                        if (pct === 0) return null;
+                        return (
+                          <motion.div
+                            key={r}
+                            initial={{ width: 0 }}
+                            animate={{ width: `${pct}%` }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="h-full"
+                            style={{ background: RISK_COLORS[r] }}
+                            title={`${r}: ${count}`}
+                          />
+                        );
+                      })}
+                    </div>
+
+                    {/* Counts */}
+                    <div className="space-y-2">
+                      {RISK_ORDER.map(r => {
+                        const count = stats?.risk_breakdown?.[r] ?? 0;
+                        if (count === 0) return null;
+                        const total = stats?.total_employees ?? 1;
+                        const pct = Math.round((count / total) * 100);
+                        return (
+                          <div key={r} className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <span
+                                className="h-2 w-2 rounded-sm shrink-0"
+                                style={{ background: RISK_COLORS[r] }}
+                              />
+                              <span className="text-[13px] text-muted-foreground">{r}</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div className="w-20 h-1 bg-surface rounded-full overflow-hidden">
+                                <div
+                                  className="h-full rounded-full"
+                                  style={{ width: `${pct}%`, background: RISK_COLORS[r] }}
+                                />
+                              </div>
+                              <span className="text-mono text-[13px] font-bold tabular-nums text-foreground w-4 text-right">
+                                {count}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+
+            {/* Quick access */}
+            <div className="rounded-lg border border-border overflow-hidden">
+              <div className="border-b border-border bg-surface/40 px-4 py-3">
+                <span className="text-[13px] font-semibold text-foreground">Investigation Tools</span>
+              </div>
+              <div className="divide-y divide-border">
+                {[
+                  { to: "/leaderboard",   label: "Employee Leaderboard",  sub: "All 50 employees ranked", icon: Users },
+                  { to: "/investigation", label: "Graph Visualizer",       sub: "3-level drilldown",       icon: Network },
+                  { to: "/simulator",     label: "Live Simulator",         sub: "Test logs & NLP notes",   icon: Zap },
+                ].map(({ to, label, sub, icon: Icon }) => (
+                  <Link
+                    key={to}
+                    to={to}
+                    className="group flex items-center justify-between px-4 py-3 hover:bg-surface/40 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover:text-[color:var(--cyan)] transition-colors" />
+                      <div>
+                        <div className="text-[13px] font-medium text-foreground">{label}</div>
+                        <div className="text-[11px] text-muted-foreground">{sub}</div>
+                      </div>
+                    </div>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* System info */}
+            <div className="rounded-lg border border-border">
+              <div className="border-b border-border bg-surface/40 px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <Activity className="h-3.5 w-3.5 text-muted-foreground" />
+                  <span className="text-[13px] font-semibold text-foreground">System Summary</span>
+                </div>
+              </div>
+              <div className="divide-y divide-border/60">
+                {[
+                  { label: "Dataset",         value: "PSB Bank · 50 Employees" },
+                  { label: "Log Events",       value: statsLoading ? "…" : fmt(stats?.total_events ?? 0) },
+                  { label: "Last Scan Date",   value: stats?.last_scan ?? "—" },
+                  { label: "DITS Formula",     value: "E1×0.30 + E2×0.30 + E3×0.20 + E4×0.20" },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex items-start justify-between gap-4 px-4 py-2.5">
+                    <span className="text-mono text-[11px] text-muted-foreground uppercase tracking-widest shrink-0">
+                      {label}
+                    </span>
+                    <span className="text-mono text-[11px] text-foreground text-right">
+                      {value}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <footer className="relative z-10 border-t border-border/60 px-8 py-6 text-mono text-[11px] text-muted-foreground">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <span>PHANTOM · Enterprise Trust Platform</span>
-          <span className="tracking-widest">CONFIDENTIAL · PROTOTYPE</span>
-        </div>
-      </footer>
+      </div>
     </main>
   );
 }
