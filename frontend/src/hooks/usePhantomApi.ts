@@ -92,6 +92,21 @@ export interface CollusionGraph {
   };
 }
 
+export interface InvestigationReport {
+  employee_id: string;
+  name: string;
+  role: string;
+  branch: string;
+  dits_score: number;
+  risk_level: RiskLevel;
+  report: string;
+  generated_at: string;
+  confidence: number;
+  version: string;
+  used_live_gemini: boolean;
+  key_evidence: string[];
+}
+
 export interface ChainScore {
   employee_id: string;
   date: string;
@@ -326,3 +341,25 @@ export function useEvaluate() {
       }),
   });
 }
+
+export function useInvestigationReport(employeeId: string) {
+  return useQuery<InvestigationReport>({
+    queryKey: ["investigation-report", employeeId],
+    queryFn: () => apiFetch<InvestigationReport>(`/api/report/investigation/${employeeId}`),
+    staleTime: STALE_60S,
+    enabled: !!employeeId,
+    retry: 1,
+  });
+}
+
+export function useGenerateReport() {
+  return useMutation<InvestigationReport, Error, { employee_id: string; force_refresh?: boolean }>({
+    mutationFn: (req) =>
+      apiFetch<InvestigationReport>("/api/report/investigation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(req),
+      }),
+  });
+}
+

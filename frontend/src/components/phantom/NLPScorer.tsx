@@ -67,7 +67,7 @@ export function NLPScorer({ nlpDetails, employeeId }: NLPScorerProps) {
           <div className="text-[14px] font-semibold text-foreground">Detected Evasion Indicators</div>
           <div className="space-y-3">
             {CATEGORIES.map(({ key, label, color }) => {
-              const val = (activeNlp as Record<string, number>)[key] ?? 0;
+              const val = (activeNlp as unknown as Record<string, number>)[key] ?? 0;
               return (
                 <div key={key} className="space-y-1">
                   <div className="flex justify-between text-[12px]">

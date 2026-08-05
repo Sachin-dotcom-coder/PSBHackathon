@@ -32,6 +32,7 @@ PREDICTIONS_DIR     = OUTPUTS_DIR / "predictions"
 # Specific file paths
 EMPLOYEES_CSV       = RAW_DATA_DIR / "employees.csv"
 ACCESS_LOGS_CSV     = RAW_DATA_DIR / "access_logs.csv"
+JUSTIFICATION_NOTES_CSV = RAW_DATA_DIR / "justification_notes.csv"
 PEER_COHORTS_CSV    = PROCESSED_DATA_DIR / "peer_cohorts.csv"
 DAILY_ACTIVITY_CSV  = PROCESSED_DATA_DIR / "daily_activity.csv"
 PREDICTIONS_JSON    = PREDICTIONS_DIR / "predictions.json"

@@ -17,6 +17,7 @@ import { useEmployee, useTimeline, useCollusion } from "@/hooks/usePhantomApi";
 import { RiskBadge } from "@/components/phantom/RiskBadge";
 import { TimelineChart } from "@/components/phantom/TimelineChart";
 import { EngineDetailTabs } from "@/components/phantom/EngineDetailTabs";
+import { AIInvestigationPanel } from "@/components/phantom/AIInvestigationPanel";
 import {
   TrustNumber,
   TrustDial,
@@ -448,6 +449,11 @@ function EmployeePage() {
             <Engine2XAICard reasons={employee.reasons ?? []} />
             {/* Engine 4 NLP Card */}
             <Engine4NLPCard nlp={employee.nlp_details} />
+          </div>
+
+          {/* AI INVESTIGATION REPORT PANEL */}
+          <div className="mt-6">
+            <AIInvestigationPanel employee={employee} timeline={timeline} />
           </div>
 
           {/* Engine detail tabs (full width) */}

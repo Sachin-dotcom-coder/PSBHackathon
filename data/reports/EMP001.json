@@ -1,0 +1,70 @@
+{
+  "employee_id": "EMP001",
+  "name": "Rajesh Kumar",
+  "role": "Branch Manager",
+  "branch": "Ahmedabad",
+  "dits_score": 40,
+  "risk_level": "Medium",
+  "report": "# Executive Summary\n\nRajesh Kumar (EMP001) showed moderate behavioral deviations in oversight module usage. The overall DITS score is **40 (MEDIUM)**, reflecting mild peer cohort variance that warrants routine monitoring.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Rajesh Kumar |\n| **Employee ID** | EMP001 |\n| **Role** | Branch Manager |\n| **Branch** | Ahmedabad |\n| **DITS Score** | **40/100** (MEDIUM) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit Reports access declined by **100%**.\n- Compliance Dashboard absent for **45 days**.\n- Primary activity remains steady.\n\n*Assessment:* Moderate deviation from peer cohort average. Monitor for further trend progression.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 0/100\n- **Policy Bypass Score:** 0/100\n- **Urgency Language Score:** 0/100\n- **Template Reuse Score:** 0/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 41/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 60.0/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 0/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 0/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **Routine Monitoring:** Schedule automated follow-up scan in 14 days.\n2. **Peer Cohort Baseline Check:** Re-evaluate activity against department averages.\n3. **Verify Compliance Submissions:** Confirm monthly compliance checklist submission status.",
+  "generated_at": "05 August 2026",
+  "confidence": 92,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 44 days",
+    "Compliance Dashboard usage reduced by 100%",
+    "Override Logs not accessed for 46 days",
+    "Audit Reports not accessed for 31 consecutive days",
+    "Audit Reports usage dropped 100% (avg 18/day early -> 0/day recently)",
+    "Compliance Dashboard usage dropped 100% (15/day -> 0/day)",
+    "Override Logs usage dropped 100% (8/day -> 0/day)",
+    "Compliance Dashboard absent for 32 consecutive days",
+    "Override Logs absent for 33 consecutive days",
+    "Selective avoidance: core work (Loan Approvals 33/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Rajesh Kumar",
+      "employee_id": "EMP001",
+      "role": "Branch Manager",
+      "branch": "Ahmedabad",
+      "department": "Retail Banking",
+      "tenure": "1 Years"
+    },
+    "scores": {
+      "DITS": 40,
+      "risk_level": "Medium",
+      "engine1_chain": 41,
+      "engine2_avoidance": 60.0,
+      "engine3_collusion": 0,
+      "engine4_language": null
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 45,
+      "override_absent_days": 46,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 0,
+      "urgency": 0,
+      "policy_bypass": 0,
+      "vagueness": 0,
+      "responsibility_shift": 0,
+      "template_reuse": 0
+    },
+    "findings": [
+      "Audit Reports absent for 44 days",
+      "Compliance Dashboard usage reduced by 100%",
+      "Override Logs not accessed for 46 days",
+      "Audit Reports not accessed for 31 consecutive days",
+      "Audit Reports usage dropped 100% (avg 18/day early -> 0/day recently)",
+      "Compliance Dashboard usage dropped 100% (15/day -> 0/day)",
+      "Override Logs usage dropped 100% (8/day -> 0/day)",
+      "Compliance Dashboard absent for 32 consecutive days",
+      "Override Logs absent for 33 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 33/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance"
+    ]
+  }
+}

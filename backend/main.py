@@ -29,6 +29,7 @@ from routes.stats import router as stats_router
 from routes.employees import router as employees_router
 from routes.engines import router as engines_router
 from routes.graph import router as graph_router
+from routes.reports import router as reports_router
 
 
 @asynccontextmanager
@@ -59,6 +60,8 @@ app.include_router(stats_router)
 app.include_router(employees_router)
 app.include_router(engines_router)
 app.include_router(graph_router)
+app.include_router(reports_router)
+
 
 
 if __name__ == "__main__":

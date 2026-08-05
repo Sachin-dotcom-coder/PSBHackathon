@@ -1,0 +1,642 @@
+note_id,employee_id,timestamp,module,action,justification,language,source,override_type,manager,delay_minutes
+NOTE0001,EMP001,2026-01-01 13:15,Loan Approval,Verification,Branch regular audit record update kiya.,Hinglish,Mobile,Emergency,Manager001,1
+NOTE0002,EMP001,2026-01-05 12:32,Override Logs,Approval,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager005,0
+NOTE0003,EMP001,2026-01-10 15:21,Compliance Dashboard,Override,Checked credit score for routine loan application.,English,Portal,VIP Override,Manager002,5
+NOTE0004,EMP001,2026-01-16 13:51,Override Logs,Override,"Sir ne ne bola override applied, ignore checklist.",Hinglish,Internal Dashboard,Manual Approval,Manager006,38
+NOTE0005,EMP001,2026-01-19 10:02,Audit Reports,Override,Customer Signature check karke complete kiya.,Hinglish,Mobile,Manual Approval,Manager008,10
+NOTE0006,EMP001,2026-01-25 11:23,Customer Search,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Compliance Exception,Manager003,7
+NOTE0007,EMP001,2026-01-30 13:59,Loan Approval,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Portal,Manual Approval,Manager007,4
+NOTE0008,EMP001,2026-02-03 12:58,Audit Reports,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,VIP Override,Manager003,4
+NOTE0009,EMP001,2026-02-07 12:47,Customer Search,Waiver,"Quick transfer required, ignore checklist.",English,Mobile,Compliance Exception,Manager003,34
+NOTE0010,EMP001,2026-02-13 10:48,Cash Operations,Waiver,"Sir approved this bypass, do not delay transaction.",English,Internal Dashboard,Emergency,Manager007,26
+NOTE0011,EMP001,2026-02-18 17:16,Cash Operations,Override,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Standard Waiver,Manager005,10
+NOTE0012,EMP001,2026-02-23 10:18,Customer Search,Approval,"Manager sahab approved, bina check approved.",Hinglish,Internal Dashboard,Emergency,Manager005,42
+NOTE0013,EMP001,2026-02-26 11:23,Loan Approval,Verification,Branch regular audit record update kiya.,Hinglish,Mobile,VIP Override,Manager001,1
+NOTE0014,EMP001,2026-03-04 13:15,Loan Approval,Waiver,प्रबंधक के मौखिक आदेश पर प्रक्रिया को छोड़ दिया गया।,Hindi,Portal,Standard Waiver,Manager003,10
+NOTE0015,EMP001,2026-03-09 17:10,Audit Reports,Verification,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager005,27
+NOTE0016,EMP001,2026-03-14 16:57,Loan Approval,Exception,"VIP customer transaction, skip KYC check.",English,Portal,Standard Waiver,Manager009,16
+NOTE0017,EMP001,2026-03-17 09:04,Loan Approval,Exception,Bypassed standard procedure for urgent client requirement.,English,Portal,Standard Waiver,Manager004,19
+NOTE0018,EMP001,2026-03-23 12:34,Audit Reports,Waiver,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Mobile,Compliance Exception,Manager002,8
+NOTE0019,EMP001,2026-03-28 14:27,Cash Operations,Override,प्रबंधक के मौखिक आदेश पर प्रक्रिया को छोड़ दिया गया।,Hindi,Portal,VIP Override,Manager006,8
+NOTE0020,EMP002,2026-01-01 12:34,Override Logs,Approval,Routine documentation generated and filed with compliance.,English,Portal,VIP Override,Manager009,1
+NOTE0021,EMP002,2026-01-09 17:53,Audit Reports,Waiver,"VIP customer transaction, skip KYC check.",English,Mobile,VIP Override,Manager004,27
+NOTE0022,EMP002,2026-01-17 11:24,Compliance Dashboard,Waiver,"Special promoter profile, skip documentation.",English,Internal Dashboard,Standard Waiver,Manager008,11
+NOTE0023,EMP002,2026-01-25 13:13,Loan Approval,Exception,Branch regular audit record update kiya.,Hinglish,Portal,Emergency,Manager008,8
+NOTE0024,EMP002,2026-02-02 09:32,Loan Approval,Approval,Processed regular utility bill payment after signature check.,English,Mobile,Emergency,Manager004,9
+NOTE0025,EMP002,2026-02-10 10:26,Compliance Dashboard,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Manual Approval,Manager004,4
+NOTE0026,EMP002,2026-02-20 11:42,Loan Approval,Waiver,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,1
+NOTE0027,EMP002,2026-02-27 17:16,Audit Reports,Exception,Transaction processed within standard limits and verified.,English,Mobile,Compliance Exception,Manager008,8
+NOTE0028,EMP002,2026-03-08 17:00,Audit Reports,Exception,Customer Signature check karke complete kiya.,Hinglish,Portal,Emergency,Manager009,2
+NOTE0029,EMP002,2026-03-16 13:38,Cash Operations,Exception,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,VIP Override,Manager005,0
+NOTE0030,EMP002,2026-03-23 15:53,Audit Reports,Exception,Checked credit score for routine loan application.,English,Portal,VIP Override,Manager009,6
+NOTE0031,EMP003,2026-01-01 10:04,Customer Search,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Standard Waiver,Manager009,2
+NOTE0032,EMP003,2026-01-08 11:02,Compliance Dashboard,Approval,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager002,5
+NOTE0033,EMP003,2026-01-14 11:59,Override Logs,Override,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Portal,Manual Approval,Manager007,10
+NOTE0034,EMP003,2026-01-20 13:10,Loan Approval,Waiver,"No deviations found, normal processing completed.",English,Portal,Compliance Exception,Manager008,5
+NOTE0035,EMP003,2026-01-27 12:14,Compliance Dashboard,Override,"As advised by regional head, skip checking.",English,Mobile,Manual Approval,Manager009,27
+NOTE0036,EMP003,2026-02-03 09:07,Compliance Dashboard,Override,Processed regular utility bill payment after signature check.,English,Portal,Standard Waiver,Manager007,5
+NOTE0037,EMP003,2026-02-09 15:38,Customer Search,Approval,Customer provided valid PAN card and address proof.,English,Mobile,Emergency,Manager007,0
+NOTE0038,EMP003,2026-02-15 14:27,Customer Search,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Emergency,Manager005,8
+NOTE0039,EMP003,2026-02-22 15:20,Audit Reports,Waiver,Standard operational check completed successfully.,English,Internal Dashboard,VIP Override,Manager003,9
+NOTE0040,EMP003,2026-02-28 15:35,Override Logs,Verification,Verified original KYC documents and address proof.,English,Internal Dashboard,Manual Approval,Manager008,7
+NOTE0041,EMP003,2026-03-07 12:32,Cash Operations,Override,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Mobile,Standard Waiver,Manager006,1
+NOTE0042,EMP003,2026-03-12 13:14,Audit Reports,Waiver,Verified customer ID card and signature for loan document.,English,Internal Dashboard,Emergency,Manager008,6
+NOTE0043,EMP003,2026-03-19 15:31,Loan Approval,Override,Standard cash deposit completed within approved threshold.,English,Mobile,Compliance Exception,Manager003,8
+NOTE0044,EMP003,2026-03-26 09:35,Audit Reports,Waiver,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Standard Waiver,Manager009,9
+NOTE0045,EMP004,2026-01-02 17:27,Cash Operations,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager004,10
+NOTE0046,EMP004,2026-01-09 17:31,Cash Operations,Exception,Transaction processed within standard limits and verified.,English,Portal,Manual Approval,Manager006,5
+NOTE0047,EMP004,2026-01-16 11:09,Loan Approval,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager009,7
+NOTE0048,EMP004,2026-01-24 09:13,Customer Search,Override,Checked credit score for routine loan application.,English,Internal Dashboard,VIP Override,Manager008,0
+NOTE0049,EMP004,2026-02-01 13:48,Customer Search,Verification,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Compliance Exception,Manager008,3
+NOTE0050,EMP004,2026-02-08 15:31,Cash Operations,Approval,"Handled necessary exception, done as verbal order.",English,Mobile,Compliance Exception,Manager009,3
+NOTE0051,EMP004,2026-02-16 09:05,Audit Reports,Override,Updated customer profile with verified Aadhaar proof.,English,Mobile,VIP Override,Manager006,3
+NOTE0052,EMP004,2026-02-23 14:21,Override Logs,Exception,Checked credit score for routine loan application.,English,Portal,VIP Override,Manager001,8
+NOTE0053,EMP004,2026-03-02 14:14,Loan Approval,Approval,Customer Signature check karke complete kiya.,Hinglish,Portal,Emergency,Manager003,3
+NOTE0054,EMP004,2026-03-09 16:42,Cash Operations,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Mobile,Compliance Exception,Manager002,2
+NOTE0055,EMP004,2026-03-18 10:37,Override Logs,Approval,"Handled necessary exception, done as verbal order.",English,Portal,Standard Waiver,Manager004,8
+NOTE0056,EMP004,2026-03-25 10:50,Customer Search,Waiver,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Manual Approval,Manager002,8
+NOTE0057,EMP005,2026-01-01 15:52,Cash Operations,Waiver,Checked account balance before processing transaction.,English,Internal Dashboard,Compliance Exception,Manager007,2
+NOTE0058,EMP005,2026-01-09 17:49,Customer Search,Exception,Standard cash deposit completed within approved threshold.,English,Mobile,Compliance Exception,Manager002,4
+NOTE0059,EMP005,2026-01-17 12:48,Compliance Dashboard,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Manual Approval,Manager003,7
+NOTE0060,EMP005,2026-01-23 14:51,Cash Operations,Exception,Processed regular utility bill payment after signature check.,English,Internal Dashboard,Emergency,Manager009,3
+NOTE0061,EMP005,2026-01-31 12:46,Cash Operations,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,VIP Override,Manager008,0
+NOTE0062,EMP005,2026-02-07 13:14,Customer Search,Exception,Fixed typo in customer name as per signed request form.,English,Mobile,Standard Waiver,Manager009,5
+NOTE0063,EMP005,2026-02-16 17:21,Compliance Dashboard,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Portal,Compliance Exception,Manager006,1
+NOTE0064,EMP005,2026-02-22 12:13,Customer Search,Verification,Processed regular utility bill payment after signature check.,English,Mobile,Emergency,Manager004,4
+NOTE0065,EMP005,2026-03-02 14:11,Compliance Dashboard,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Standard Waiver,Manager005,2
+NOTE0066,EMP005,2026-03-10 10:55,Override Logs,Exception,Immediate bypass of limits instructed by regional office.,English,Portal,Emergency,Manager005,32
+NOTE0067,EMP005,2026-03-17 10:25,Audit Reports,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager002,3
+NOTE0068,EMP005,2026-03-24 17:48,Audit Reports,Verification,Branch regular audit record update kiya.,Hinglish,Mobile,VIP Override,Manager008,4
+NOTE0069,EMP006,2026-01-02 13:36,Audit Reports,Approval,Customer Signature check karke complete kiya.,Hinglish,Mobile,Emergency,Manager003,3
+NOTE0070,EMP006,2026-01-07 17:04,Customer Search,Waiver,Standard cash deposit completed within approved threshold.,English,Mobile,Emergency,Manager004,4
+NOTE0071,EMP006,2026-01-14 16:04,Cash Operations,Approval,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Mobile,Emergency,Manager009,3
+NOTE0072,EMP006,2026-01-20 13:52,Compliance Dashboard,Verification,Checked credit score for routine loan application.,English,Internal Dashboard,Standard Waiver,Manager005,7
+NOTE0073,EMP006,2026-01-26 16:44,Customer Search,Verification,Routine documentation generated and filed with compliance.,English,Mobile,VIP Override,Manager002,9
+NOTE0074,EMP006,2026-02-02 15:47,Audit Reports,Verification,Transaction processed within standard limits and verified.,English,Internal Dashboard,Emergency,Manager005,9
+NOTE0075,EMP006,2026-02-08 11:30,Audit Reports,Verification,Routine documentation generated and filed with compliance.,English,Mobile,VIP Override,Manager002,7
+NOTE0076,EMP006,2026-02-16 15:21,Compliance Dashboard,Waiver,Standard operational check completed successfully.,English,Internal Dashboard,VIP Override,Manager005,10
+NOTE0077,EMP006,2026-02-22 17:02,Loan Approval,Waiver,Checked account balance before processing transaction.,English,Internal Dashboard,Emergency,Manager009,7
+NOTE0078,EMP006,2026-02-28 09:12,Cash Operations,Waiver,Account verification complete ho gaya hai.,Hinglish,Portal,Compliance Exception,Manager005,8
+NOTE0079,EMP006,2026-03-06 13:28,Cash Operations,Verification,Customer Signature check karke complete kiya.,Hinglish,Portal,Compliance Exception,Manager005,8
+NOTE0080,EMP006,2026-03-12 17:26,Override Logs,Override,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager008,4
+NOTE0081,EMP006,2026-03-20 15:53,Customer Search,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,Compliance Exception,Manager009,2
+NOTE0082,EMP006,2026-03-25 13:49,Customer Search,Exception,Customer provided valid PAN card and address proof.,English,Portal,Manual Approval,Manager005,9
+NOTE0083,EMP007,2026-01-02 11:28,Customer Search,Waiver,Completed KYC validation for new account opening.,English,Mobile,Manual Approval,Manager004,3
+NOTE0084,EMP007,2026-01-08 12:54,Override Logs,Waiver,Standard cash deposit completed within approved threshold.,English,Mobile,Compliance Exception,Manager008,0
+NOTE0085,EMP007,2026-01-13 17:37,Override Logs,Override,"No deviations found, normal processing completed.",English,Internal Dashboard,VIP Override,Manager001,2
+NOTE0086,EMP007,2026-01-21 11:04,Customer Search,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Emergency,Manager006,10
+NOTE0087,EMP007,2026-01-27 14:40,Loan Approval,Verification,Branch regular audit record update kiya.,Hinglish,Portal,Compliance Exception,Manager005,3
+NOTE0088,EMP007,2026-02-02 15:06,Override Logs,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager001,0
+NOTE0089,EMP007,2026-02-09 09:18,Customer Search,Waiver,Verified original KYC documents and address proof.,English,Internal Dashboard,Compliance Exception,Manager003,2
+NOTE0090,EMP007,2026-02-15 15:39,Audit Reports,Approval,Branch regular audit record update kiya.,Hinglish,Mobile,Manual Approval,Manager008,4
+NOTE0091,EMP007,2026-02-21 16:57,Override Logs,Exception,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager007,4
+NOTE0092,EMP007,2026-02-28 13:12,Audit Reports,Waiver,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Manual Approval,Manager005,4
+NOTE0093,EMP007,2026-03-06 15:17,Customer Search,Waiver,प्रबंधक के मौखिक आदेश पर प्रक्रिया को छोड़ दिया गया।,Hindi,Mobile,Compliance Exception,Manager006,16
+NOTE0094,EMP007,2026-03-12 13:43,Cash Operations,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Emergency,Manager005,7
+NOTE0095,EMP007,2026-03-19 14:46,Cash Operations,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Compliance Exception,Manager003,8
+NOTE0096,EMP007,2026-03-26 17:32,Override Logs,Exception,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Manual Approval,Manager002,7
+NOTE0097,EMP008,2026-01-01 12:55,Customer Search,Exception,Account verification complete ho gaya hai.,Hinglish,Portal,VIP Override,Manager001,4
+NOTE0098,EMP008,2026-01-10 16:23,Override Logs,Exception,Branch regular audit record update kiya.,Hinglish,Portal,Compliance Exception,Manager008,0
+NOTE0099,EMP008,2026-01-20 12:41,Cash Operations,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Compliance Exception,Manager001,0
+NOTE0100,EMP008,2026-01-29 16:07,Override Logs,Waiver,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Mobile,Standard Waiver,Manager007,9
+NOTE0101,EMP008,2026-02-06 15:41,Compliance Dashboard,Override,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Manual Approval,Manager004,7
+NOTE0102,EMP008,2026-02-16 12:54,Customer Search,Exception,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,VIP Override,Manager005,3
+NOTE0103,EMP008,2026-02-24 16:05,Loan Approval,Override,Branch regular audit record update kiya.,Hinglish,Mobile,Compliance Exception,Manager003,9
+NOTE0104,EMP008,2026-03-04 10:53,Audit Reports,Exception,Verified original KYC documents and address proof.,English,Portal,Standard Waiver,Manager001,4
+NOTE0105,EMP008,2026-03-14 11:34,Loan Approval,Approval,Fixed typo in customer name as per signed request form.,English,Portal,Manual Approval,Manager004,9
+NOTE0106,EMP008,2026-03-24 09:11,Customer Search,Override,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Emergency,Manager008,7
+NOTE0107,EMP009,2026-01-01 16:32,Compliance Dashboard,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Emergency,Manager001,7
+NOTE0108,EMP009,2026-01-09 15:43,Loan Approval,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager003,1
+NOTE0109,EMP009,2026-01-16 13:39,Override Logs,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Manual Approval,Manager008,8
+NOTE0110,EMP009,2026-01-24 10:50,Cash Operations,Approval,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Mobile,VIP Override,Manager004,6
+NOTE0111,EMP009,2026-02-01 16:25,Compliance Dashboard,Exception,Customer query resolved via standard service desk procedure.,English,Mobile,Compliance Exception,Manager008,1
+NOTE0112,EMP009,2026-02-07 10:05,Audit Reports,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Portal,Standard Waiver,Manager009,8
+NOTE0113,EMP009,2026-02-16 10:26,Cash Operations,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager005,5
+NOTE0114,EMP009,2026-02-22 17:13,Compliance Dashboard,Verification,Customer Signature check karke complete kiya.,Hinglish,Mobile,Emergency,Manager005,9
+NOTE0115,EMP009,2026-03-02 15:54,Customer Search,Verification,Branch regular audit record update kiya.,Hinglish,Portal,Standard Waiver,Manager005,0
+NOTE0116,EMP009,2026-03-09 13:44,Loan Approval,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Standard Waiver,Manager007,1
+NOTE0117,EMP009,2026-03-17 09:05,Override Logs,Exception,Customer query resolved via standard service desk procedure.,English,Portal,Manual Approval,Manager005,5
+NOTE0118,EMP009,2026-03-24 09:09,Compliance Dashboard,Waiver,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,VIP Override,Manager008,9
+NOTE0119,EMP010,2026-01-02 13:13,Loan Approval,Exception,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Standard Waiver,Manager008,8
+NOTE0120,EMP010,2026-01-05 09:14,Audit Reports,Exception,Customer Signature check karke complete kiya.,Hinglish,Portal,Compliance Exception,Manager005,4
+NOTE0121,EMP010,2026-01-09 10:00,Override Logs,Verification,Standard operational check completed successfully.,English,Internal Dashboard,Compliance Exception,Manager009,8
+NOTE0122,EMP010,2026-01-12 10:25,Override Logs,Override,Verified customer ID card and signature for loan document.,English,Mobile,Standard Waiver,Manager007,9
+NOTE0123,EMP010,2026-01-16 15:18,Audit Reports,Verification,Checked account balance before processing transaction.,English,Mobile,Manual Approval,Manager002,6
+NOTE0124,EMP010,2026-01-19 12:27,Compliance Dashboard,Exception,Account verification complete ho gaya hai.,Hinglish,Portal,Manual Approval,Manager003,1
+NOTE0125,EMP010,2026-01-22 17:32,Cash Operations,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Portal,Emergency,Manager003,4
+NOTE0126,EMP010,2026-01-26 11:38,Audit Reports,Waiver,Customer Signature check karke complete kiya.,Hinglish,Mobile,Standard Waiver,Manager008,10
+NOTE0127,EMP010,2026-01-30 14:09,Compliance Dashboard,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Portal,Manual Approval,Manager009,1
+NOTE0128,EMP010,2026-02-03 16:28,Loan Approval,Override,"Customer insisted on urgency, controls suspended.",English,Internal Dashboard,Standard Waiver,Manager009,26
+NOTE0129,EMP010,2026-02-07 17:50,Customer Search,Approval,Customer provided valid PAN card and address proof.,English,Mobile,Standard Waiver,Manager008,8
+NOTE0130,EMP010,2026-02-09 09:28,Cash Operations,Override,उच्च अधिकारी के निर्देशानुसार बाईपास स्वीकृत किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager001,17
+NOTE0131,EMP010,2026-02-14 16:33,Compliance Dashboard,Waiver,Told by supervisor to ignore warning and complete transaction.,English,Mobile,Manual Approval,Manager001,42
+NOTE0132,EMP010,2026-02-17 10:21,Compliance Dashboard,Verification,"Manager sahab approved, bina check approved.",Hinglish,Portal,Manual Approval,Manager002,39
+NOTE0133,EMP010,2026-02-20 14:19,Audit Reports,Verification,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Emergency,Manager005,8
+NOTE0134,EMP010,2026-02-25 14:52,Cash Operations,Waiver,"Sir ne ne bola override applied, ignore checklist.",Hinglish,Internal Dashboard,Manual Approval,Manager001,25
+NOTE0135,EMP010,2026-02-28 11:13,Audit Reports,Approval,"Sir ne kaha bypass kar do, emergency case hai.",Hinglish,Portal,Emergency,Manager005,8
+NOTE0136,EMP010,2026-03-03 14:56,Audit Reports,Approval,"Handled necessary exception, done as verbal order.",English,Portal,Standard Waiver,Manager003,30
+NOTE0137,EMP010,2026-03-06 15:23,Customer Search,Exception,"Special promoter profile, skip documentation.",English,Internal Dashboard,VIP Override,Manager004,36
+NOTE0138,EMP010,2026-03-10 13:51,Compliance Dashboard,Verification,ग्राहक की तत्काल आवश्यकता के कारण मानक जांच छोड़ दी गई।,Hindi,Mobile,VIP Override,Manager005,26
+NOTE0139,EMP010,2026-03-15 11:52,Loan Approval,Waiver,"Manager sahab approved, bina check approved.",Hinglish,Mobile,Standard Waiver,Manager002,35
+NOTE0140,EMP010,2026-03-17 13:05,Override Logs,Override,Standard procedure waived due to client emergency.,English,Portal,VIP Override,Manager006,3
+NOTE0141,EMP010,2026-03-22 09:25,Compliance Dashboard,Approval,Bypassed standard procedure for urgent client requirement.,English,Portal,Manual Approval,Manager002,43
+NOTE0142,EMP010,2026-03-25 11:08,Cash Operations,Approval,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Internal Dashboard,VIP Override,Manager008,41
+NOTE0143,EMP010,2026-03-28 10:01,Loan Approval,Exception,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Portal,Manual Approval,Manager002,5
+NOTE0144,EMP011,2026-01-02 16:04,Customer Search,Override,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Standard Waiver,Manager004,2
+NOTE0145,EMP011,2026-01-10 15:00,Audit Reports,Override,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Manual Approval,Manager002,8
+NOTE0146,EMP011,2026-01-17 15:55,Compliance Dashboard,Override,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Emergency,Manager006,3
+NOTE0147,EMP011,2026-01-25 14:08,Cash Operations,Waiver,"Boss order to skip verification, client ne bola jaldi hai.",Hinglish,Internal Dashboard,VIP Override,Manager003,10
+NOTE0148,EMP011,2026-02-02 16:02,Loan Approval,Exception,Verified original KYC documents and address proof.,English,Mobile,Standard Waiver,Manager007,8
+NOTE0149,EMP011,2026-02-11 13:02,Loan Approval,Exception,Checked account balance before processing transaction.,English,Mobile,Emergency,Manager006,6
+NOTE0150,EMP011,2026-02-20 16:57,Override Logs,Waiver,Standard operational check completed successfully.,English,Mobile,Standard Waiver,Manager005,1
+NOTE0151,EMP011,2026-02-28 10:27,Compliance Dashboard,Exception,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,Emergency,Manager006,10
+NOTE0152,EMP011,2026-03-08 13:28,Override Logs,Exception,Standard cash deposit completed within approved threshold.,English,Mobile,Emergency,Manager006,9
+NOTE0153,EMP011,2026-03-16 13:40,Cash Operations,Waiver,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,Standard Waiver,Manager003,0
+NOTE0154,EMP011,2026-03-23 16:02,Compliance Dashboard,Exception,Fixed typo in customer name as per signed request form.,English,Mobile,Standard Waiver,Manager001,9
+NOTE0155,EMP012,2026-01-02 14:23,Customer Search,Exception,Standard operational check completed successfully.,English,Mobile,Manual Approval,Manager005,3
+NOTE0156,EMP012,2026-01-09 09:47,Loan Approval,Exception,Branch regular audit record update kiya.,Hinglish,Mobile,VIP Override,Manager004,9
+NOTE0157,EMP012,2026-01-18 16:12,Audit Reports,Waiver,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Portal,Manual Approval,Manager006,1
+NOTE0158,EMP012,2026-01-26 13:54,Compliance Dashboard,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Emergency,Manager004,2
+NOTE0159,EMP012,2026-02-02 16:01,Customer Search,Approval,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Emergency,Manager002,4
+NOTE0160,EMP012,2026-02-11 16:33,Loan Approval,Approval,Processed regular utility bill payment after signature check.,English,Mobile,Emergency,Manager008,7
+NOTE0161,EMP012,2026-02-20 11:56,Audit Reports,Approval,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager001,1
+NOTE0162,EMP012,2026-02-27 13:10,Compliance Dashboard,Verification,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Mobile,Emergency,Manager005,3
+NOTE0163,EMP012,2026-03-08 11:40,Cash Operations,Approval,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager003,2
+NOTE0164,EMP012,2026-03-16 09:52,Customer Search,Exception,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Compliance Exception,Manager007,9
+NOTE0165,EMP012,2026-03-23 16:56,Override Logs,Approval,Routine documentation generated and filed with compliance.,English,Internal Dashboard,VIP Override,Manager005,7
+NOTE0166,EMP013,2026-01-01 11:28,Customer Search,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Manual Approval,Manager006,6
+NOTE0167,EMP013,2026-01-10 14:32,Loan Approval,Exception,Updated customer profile with verified Aadhaar proof.,English,Mobile,Compliance Exception,Manager003,1
+NOTE0168,EMP013,2026-01-19 13:24,Audit Reports,Exception,"No deviations found, normal processing completed.",English,Internal Dashboard,Manual Approval,Manager004,2
+NOTE0169,EMP013,2026-01-29 17:29,Loan Approval,Waiver,Verified customer ID card and signature for loan document.,English,Internal Dashboard,VIP Override,Manager004,3
+NOTE0170,EMP013,2026-02-07 09:03,Compliance Dashboard,Verification,Account verification complete ho gaya hai.,Hinglish,Portal,Emergency,Manager007,2
+NOTE0171,EMP013,2026-02-16 14:48,Customer Search,Verification,Verified customer ID card and signature for loan document.,English,Portal,Manual Approval,Manager009,4
+NOTE0172,EMP013,2026-02-24 15:32,Cash Operations,Verification,Branch regular audit record update kiya.,Hinglish,Portal,Compliance Exception,Manager002,6
+NOTE0173,EMP013,2026-03-05 14:35,Customer Search,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Standard Waiver,Manager001,0
+NOTE0174,EMP013,2026-03-14 11:45,Audit Reports,Verification,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Compliance Exception,Manager006,9
+NOTE0175,EMP013,2026-03-24 11:25,Customer Search,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Standard Waiver,Manager009,7
+NOTE0176,EMP014,2026-01-02 16:52,Override Logs,Verification,Urgent request from branch manager to waive verification.,English,Mobile,Emergency,Manager008,18
+NOTE0177,EMP014,2026-01-07 09:37,Override Logs,Approval,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Compliance Exception,Manager001,9
+NOTE0178,EMP014,2026-01-13 12:01,Cash Operations,Approval,Customer query resolved via standard service desk procedure.,English,Mobile,Standard Waiver,Manager008,0
+NOTE0179,EMP014,2026-01-20 17:13,Customer Search,Waiver,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Mobile,Compliance Exception,Manager008,8
+NOTE0180,EMP014,2026-01-27 17:22,Customer Search,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Compliance Exception,Manager005,8
+NOTE0181,EMP014,2026-02-03 12:19,Compliance Dashboard,Waiver,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager005,4
+NOTE0182,EMP014,2026-02-08 17:24,Audit Reports,Exception,Checked account balance before processing transaction.,English,Portal,Manual Approval,Manager002,5
+NOTE0183,EMP014,2026-02-16 13:47,Compliance Dashboard,Verification,Completed KYC validation for new account opening.,English,Internal Dashboard,Manual Approval,Manager003,1
+NOTE0184,EMP014,2026-02-21 12:03,Loan Approval,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager008,1
+NOTE0185,EMP014,2026-02-27 09:35,Override Logs,Waiver,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Compliance Exception,Manager005,5
+NOTE0186,EMP014,2026-03-07 09:58,Customer Search,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,VIP Override,Manager003,0
+NOTE0187,EMP014,2026-03-13 16:11,Loan Approval,Override,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Standard Waiver,Manager002,5
+NOTE0188,EMP014,2026-03-20 16:41,Customer Search,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Compliance Exception,Manager002,5
+NOTE0189,EMP014,2026-03-25 16:41,Compliance Dashboard,Exception,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Compliance Exception,Manager003,9
+NOTE0190,EMP015,2026-01-02 17:20,Audit Reports,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Compliance Exception,Manager001,4
+NOTE0191,EMP015,2026-01-05 12:28,Customer Search,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Manual Approval,Manager006,3
+NOTE0192,EMP015,2026-01-08 10:29,Cash Operations,Exception,Completed KYC validation for new account opening.,English,Internal Dashboard,Emergency,Manager005,5
+NOTE0193,EMP015,2026-01-12 12:08,Compliance Dashboard,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager008,8
+NOTE0194,EMP015,2026-01-16 12:43,Customer Search,Waiver,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Manual Approval,Manager002,9
+NOTE0195,EMP015,2026-01-19 09:53,Customer Search,Approval,Branch regular audit record update kiya.,Hinglish,Portal,Manual Approval,Manager009,7
+NOTE0196,EMP015,2026-01-23 12:45,Override Logs,Override,Completed KYC validation for new account opening.,English,Mobile,Compliance Exception,Manager009,6
+NOTE0197,EMP015,2026-01-28 09:35,Override Logs,Exception,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Portal,Compliance Exception,Manager002,0
+NOTE0198,EMP015,2026-02-01 14:44,Override Logs,Override,प्रबंधक के मौखिक आदेश पर प्रक्रिया को छोड़ दिया गया।,Hindi,Mobile,VIP Override,Manager003,10
+NOTE0199,EMP015,2026-02-04 14:57,Override Logs,Override,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Internal Dashboard,Standard Waiver,Manager003,43
+NOTE0200,EMP015,2026-02-08 10:11,Cash Operations,Approval,Standard operational check completed successfully.,English,Portal,Emergency,Manager005,7
+NOTE0201,EMP015,2026-02-12 17:24,Audit Reports,Exception,Checked account balance before processing transaction.,English,Portal,Emergency,Manager001,10
+NOTE0202,EMP015,2026-02-16 09:15,Override Logs,Verification,Verbal approval from supervisor to bypass limit.,English,Internal Dashboard,Emergency,Manager004,4
+NOTE0203,EMP015,2026-02-19 16:14,Audit Reports,Verification,"Procedure baad mein check, client urgent hai.",Hinglish,Mobile,Compliance Exception,Manager006,38
+NOTE0204,EMP015,2026-02-23 12:19,Audit Reports,Waiver,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Mobile,Manual Approval,Manager001,8
+NOTE0205,EMP015,2026-02-26 15:35,Customer Search,Exception,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Internal Dashboard,VIP Override,Manager007,11
+NOTE0206,EMP015,2026-03-03 15:11,Compliance Dashboard,Approval,"Sir ne kaha bypass kar do, emergency case hai.",Hinglish,Mobile,Emergency,Manager009,28
+NOTE0207,EMP015,2026-03-06 17:33,Compliance Dashboard,Override,"Emergency cash withdrawal requested, bypass validation.",English,Mobile,Manual Approval,Manager002,36
+NOTE0208,EMP015,2026-03-09 09:17,Loan Approval,Approval,"Procedure baad mein check, client urgent hai.",Hinglish,Internal Dashboard,Standard Waiver,Manager004,32
+NOTE0209,EMP015,2026-03-13 14:19,Audit Reports,Override,Customer provided valid PAN card and address proof.,English,Internal Dashboard,VIP Override,Manager004,9
+NOTE0210,EMP015,2026-03-17 15:58,Override Logs,Waiver,"Customer insisted on urgency, controls suspended.",English,Internal Dashboard,Manual Approval,Manager005,18
+NOTE0211,EMP015,2026-03-21 17:56,Compliance Dashboard,Approval,Immediate bypass of limits instructed by regional office.,English,Mobile,Manual Approval,Manager007,4
+NOTE0212,EMP015,2026-03-24 11:01,Compliance Dashboard,Approval,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Portal,Manual Approval,Manager004,26
+NOTE0213,EMP015,2026-03-28 16:35,Override Logs,Waiver,"Manager sahab approved, bina check approved.",Hinglish,Mobile,Compliance Exception,Manager006,12
+NOTE0214,EMP016,2026-01-02 11:58,Customer Search,Override,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Portal,Emergency,Manager001,6
+NOTE0215,EMP016,2026-01-09 12:04,Override Logs,Exception,Completed KYC validation for new account opening.,English,Portal,Standard Waiver,Manager008,10
+NOTE0216,EMP016,2026-01-18 09:00,Customer Search,Exception,Verified customer ID card and signature for loan document.,English,Internal Dashboard,Manual Approval,Manager001,8
+NOTE0217,EMP016,2026-01-26 11:06,Audit Reports,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Manual Approval,Manager006,4
+NOTE0218,EMP016,2026-02-03 10:23,Cash Operations,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Emergency,Manager001,1
+NOTE0219,EMP016,2026-02-11 15:24,Cash Operations,Approval,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager007,10
+NOTE0220,EMP016,2026-02-20 10:57,Cash Operations,Verification,Verified original KYC documents and address proof.,English,Mobile,Manual Approval,Manager001,1
+NOTE0221,EMP016,2026-02-28 17:36,Compliance Dashboard,Override,"No deviations found, normal processing completed.",English,Portal,Standard Waiver,Manager003,6
+NOTE0222,EMP016,2026-03-07 13:10,Cash Operations,Verification,Account verification complete ho gaya hai.,Hinglish,Mobile,VIP Override,Manager003,1
+NOTE0223,EMP016,2026-03-16 09:06,Customer Search,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,VIP Override,Manager006,0
+NOTE0224,EMP016,2026-03-24 16:31,Override Logs,Approval,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Standard Waiver,Manager007,1
+NOTE0225,EMP017,2026-01-02 12:45,Cash Operations,Approval,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,VIP Override,Manager006,5
+NOTE0226,EMP017,2026-01-07 10:00,Compliance Dashboard,Override,Checked credit score for routine loan application.,English,Portal,Emergency,Manager003,6
+NOTE0227,EMP017,2026-01-14 17:35,Compliance Dashboard,Verification,Transaction processed within standard limits and verified.,English,Portal,Standard Waiver,Manager006,6
+NOTE0228,EMP017,2026-01-20 13:26,Customer Search,Approval,Customer provided valid PAN card and address proof.,English,Internal Dashboard,Standard Waiver,Manager003,10
+NOTE0229,EMP017,2026-01-27 11:08,Loan Approval,Approval,Standard operational check completed successfully.,English,Mobile,Manual Approval,Manager007,4
+NOTE0230,EMP017,2026-02-03 10:23,Override Logs,Verification,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Compliance Exception,Manager008,1
+NOTE0231,EMP017,2026-02-08 13:00,Override Logs,Exception,Processed regular utility bill payment after signature check.,English,Mobile,Manual Approval,Manager007,10
+NOTE0232,EMP017,2026-02-15 13:20,Compliance Dashboard,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,Manual Approval,Manager005,10
+NOTE0233,EMP017,2026-02-22 12:20,Compliance Dashboard,Override,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Compliance Exception,Manager009,2
+NOTE0234,EMP017,2026-02-27 16:45,Override Logs,Waiver,Customer Signature check karke complete kiya.,Hinglish,Portal,Manual Approval,Manager004,4
+NOTE0235,EMP017,2026-03-06 15:50,Override Logs,Verification,Processed regular utility bill payment after signature check.,English,Mobile,Standard Waiver,Manager009,6
+NOTE0236,EMP017,2026-03-12 14:44,Loan Approval,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager003,10
+NOTE0237,EMP017,2026-03-19 15:48,Loan Approval,Override,Customer Signature check karke complete kiya.,Hinglish,Mobile,Compliance Exception,Manager009,8
+NOTE0238,EMP017,2026-03-25 16:23,Cash Operations,Verification,Branch regular audit record update kiya.,Hinglish,Portal,Manual Approval,Manager001,7
+NOTE0239,EMP018,2026-01-02 15:58,Audit Reports,Exception,Standard cash deposit completed within approved threshold.,English,Mobile,Manual Approval,Manager008,3
+NOTE0240,EMP018,2026-01-11 14:30,Compliance Dashboard,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Emergency,Manager002,0
+NOTE0241,EMP018,2026-01-20 10:43,Customer Search,Approval,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Compliance Exception,Manager006,8
+NOTE0242,EMP018,2026-01-29 16:14,Cash Operations,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Emergency,Manager004,7
+NOTE0243,EMP018,2026-02-07 15:00,Cash Operations,Override,Checked credit score for routine loan application.,English,Internal Dashboard,Emergency,Manager009,2
+NOTE0244,EMP018,2026-02-16 14:12,Override Logs,Verification,"No deviations found, normal processing completed.",English,Internal Dashboard,Manual Approval,Manager007,9
+NOTE0245,EMP018,2026-02-25 10:22,Cash Operations,Exception,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,10
+NOTE0246,EMP018,2026-03-04 14:07,Cash Operations,Approval,Checked account balance before processing transaction.,English,Internal Dashboard,VIP Override,Manager007,9
+NOTE0247,EMP018,2026-03-14 15:27,Customer Search,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager003,2
+NOTE0248,EMP018,2026-03-24 16:39,Override Logs,Approval,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager009,8
+NOTE0249,EMP019,2026-01-02 16:26,Loan Approval,Verification,Standard operational check completed successfully.,English,Portal,Compliance Exception,Manager005,0
+NOTE0250,EMP019,2026-01-08 12:34,Cash Operations,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,9
+NOTE0251,EMP019,2026-01-14 13:49,Loan Approval,Waiver,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager007,1
+NOTE0252,EMP019,2026-01-21 13:55,Loan Approval,Waiver,Checked account balance before processing transaction.,English,Portal,Compliance Exception,Manager004,9
+NOTE0253,EMP019,2026-01-29 15:10,Loan Approval,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Standard Waiver,Manager005,9
+NOTE0254,EMP019,2026-02-04 14:45,Cash Operations,Override,Branch regular audit record update kiya.,Hinglish,Portal,VIP Override,Manager001,4
+NOTE0255,EMP019,2026-02-11 11:15,Cash Operations,Waiver,Verified original KYC documents and address proof.,English,Mobile,Compliance Exception,Manager005,10
+NOTE0256,EMP019,2026-02-19 15:28,Override Logs,Verification,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager006,7
+NOTE0257,EMP019,2026-02-26 14:37,Cash Operations,Waiver,"Sir ne ne bola override applied, ignore checklist.",Hinglish,Internal Dashboard,Manual Approval,Manager002,36
+NOTE0258,EMP019,2026-03-05 12:27,Compliance Dashboard,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Standard Waiver,Manager003,9
+NOTE0259,EMP019,2026-03-12 14:57,Cash Operations,Waiver,Transaction processed within standard limits and verified.,English,Portal,Emergency,Manager003,7
+NOTE0260,EMP019,2026-03-19 09:27,Cash Operations,Exception,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Manual Approval,Manager002,10
+NOTE0261,EMP019,2026-03-26 13:05,Loan Approval,Waiver,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Manual Approval,Manager004,6
+NOTE0262,EMP020,2026-01-01 09:13,Customer Search,Waiver,Verified original KYC documents and address proof.,English,Portal,Emergency,Manager006,1
+NOTE0263,EMP020,2026-01-11 11:30,Loan Approval,Override,Standard cash deposit completed within approved threshold.,English,Mobile,Manual Approval,Manager005,2
+NOTE0264,EMP020,2026-01-20 11:41,Customer Search,Override,Completed KYC validation for new account opening.,English,Internal Dashboard,Compliance Exception,Manager008,5
+NOTE0265,EMP020,2026-01-28 11:58,Loan Approval,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Emergency,Manager007,5
+NOTE0266,EMP020,2026-02-07 14:50,Audit Reports,Verification,Transaction processed within standard limits and verified.,English,Internal Dashboard,Standard Waiver,Manager005,0
+NOTE0267,EMP020,2026-02-16 12:33,Compliance Dashboard,Override,Customer query resolved via standard service desk procedure.,English,Portal,VIP Override,Manager007,1
+NOTE0268,EMP020,2026-02-24 16:40,Compliance Dashboard,Exception,Customer Signature check karke complete kiya.,Hinglish,Portal,VIP Override,Manager007,5
+NOTE0269,EMP020,2026-03-04 16:49,Compliance Dashboard,Approval,Customer Signature check karke complete kiya.,Hinglish,Portal,Emergency,Manager007,8
+NOTE0270,EMP020,2026-03-15 17:49,Cash Operations,Verification,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager003,4
+NOTE0271,EMP020,2026-03-23 13:05,Audit Reports,Verification,Checked credit score for routine loan application.,English,Mobile,VIP Override,Manager002,4
+NOTE0272,EMP021,2026-01-01 09:15,Customer Search,Verification,Updated customer profile with verified Aadhaar proof.,English,Portal,Manual Approval,Manager003,1
+NOTE0273,EMP021,2026-01-07 11:44,Customer Search,Verification,"Client ne bola jaldi hai, sab thik hai override.",Hinglish,Internal Dashboard,Manual Approval,Manager003,25
+NOTE0274,EMP021,2026-01-14 13:46,Compliance Dashboard,Waiver,Customer Signature check karke complete kiya.,Hinglish,Mobile,Standard Waiver,Manager002,4
+NOTE0275,EMP021,2026-01-21 16:29,Customer Search,Approval,"No deviations found, normal processing completed.",English,Mobile,Compliance Exception,Manager005,1
+NOTE0276,EMP021,2026-01-28 12:47,Loan Approval,Approval,"No deviations found, normal processing completed.",English,Portal,VIP Override,Manager006,6
+NOTE0277,EMP021,2026-02-04 11:59,Cash Operations,Waiver,Checked credit score for routine loan application.,English,Portal,Manual Approval,Manager004,6
+NOTE0278,EMP021,2026-02-12 13:52,Cash Operations,Override,Completed KYC validation for new account opening.,English,Portal,Compliance Exception,Manager009,0
+NOTE0279,EMP021,2026-02-19 10:56,Compliance Dashboard,Exception,"No deviations found, normal processing completed.",English,Portal,Standard Waiver,Manager008,0
+NOTE0280,EMP021,2026-02-26 12:18,Audit Reports,Waiver,Processed regular utility bill payment after signature check.,English,Mobile,Standard Waiver,Manager008,3
+NOTE0281,EMP021,2026-03-04 11:00,Compliance Dashboard,Override,Completed KYC validation for new account opening.,English,Mobile,Emergency,Manager007,4
+NOTE0282,EMP021,2026-03-11 12:33,Audit Reports,Exception,Verified customer ID card and signature for loan document.,English,Portal,Emergency,Manager004,8
+NOTE0283,EMP021,2026-03-19 14:29,Customer Search,Approval,Transaction processed within standard limits and verified.,English,Internal Dashboard,VIP Override,Manager002,9
+NOTE0284,EMP021,2026-03-25 15:42,Compliance Dashboard,Waiver,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Manual Approval,Manager006,7
+NOTE0285,EMP022,2026-01-01 10:12,Audit Reports,Override,Customer Signature check karke complete kiya.,Hinglish,Portal,VIP Override,Manager008,5
+NOTE0286,EMP022,2026-01-09 10:34,Compliance Dashboard,Waiver,Account verification complete ho gaya hai.,Hinglish,Mobile,Emergency,Manager002,2
+NOTE0287,EMP022,2026-01-17 09:13,Cash Operations,Approval,Transaction processed within standard limits and verified.,English,Mobile,VIP Override,Manager009,0
+NOTE0288,EMP022,2026-01-24 13:52,Override Logs,Verification,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Standard Waiver,Manager004,1
+NOTE0289,EMP022,2026-02-01 10:51,Audit Reports,Approval,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager006,10
+NOTE0290,EMP022,2026-02-07 13:58,Audit Reports,Waiver,Transaction processed within standard limits and verified.,English,Portal,Emergency,Manager006,1
+NOTE0291,EMP022,2026-02-15 16:03,Override Logs,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,VIP Override,Manager003,5
+NOTE0292,EMP022,2026-02-22 11:17,Customer Search,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager005,7
+NOTE0293,EMP022,2026-03-03 17:30,Override Logs,Approval,Standard operational check completed successfully.,English,Internal Dashboard,Standard Waiver,Manager004,10
+NOTE0294,EMP022,2026-03-09 15:50,Compliance Dashboard,Verification,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Manual Approval,Manager007,4
+NOTE0295,EMP022,2026-03-17 09:20,Compliance Dashboard,Override,Checked credit score for routine loan application.,English,Mobile,Standard Waiver,Manager006,9
+NOTE0296,EMP022,2026-03-24 11:06,Cash Operations,Override,Completed KYC validation for new account opening.,English,Portal,Standard Waiver,Manager007,5
+NOTE0297,EMP023,2026-01-01 12:37,Customer Search,Override,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Manual Approval,Manager003,9
+NOTE0298,EMP023,2026-01-05 16:34,Loan Approval,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Compliance Exception,Manager001,8
+NOTE0299,EMP023,2026-01-11 09:21,Compliance Dashboard,Approval,Standard operational check completed successfully.,English,Mobile,Emergency,Manager001,2
+NOTE0300,EMP023,2026-01-14 10:54,Compliance Dashboard,Waiver,Transaction processed within standard limits and verified.,English,Internal Dashboard,Emergency,Manager006,4
+NOTE0301,EMP023,2026-01-20 11:10,Override Logs,Exception,Fixed typo in customer name as per signed request form.,English,Portal,Standard Waiver,Manager006,3
+NOTE0302,EMP023,2026-01-23 15:19,Cash Operations,Override,Standard operational check completed successfully.,English,Internal Dashboard,Standard Waiver,Manager007,9
+NOTE0303,EMP023,2026-01-28 11:38,Audit Reports,Verification,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,VIP Override,Manager003,5
+NOTE0304,EMP023,2026-02-01 12:22,Loan Approval,Exception,Customer provided valid PAN card and address proof.,English,Mobile,Emergency,Manager005,3
+NOTE0305,EMP023,2026-02-06 10:22,Loan Approval,Waiver,"Manager approved override, skip standard checks for client.",English,Mobile,VIP Override,Manager003,28
+NOTE0306,EMP023,2026-02-11 15:22,Customer Search,Approval,Immediate bypass of limits instructed by regional office.,English,Portal,VIP Override,Manager002,4
+NOTE0307,EMP023,2026-02-16 09:20,Audit Reports,Waiver,"As advised by regional head, skip checking.",English,Portal,Emergency,Manager009,7
+NOTE0308,EMP023,2026-02-20 16:45,Customer Search,Waiver,ग्राहक की तत्काल आवश्यकता के कारण मानक जांच छोड़ दी गई।,Hindi,Portal,Emergency,Manager002,23
+NOTE0309,EMP023,2026-02-24 12:26,Compliance Dashboard,Exception,Branch regular audit record update kiya.,Hinglish,Mobile,Compliance Exception,Manager002,0
+NOTE0310,EMP023,2026-03-01 17:53,Override Logs,Override,"Manager approved override, skip standard checks for client.",English,Mobile,Standard Waiver,Manager008,14
+NOTE0311,EMP023,2026-03-04 09:13,Override Logs,Override,Bypassed standard procedure for urgent client requirement.,English,Mobile,VIP Override,Manager008,33
+NOTE0312,EMP023,2026-03-10 10:41,Compliance Dashboard,Approval,"Handled necessary exception, done as verbal order.",English,Mobile,Emergency,Manager005,30
+NOTE0313,EMP023,2026-03-15 13:14,Cash Operations,Override,"Boss order to skip verification, client ne bola jaldi hai.",Hinglish,Portal,Manual Approval,Manager009,28
+NOTE0314,EMP023,2026-03-18 17:03,Customer Search,Waiver,आपातकालीन मामले के कारण सत्यापन को स्थगित किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager008,21
+NOTE0315,EMP023,2026-03-23 15:57,Customer Search,Verification,Processed regular utility bill payment after signature check.,English,Internal Dashboard,Standard Waiver,Manager003,1
+NOTE0316,EMP023,2026-03-28 11:10,Loan Approval,Waiver,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Portal,VIP Override,Manager004,10
+NOTE0317,EMP024,2026-01-02 14:58,Override Logs,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,Standard Waiver,Manager006,4
+NOTE0318,EMP024,2026-01-10 09:50,Loan Approval,Waiver,Account verification complete ho gaya hai.,Hinglish,Portal,Compliance Exception,Manager002,1
+NOTE0319,EMP024,2026-01-17 13:55,Compliance Dashboard,Waiver,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,VIP Override,Manager008,0
+NOTE0320,EMP024,2026-01-25 13:25,Loan Approval,Waiver,Account verification complete ho gaya hai.,Hinglish,Mobile,Compliance Exception,Manager001,7
+NOTE0321,EMP024,2026-02-03 14:01,Compliance Dashboard,Waiver,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Emergency,Manager004,2
+NOTE0322,EMP024,2026-02-11 16:49,Customer Search,Override,Customer query resolved via standard service desk procedure.,English,Portal,VIP Override,Manager004,6
+NOTE0323,EMP024,2026-02-20 17:55,Audit Reports,Override,Checked credit score for routine loan application.,English,Mobile,Standard Waiver,Manager007,2
+NOTE0324,EMP024,2026-02-27 11:12,Audit Reports,Override,Verified customer ID card and signature for loan document.,English,Mobile,Emergency,Manager006,3
+NOTE0325,EMP024,2026-03-08 14:52,Loan Approval,Override,Customer provided valid PAN card and address proof.,English,Portal,Manual Approval,Manager008,9
+NOTE0326,EMP024,2026-03-16 11:55,Audit Reports,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Emergency,Manager005,0
+NOTE0327,EMP024,2026-03-24 09:10,Audit Reports,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Compliance Exception,Manager005,10
+NOTE0328,EMP025,2026-01-01 09:30,Loan Approval,Approval,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager005,10
+NOTE0329,EMP025,2026-01-08 15:57,Audit Reports,Waiver,Routine documentation generated and filed with compliance.,English,Mobile,Standard Waiver,Manager007,9
+NOTE0330,EMP025,2026-01-14 09:32,Customer Search,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Manual Approval,Manager005,10
+NOTE0331,EMP025,2026-01-21 16:04,Compliance Dashboard,Exception,Checked account balance before processing transaction.,English,Internal Dashboard,Manual Approval,Manager004,2
+NOTE0332,EMP025,2026-01-28 09:51,Cash Operations,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Compliance Exception,Manager001,10
+NOTE0333,EMP025,2026-02-05 13:16,Loan Approval,Verification,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Standard Waiver,Manager004,5
+NOTE0334,EMP025,2026-02-11 17:40,Customer Search,Exception,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Standard Waiver,Manager003,4
+NOTE0335,EMP025,2026-02-18 16:08,Audit Reports,Exception,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Emergency,Manager004,5
+NOTE0336,EMP025,2026-02-25 13:26,Customer Search,Exception,Routine documentation generated and filed with compliance.,English,Mobile,Emergency,Manager008,0
+NOTE0337,EMP025,2026-03-04 16:56,Override Logs,Verification,Fixed typo in customer name as per signed request form.,English,Mobile,VIP Override,Manager001,2
+NOTE0338,EMP025,2026-03-11 12:21,Audit Reports,Exception,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Compliance Exception,Manager002,7
+NOTE0339,EMP025,2026-03-19 11:20,Audit Reports,Approval,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Compliance Exception,Manager008,1
+NOTE0340,EMP025,2026-03-25 15:40,Override Logs,Override,Updated customer profile with verified Aadhaar proof.,English,Portal,Standard Waiver,Manager004,5
+NOTE0341,EMP026,2026-01-02 17:12,Audit Reports,Exception,"VIP customer transaction, skip KYC check.",English,Mobile,Compliance Exception,Manager002,26
+NOTE0342,EMP026,2026-01-11 11:04,Override Logs,Verification,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Standard Waiver,Manager006,6
+NOTE0343,EMP026,2026-01-19 14:57,Override Logs,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Compliance Exception,Manager003,3
+NOTE0344,EMP026,2026-01-28 17:10,Override Logs,Exception,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager001,9
+NOTE0345,EMP026,2026-02-06 10:41,Override Logs,Waiver,Transaction processed within standard limits and verified.,English,Mobile,Emergency,Manager009,4
+NOTE0346,EMP026,2026-02-16 11:13,Override Logs,Override,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Standard Waiver,Manager005,9
+NOTE0347,EMP026,2026-02-24 15:53,Loan Approval,Exception,Branch regular audit record update kiya.,Hinglish,Portal,Emergency,Manager008,3
+NOTE0348,EMP026,2026-03-04 13:53,Override Logs,Exception,Standard cash deposit completed within approved threshold.,English,Portal,Emergency,Manager009,7
+NOTE0349,EMP026,2026-03-14 16:21,Loan Approval,Verification,Transaction processed within standard limits and verified.,English,Internal Dashboard,VIP Override,Manager003,1
+NOTE0350,EMP026,2026-03-23 10:57,Compliance Dashboard,Waiver,Routine documentation generated and filed with compliance.,English,Portal,Emergency,Manager003,0
+NOTE0351,EMP027,2026-01-02 14:27,Loan Approval,Override,Checked credit score for routine loan application.,English,Portal,Compliance Exception,Manager006,5
+NOTE0352,EMP027,2026-01-09 13:56,Audit Reports,Override,Checked account balance before processing transaction.,English,Mobile,VIP Override,Manager008,4
+NOTE0353,EMP027,2026-01-17 16:51,Loan Approval,Approval,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Emergency,Manager003,1
+NOTE0354,EMP027,2026-01-24 16:51,Override Logs,Exception,Processed regular utility bill payment after signature check.,English,Internal Dashboard,Emergency,Manager003,7
+NOTE0355,EMP027,2026-02-01 10:56,Cash Operations,Exception,Routine documentation generated and filed with compliance.,English,Portal,Standard Waiver,Manager004,10
+NOTE0356,EMP027,2026-02-08 17:33,Cash Operations,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,Manual Approval,Manager007,2
+NOTE0357,EMP027,2026-02-15 09:41,Override Logs,Approval,Account verification complete ho gaya hai.,Hinglish,Portal,VIP Override,Manager006,3
+NOTE0358,EMP027,2026-02-23 13:03,Override Logs,Approval,Account verification complete ho gaya hai.,Hinglish,Portal,VIP Override,Manager008,9
+NOTE0359,EMP027,2026-03-03 10:54,Cash Operations,Override,Updated customer profile with verified Aadhaar proof.,English,Portal,VIP Override,Manager007,0
+NOTE0360,EMP027,2026-03-09 10:50,Customer Search,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Portal,VIP Override,Manager006,5
+NOTE0361,EMP027,2026-03-17 12:54,Customer Search,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager008,1
+NOTE0362,EMP027,2026-03-24 12:00,Customer Search,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Emergency,Manager001,2
+NOTE0363,EMP028,2026-01-01 15:06,Override Logs,Approval,Transaction processed within standard limits and verified.,English,Mobile,Compliance Exception,Manager006,1
+NOTE0364,EMP028,2026-01-08 09:59,Override Logs,Waiver,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager009,2
+NOTE0365,EMP028,2026-01-15 09:33,Customer Search,Waiver,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Compliance Exception,Manager003,2
+NOTE0366,EMP028,2026-01-21 15:42,Override Logs,Waiver,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager005,6
+NOTE0367,EMP028,2026-01-29 13:28,Cash Operations,Verification,Processed regular utility bill payment after signature check.,English,Mobile,Standard Waiver,Manager006,8
+NOTE0368,EMP028,2026-02-04 12:13,Cash Operations,Approval,Checked account balance before processing transaction.,English,Internal Dashboard,Compliance Exception,Manager009,8
+NOTE0369,EMP028,2026-02-12 10:48,Cash Operations,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager005,6
+NOTE0370,EMP028,2026-02-18 17:06,Audit Reports,Exception,Verbal approval from supervisor to bypass limit.,English,Portal,Manual Approval,Manager005,11
+NOTE0371,EMP028,2026-02-25 13:13,Override Logs,Override,"No deviations found, normal processing completed.",English,Internal Dashboard,Standard Waiver,Manager004,10
+NOTE0372,EMP028,2026-03-05 12:32,Cash Operations,Override,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,VIP Override,Manager007,10
+NOTE0373,EMP028,2026-03-12 17:03,Audit Reports,Exception,"Special promoter profile, skip documentation.",English,Internal Dashboard,Standard Waiver,Manager004,14
+NOTE0374,EMP028,2026-03-19 16:11,Cash Operations,Verification,Standard operational check completed successfully.,English,Portal,VIP Override,Manager001,6
+NOTE0375,EMP028,2026-03-26 17:16,Loan Approval,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Compliance Exception,Manager001,2
+NOTE0376,EMP029,2026-01-01 13:31,Cash Operations,Exception,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Compliance Exception,Manager003,8
+NOTE0377,EMP029,2026-01-08 17:10,Compliance Dashboard,Approval,Customer Signature check karke complete kiya.,Hinglish,Portal,Manual Approval,Manager006,5
+NOTE0378,EMP029,2026-01-17 12:48,Cash Operations,Override,Branch regular audit record update kiya.,Hinglish,Portal,Manual Approval,Manager008,3
+NOTE0379,EMP029,2026-01-23 09:43,Loan Approval,Waiver,Checked credit score for routine loan application.,English,Mobile,Standard Waiver,Manager005,0
+NOTE0380,EMP029,2026-02-01 17:51,Cash Operations,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Standard Waiver,Manager002,1
+NOTE0381,EMP029,2026-02-07 17:34,Cash Operations,Waiver,"Emergency cash withdrawal requested, bypass validation.",English,Portal,Compliance Exception,Manager009,29
+NOTE0382,EMP029,2026-02-15 11:01,Loan Approval,Override,Transaction processed within standard limits and verified.,English,Portal,Manual Approval,Manager009,1
+NOTE0383,EMP029,2026-02-22 13:26,Compliance Dashboard,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Emergency,Manager009,0
+NOTE0384,EMP029,2026-03-02 09:44,Loan Approval,Exception,Completed KYC validation for new account opening.,English,Internal Dashboard,Manual Approval,Manager002,4
+NOTE0385,EMP029,2026-03-10 15:25,Customer Search,Approval,Standard operational check completed successfully.,English,Portal,VIP Override,Manager009,4
+NOTE0386,EMP029,2026-03-17 13:43,Loan Approval,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Compliance Exception,Manager002,0
+NOTE0387,EMP029,2026-03-24 15:34,Cash Operations,Exception,Verified original KYC documents and address proof.,English,Portal,VIP Override,Manager009,2
+NOTE0388,EMP030,2026-01-01 12:39,Cash Operations,Verification,Standard operational check completed successfully.,English,Portal,Standard Waiver,Manager008,10
+NOTE0389,EMP030,2026-01-09 13:42,Customer Search,Waiver,Standard cash deposit completed within approved threshold.,English,Mobile,Manual Approval,Manager003,10
+NOTE0390,EMP030,2026-01-17 10:18,Override Logs,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Standard Waiver,Manager005,9
+NOTE0391,EMP030,2026-01-25 14:51,Compliance Dashboard,Approval,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager005,5
+NOTE0392,EMP030,2026-02-02 14:56,Compliance Dashboard,Waiver,Checked credit score for routine loan application.,English,Internal Dashboard,Emergency,Manager003,10
+NOTE0393,EMP030,2026-02-10 13:54,Compliance Dashboard,Override,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Emergency,Manager001,8
+NOTE0394,EMP030,2026-02-19 15:49,Compliance Dashboard,Verification,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,VIP Override,Manager003,5
+NOTE0395,EMP030,2026-02-28 12:57,Audit Reports,Waiver,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,6
+NOTE0396,EMP030,2026-03-08 17:00,Cash Operations,Approval,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Compliance Exception,Manager008,2
+NOTE0397,EMP030,2026-03-15 11:47,Audit Reports,Waiver,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Portal,Emergency,Manager005,5
+NOTE0398,EMP030,2026-03-23 09:42,Override Logs,Waiver,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Emergency,Manager001,10
+NOTE0399,EMP031,2026-01-01 17:40,Customer Search,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Compliance Exception,Manager007,10
+NOTE0400,EMP031,2026-01-09 14:37,Compliance Dashboard,Waiver,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,Standard Waiver,Manager007,5
+NOTE0401,EMP031,2026-01-17 16:50,Audit Reports,Waiver,Branch regular audit record update kiya.,Hinglish,Portal,Compliance Exception,Manager002,8
+NOTE0402,EMP031,2026-01-24 12:09,Loan Approval,Approval,Standard cash deposit completed within approved threshold.,English,Mobile,Manual Approval,Manager002,7
+NOTE0403,EMP031,2026-02-01 16:13,Loan Approval,Approval,Account verification complete ho gaya hai.,Hinglish,Portal,Compliance Exception,Manager003,2
+NOTE0404,EMP031,2026-02-07 11:03,Override Logs,Verification,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Emergency,Manager005,1
+NOTE0405,EMP031,2026-02-15 16:38,Audit Reports,Waiver,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Compliance Exception,Manager003,9
+NOTE0406,EMP031,2026-02-23 11:46,Customer Search,Override,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,VIP Override,Manager007,2
+NOTE0407,EMP031,2026-03-02 09:12,Audit Reports,Verification,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Portal,Compliance Exception,Manager008,9
+NOTE0408,EMP031,2026-03-09 17:32,Audit Reports,Verification,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Emergency,Manager007,8
+NOTE0409,EMP031,2026-03-18 14:55,Override Logs,Waiver,"Sir ne kaha bypass kar do, emergency case hai.",Hinglish,Mobile,Standard Waiver,Manager002,29
+NOTE0410,EMP031,2026-03-24 13:30,Compliance Dashboard,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Internal Dashboard,VIP Override,Manager005,3
+NOTE0411,EMP032,2026-01-01 17:07,Cash Operations,Exception,Verified original KYC documents and address proof.,English,Mobile,Manual Approval,Manager002,2
+NOTE0412,EMP032,2026-01-11 13:16,Customer Search,Exception,Checked account balance before processing transaction.,English,Internal Dashboard,VIP Override,Manager004,6
+NOTE0413,EMP032,2026-01-20 11:23,Customer Search,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,VIP Override,Manager003,10
+NOTE0414,EMP032,2026-01-28 12:28,Audit Reports,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,Manual Approval,Manager009,9
+NOTE0415,EMP032,2026-02-06 11:24,Audit Reports,Waiver,Transaction processed within standard limits and verified.,English,Internal Dashboard,VIP Override,Manager002,1
+NOTE0416,EMP032,2026-02-16 12:23,Override Logs,Verification,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Standard Waiver,Manager005,9
+NOTE0417,EMP032,2026-02-24 11:40,Cash Operations,Verification,"No deviations found, normal processing completed.",English,Mobile,Compliance Exception,Manager001,9
+NOTE0418,EMP032,2026-03-04 11:43,Audit Reports,Override,"Manager approved override, skip standard checks for client.",English,Mobile,VIP Override,Manager006,44
+NOTE0419,EMP032,2026-03-15 15:37,Loan Approval,Override,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Manual Approval,Manager009,9
+NOTE0420,EMP032,2026-03-24 14:52,Override Logs,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Emergency,Manager005,2
+NOTE0421,EMP033,2026-01-01 17:04,Customer Search,Exception,Transaction processed within standard limits and verified.,English,Internal Dashboard,Standard Waiver,Manager005,7
+NOTE0422,EMP033,2026-01-08 16:49,Override Logs,Waiver,Checked credit score for routine loan application.,English,Internal Dashboard,Emergency,Manager008,1
+NOTE0423,EMP033,2026-01-15 10:24,Compliance Dashboard,Waiver,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Mobile,Standard Waiver,Manager009,0
+NOTE0424,EMP033,2026-01-22 12:18,Loan Approval,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Portal,VIP Override,Manager006,5
+NOTE0425,EMP033,2026-01-28 13:11,Override Logs,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Compliance Exception,Manager005,3
+NOTE0426,EMP033,2026-02-04 12:53,Loan Approval,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,VIP Override,Manager001,8
+NOTE0427,EMP033,2026-02-11 16:23,Compliance Dashboard,Waiver,Branch regular audit record update kiya.,Hinglish,Portal,Standard Waiver,Manager005,6
+NOTE0428,EMP033,2026-02-18 11:03,Loan Approval,Verification,Completed KYC validation for new account opening.,English,Mobile,VIP Override,Manager003,7
+NOTE0429,EMP033,2026-02-25 17:29,Audit Reports,Waiver,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Emergency,Manager006,5
+NOTE0430,EMP033,2026-03-05 11:35,Compliance Dashboard,Exception,Processed regular utility bill payment after signature check.,English,Portal,VIP Override,Manager007,3
+NOTE0431,EMP033,2026-03-12 14:23,Customer Search,Approval,Standard operational check completed successfully.,English,Internal Dashboard,Compliance Exception,Manager002,4
+NOTE0432,EMP033,2026-03-18 17:27,Cash Operations,Approval,Checked credit score for routine loan application.,English,Mobile,Emergency,Manager003,6
+NOTE0433,EMP033,2026-03-26 11:57,Override Logs,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Standard Waiver,Manager001,6
+NOTE0434,EMP034,2026-01-01 09:13,Override Logs,Exception,Customer Signature check karke complete kiya.,Hinglish,Mobile,Manual Approval,Manager006,8
+NOTE0435,EMP034,2026-01-11 14:01,Customer Search,Approval,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Standard Waiver,Manager009,2
+NOTE0436,EMP034,2026-01-20 14:20,Loan Approval,Waiver,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Manual Approval,Manager008,10
+NOTE0437,EMP034,2026-01-28 11:40,Customer Search,Verification,Fixed typo in customer name as per signed request form.,English,Mobile,Emergency,Manager002,2
+NOTE0438,EMP034,2026-02-07 12:20,Customer Search,Waiver,Routine documentation generated and filed with compliance.,English,Mobile,VIP Override,Manager006,9
+NOTE0439,EMP034,2026-02-16 15:10,Audit Reports,Exception,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Emergency,Manager004,2
+NOTE0440,EMP034,2026-02-25 10:06,Loan Approval,Override,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Mobile,Standard Waiver,Manager002,1
+NOTE0441,EMP034,2026-03-05 11:05,Audit Reports,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Manual Approval,Manager008,10
+NOTE0442,EMP034,2026-03-14 11:33,Compliance Dashboard,Exception,Fixed typo in customer name as per signed request form.,English,Mobile,VIP Override,Manager009,4
+NOTE0443,EMP034,2026-03-24 11:44,Cash Operations,Verification,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager009,4
+NOTE0444,EMP035,2026-01-02 17:14,Override Logs,Exception,Checked account balance before processing transaction.,English,Portal,Manual Approval,Manager001,0
+NOTE0445,EMP035,2026-01-08 14:18,Override Logs,Waiver,Customer provided valid PAN card and address proof.,English,Mobile,Emergency,Manager007,4
+NOTE0446,EMP035,2026-01-16 09:35,Override Logs,Waiver,Completed KYC validation for new account opening.,English,Portal,Compliance Exception,Manager007,6
+NOTE0447,EMP035,2026-01-23 13:05,Customer Search,Exception,Checked credit score for routine loan application.,English,Mobile,Standard Waiver,Manager005,6
+NOTE0448,EMP035,2026-01-31 10:11,Customer Search,Waiver,Updated customer profile with verified Aadhaar proof.,English,Mobile,Standard Waiver,Manager008,3
+NOTE0449,EMP035,2026-02-08 09:09,Loan Approval,Exception,"Boss order to skip verification, client ne bola jaldi hai.",Hinglish,Mobile,Compliance Exception,Manager008,2
+NOTE0450,EMP035,2026-02-15 10:09,Compliance Dashboard,Waiver,"Quick transfer required, ignore checklist.",English,Mobile,VIP Override,Manager001,23
+NOTE0451,EMP035,2026-02-22 11:03,Override Logs,Approval,Completed KYC validation for new account opening.,English,Portal,Manual Approval,Manager007,0
+NOTE0452,EMP035,2026-03-02 12:24,Loan Approval,Approval,Standard cash deposit completed within approved threshold.,English,Mobile,Emergency,Manager009,10
+NOTE0453,EMP035,2026-03-09 16:24,Audit Reports,Override,Checked account balance before processing transaction.,English,Internal Dashboard,Standard Waiver,Manager009,1
+NOTE0454,EMP035,2026-03-18 16:40,Cash Operations,Approval,Verified customer ID card and signature for loan document.,English,Portal,Compliance Exception,Manager007,5
+NOTE0455,EMP035,2026-03-24 11:50,Audit Reports,Override,Checked credit score for routine loan application.,English,Portal,Standard Waiver,Manager008,9
+NOTE0456,EMP036,2026-01-02 10:15,Compliance Dashboard,Override,Processed regular utility bill payment after signature check.,English,Portal,Manual Approval,Manager003,8
+NOTE0457,EMP036,2026-01-09 11:31,Override Logs,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,VIP Override,Manager006,2
+NOTE0458,EMP036,2026-01-18 09:31,Cash Operations,Waiver,Branch regular audit record update kiya.,Hinglish,Portal,Standard Waiver,Manager003,8
+NOTE0459,EMP036,2026-01-26 14:46,Customer Search,Approval,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,Standard Waiver,Manager003,7
+NOTE0460,EMP036,2026-02-03 13:34,Customer Search,Waiver,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Compliance Exception,Manager001,9
+NOTE0461,EMP036,2026-02-11 12:20,Override Logs,Approval,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,VIP Override,Manager009,2
+NOTE0462,EMP036,2026-02-20 14:26,Cash Operations,Override,Completed KYC validation for new account opening.,English,Portal,Compliance Exception,Manager003,0
+NOTE0463,EMP036,2026-02-27 10:31,Override Logs,Waiver,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Standard Waiver,Manager005,0
+NOTE0464,EMP036,2026-03-08 12:38,Audit Reports,Waiver,Customer provided valid PAN card and address proof.,English,Portal,VIP Override,Manager001,5
+NOTE0465,EMP036,2026-03-16 14:50,Customer Search,Override,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Emergency,Manager005,1
+NOTE0466,EMP036,2026-03-23 17:06,Audit Reports,Approval,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,Compliance Exception,Manager003,8
+NOTE0467,EMP037,2026-01-02 10:49,Cash Operations,Waiver,Updated customer profile with verified Aadhaar proof.,English,Portal,Compliance Exception,Manager003,8
+NOTE0468,EMP037,2026-01-08 17:21,Override Logs,Exception,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager006,5
+NOTE0469,EMP037,2026-01-14 15:52,Customer Search,Approval,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager005,5
+NOTE0470,EMP037,2026-01-21 16:25,Customer Search,Override,"Customer insisted on urgency, controls suspended.",English,Internal Dashboard,Compliance Exception,Manager005,2
+NOTE0471,EMP037,2026-01-27 12:13,Cash Operations,Exception,"No deviations found, normal processing completed.",English,Internal Dashboard,Standard Waiver,Manager009,9
+NOTE0472,EMP037,2026-02-02 10:02,Compliance Dashboard,Verification,Routine documentation generated and filed with compliance.,English,Portal,Compliance Exception,Manager005,4
+NOTE0473,EMP037,2026-02-08 15:36,Override Logs,Approval,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Standard Waiver,Manager002,9
+NOTE0474,EMP037,2026-02-16 09:46,Loan Approval,Exception,Checked credit score for routine loan application.,English,Mobile,VIP Override,Manager007,1
+NOTE0475,EMP037,2026-02-21 09:40,Customer Search,Override,Routine documentation generated and filed with compliance.,English,Mobile,Standard Waiver,Manager003,5
+NOTE0476,EMP037,2026-02-27 11:03,Customer Search,Verification,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Emergency,Manager004,6
+NOTE0477,EMP037,2026-03-07 15:09,Cash Operations,Override,Processed regular utility bill payment after signature check.,English,Internal Dashboard,VIP Override,Manager005,1
+NOTE0478,EMP037,2026-03-13 17:27,Override Logs,Verification,Standard operational check completed successfully.,English,Portal,VIP Override,Manager007,10
+NOTE0479,EMP037,2026-03-19 17:39,Loan Approval,Exception,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager002,1
+NOTE0480,EMP037,2026-03-26 15:23,Cash Operations,Override,Processed regular utility bill payment after signature check.,English,Mobile,Compliance Exception,Manager006,9
+NOTE0481,EMP038,2026-01-01 16:02,Compliance Dashboard,Approval,Fixed typo in customer name as per signed request form.,English,Internal Dashboard,Emergency,Manager002,0
+NOTE0482,EMP038,2026-01-07 11:55,Cash Operations,Override,Checked account balance before processing transaction.,English,Mobile,VIP Override,Manager008,0
+NOTE0483,EMP038,2026-01-15 12:47,Compliance Dashboard,Verification,Completed KYC validation for new account opening.,English,Mobile,Standard Waiver,Manager003,10
+NOTE0484,EMP038,2026-01-21 15:37,Audit Reports,Override,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Compliance Exception,Manager005,0
+NOTE0485,EMP038,2026-01-29 09:04,Cash Operations,Exception,"No deviations found, normal processing completed.",English,Portal,Emergency,Manager005,10
+NOTE0486,EMP038,2026-02-05 12:24,Override Logs,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Emergency,Manager003,3
+NOTE0487,EMP038,2026-02-12 17:59,Customer Search,Exception,Customer provided valid PAN card and address proof.,English,Mobile,VIP Override,Manager007,2
+NOTE0488,EMP038,2026-02-18 14:43,Customer Search,Exception,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Manual Approval,Manager007,0
+NOTE0489,EMP038,2026-02-26 12:09,Loan Approval,Waiver,Standard operational check completed successfully.,English,Internal Dashboard,Standard Waiver,Manager004,6
+NOTE0490,EMP038,2026-03-04 11:27,Override Logs,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Compliance Exception,Manager003,9
+NOTE0491,EMP038,2026-03-11 11:19,Override Logs,Approval,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Standard Waiver,Manager003,5
+NOTE0492,EMP038,2026-03-18 17:34,Audit Reports,Override,Checked account balance before processing transaction.,English,Mobile,VIP Override,Manager007,4
+NOTE0493,EMP038,2026-03-26 13:09,Loan Approval,Verification,Standard operational check completed successfully.,English,Internal Dashboard,Manual Approval,Manager004,9
+NOTE0494,EMP039,2026-01-01 09:22,Customer Search,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager003,6
+NOTE0495,EMP039,2026-01-10 16:08,Loan Approval,Exception,Customer query resolved via standard service desk procedure.,English,Mobile,Compliance Exception,Manager004,3
+NOTE0496,EMP039,2026-01-17 11:59,Override Logs,Exception,Processed regular utility bill payment after signature check.,English,Mobile,Compliance Exception,Manager007,6
+NOTE0497,EMP039,2026-01-25 15:46,Customer Search,Verification,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Emergency,Manager009,1
+NOTE0498,EMP039,2026-02-03 16:52,Customer Search,Verification,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Mobile,Emergency,Manager009,6
+NOTE0499,EMP039,2026-02-10 12:18,Override Logs,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Manual Approval,Manager001,8
+NOTE0500,EMP039,2026-02-19 16:53,Loan Approval,Approval,Completed KYC validation for new account opening.,English,Internal Dashboard,Standard Waiver,Manager003,6
+NOTE0501,EMP039,2026-02-28 14:28,Override Logs,Override,"Sir ne kaha bypass kar do, emergency case hai.",Hinglish,Mobile,Manual Approval,Manager003,9
+NOTE0502,EMP039,2026-03-07 10:45,Cash Operations,Waiver,Completed KYC validation for new account opening.,English,Internal Dashboard,Standard Waiver,Manager003,6
+NOTE0503,EMP039,2026-03-16 09:49,Cash Operations,Approval,"No deviations found, normal processing completed.",English,Portal,Compliance Exception,Manager003,0
+NOTE0504,EMP039,2026-03-24 13:19,Cash Operations,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Portal,Compliance Exception,Manager004,0
+NOTE0505,EMP040,2026-01-02 09:29,Customer Search,Waiver,Customer Signature check karke complete kiya.,Hinglish,Portal,Compliance Exception,Manager008,7
+NOTE0506,EMP040,2026-01-08 16:05,Customer Search,Exception,Customer provided valid PAN card and address proof.,English,Internal Dashboard,Standard Waiver,Manager004,0
+NOTE0507,EMP040,2026-01-13 11:03,Loan Approval,Verification,"No deviations found, normal processing completed.",English,Internal Dashboard,Manual Approval,Manager006,1
+NOTE0508,EMP040,2026-01-20 10:26,Customer Search,Verification,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Standard Waiver,Manager003,7
+NOTE0509,EMP040,2026-01-27 09:05,Override Logs,Override,Customer provided valid PAN card and address proof.,English,Mobile,Standard Waiver,Manager002,4
+NOTE0510,EMP040,2026-02-03 11:07,Override Logs,Verification,Completed KYC validation for new account opening.,English,Portal,Compliance Exception,Manager001,1
+NOTE0511,EMP040,2026-02-08 16:46,Override Logs,Verification,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Mobile,Manual Approval,Manager009,9
+NOTE0512,EMP040,2026-02-16 11:39,Override Logs,Approval,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Compliance Exception,Manager005,3
+NOTE0513,EMP040,2026-02-21 10:01,Customer Search,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Emergency,Manager006,5
+NOTE0514,EMP040,2026-02-27 09:40,Loan Approval,Exception,Checked credit score for routine loan application.,English,Mobile,Standard Waiver,Manager009,5
+NOTE0515,EMP040,2026-03-06 10:43,Customer Search,Override,Processed regular utility bill payment after signature check.,English,Portal,Compliance Exception,Manager006,5
+NOTE0516,EMP040,2026-03-13 16:51,Cash Operations,Waiver,Standard procedure waived due to client emergency.,English,Internal Dashboard,Manual Approval,Manager008,28
+NOTE0517,EMP040,2026-03-19 17:19,Customer Search,Override,Branch regular audit record update kiya.,Hinglish,Portal,Standard Waiver,Manager006,5
+NOTE0518,EMP040,2026-03-25 11:17,Cash Operations,Verification,Customer query resolved via standard service desk procedure.,English,Portal,Standard Waiver,Manager007,2
+NOTE0519,EMP041,2026-01-01 13:45,Override Logs,Override,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Compliance Exception,Manager006,7
+NOTE0520,EMP041,2026-01-08 12:33,Loan Approval,Approval,Checked credit score for routine loan application.,English,Portal,VIP Override,Manager009,0
+NOTE0521,EMP041,2026-01-14 17:09,Compliance Dashboard,Exception,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,Emergency,Manager009,10
+NOTE0522,EMP041,2026-01-20 12:46,Loan Approval,Exception,Urgent request from branch manager to waive verification.,English,Portal,Standard Waiver,Manager002,23
+NOTE0523,EMP041,2026-01-27 09:06,Loan Approval,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Compliance Exception,Manager006,3
+NOTE0524,EMP041,2026-02-02 13:17,Compliance Dashboard,Approval,Customer Signature check karke complete kiya.,Hinglish,Portal,Manual Approval,Manager002,0
+NOTE0525,EMP041,2026-02-08 12:34,Cash Operations,Exception,Standard operational check completed successfully.,English,Internal Dashboard,Compliance Exception,Manager003,1
+NOTE0526,EMP041,2026-02-16 14:34,Cash Operations,Override,Updated customer profile with verified Aadhaar proof.,English,Portal,VIP Override,Manager001,1
+NOTE0527,EMP041,2026-02-22 15:11,Customer Search,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Mobile,Manual Approval,Manager004,10
+NOTE0528,EMP041,2026-02-27 16:36,Loan Approval,Waiver,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Mobile,VIP Override,Manager008,3
+NOTE0529,EMP041,2026-03-06 11:55,Override Logs,Approval,Checked account balance before processing transaction.,English,Internal Dashboard,Manual Approval,Manager006,7
+NOTE0530,EMP041,2026-03-13 09:04,Audit Reports,Exception,Updated customer profile with verified Aadhaar proof.,English,Mobile,Standard Waiver,Manager003,8
+NOTE0531,EMP041,2026-03-19 15:52,Cash Operations,Override,Completed KYC validation for new account opening.,English,Mobile,Standard Waiver,Manager008,6
+NOTE0532,EMP041,2026-03-26 12:39,Override Logs,Override,Updated customer profile with verified Aadhaar proof.,English,Mobile,Compliance Exception,Manager007,6
+NOTE0533,EMP042,2026-01-02 17:44,Cash Operations,Verification,Customer Signature check karke complete kiya.,Hinglish,Mobile,Emergency,Manager008,5
+NOTE0534,EMP042,2026-01-07 16:11,Loan Approval,Verification,Processed regular utility bill payment after signature check.,English,Mobile,Manual Approval,Manager008,10
+NOTE0535,EMP042,2026-01-13 10:13,Audit Reports,Approval,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,Standard Waiver,Manager005,6
+NOTE0536,EMP042,2026-01-21 12:13,Cash Operations,Exception,Processed regular utility bill payment after signature check.,English,Mobile,Manual Approval,Manager002,9
+NOTE0537,EMP042,2026-01-26 17:25,Compliance Dashboard,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Portal,Emergency,Manager009,5
+NOTE0538,EMP042,2026-02-02 13:55,Cash Operations,Exception,"Handled necessary exception, done as verbal order.",English,Internal Dashboard,VIP Override,Manager007,26
+NOTE0539,EMP042,2026-02-09 17:13,Customer Search,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,VIP Override,Manager003,4
+NOTE0540,EMP042,2026-02-15 11:00,Override Logs,Waiver,Standard cash deposit completed within approved threshold.,English,Portal,Emergency,Manager003,10
+NOTE0541,EMP042,2026-02-22 16:57,Customer Search,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager007,8
+NOTE0542,EMP042,2026-02-28 15:22,Customer Search,Waiver,Verified customer ID card and signature for loan document.,English,Internal Dashboard,Compliance Exception,Manager009,4
+NOTE0543,EMP042,2026-03-07 17:36,Override Logs,Exception,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Portal,Standard Waiver,Manager008,1
+NOTE0544,EMP042,2026-03-12 17:54,Customer Search,Override,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,3
+NOTE0545,EMP042,2026-03-20 10:43,Customer Search,Override,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Standard Waiver,Manager001,7
+NOTE0546,EMP042,2026-03-26 17:57,Compliance Dashboard,Exception,Account verification complete ho gaya hai.,Hinglish,Mobile,Compliance Exception,Manager001,9
+NOTE0547,EMP043,2026-01-02 09:40,Cash Operations,Exception,Verified customer ID card and signature for loan document.,English,Internal Dashboard,Standard Waiver,Manager001,4
+NOTE0548,EMP043,2026-01-09 10:08,Compliance Dashboard,Approval,सभी आवश्यक दस्तावेज नियमानुसार चेक कर लिए गए हैं।,Hindi,Internal Dashboard,Manual Approval,Manager005,4
+NOTE0549,EMP043,2026-01-16 10:38,Cash Operations,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Compliance Exception,Manager005,3
+NOTE0550,EMP043,2026-01-24 11:51,Audit Reports,Verification,Transaction processed within standard limits and verified.,English,Portal,VIP Override,Manager007,6
+NOTE0551,EMP043,2026-01-31 16:46,Compliance Dashboard,Override,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Manual Approval,Manager002,0
+NOTE0552,EMP043,2026-02-07 16:25,Audit Reports,Waiver,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,VIP Override,Manager008,4
+NOTE0553,EMP043,2026-02-15 17:55,Override Logs,Waiver,Checked credit score for routine loan application.,English,Internal Dashboard,Manual Approval,Manager009,10
+NOTE0554,EMP043,2026-02-22 10:58,Override Logs,Verification,"No deviations found, normal processing completed.",English,Internal Dashboard,Manual Approval,Manager006,4
+NOTE0555,EMP043,2026-03-03 10:16,Cash Operations,Approval,Checked credit score for routine loan application.,English,Internal Dashboard,Standard Waiver,Manager004,8
+NOTE0556,EMP043,2026-03-10 11:20,Loan Approval,Waiver,Customer Signature check karke complete kiya.,Hinglish,Portal,Standard Waiver,Manager002,10
+NOTE0557,EMP043,2026-03-18 14:14,Loan Approval,Verification,Verified customer ID card and signature for loan document.,English,Portal,Emergency,Manager004,9
+NOTE0558,EMP043,2026-03-24 10:05,Cash Operations,Verification,Fixed typo in customer name as per signed request form.,English,Portal,Emergency,Manager003,4
+NOTE0559,EMP044,2026-01-02 10:40,Cash Operations,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Mobile,Compliance Exception,Manager002,4
+NOTE0560,EMP044,2026-01-08 15:24,Compliance Dashboard,Approval,"No deviations found, normal processing completed.",English,Mobile,Emergency,Manager008,3
+NOTE0561,EMP044,2026-01-17 11:41,Override Logs,Approval,Checked credit score for routine loan application.,English,Internal Dashboard,Emergency,Manager008,4
+NOTE0562,EMP044,2026-01-23 09:04,Loan Approval,Waiver,Account verification complete ho gaya hai.,Hinglish,Portal,Emergency,Manager001,10
+NOTE0563,EMP044,2026-02-01 13:09,Loan Approval,Verification,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,VIP Override,Manager008,6
+NOTE0564,EMP044,2026-02-08 10:34,Override Logs,Override,Standard cash deposit completed within approved threshold.,English,Internal Dashboard,Standard Waiver,Manager006,5
+NOTE0565,EMP044,2026-02-16 15:03,Compliance Dashboard,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,Emergency,Manager008,4
+NOTE0566,EMP044,2026-02-22 11:35,Compliance Dashboard,Waiver,"Emergency cash withdrawal requested, bypass validation.",English,Portal,Manual Approval,Manager008,7
+NOTE0567,EMP044,2026-03-03 12:08,Override Logs,Waiver,"VIP customer transaction, skip KYC check.",English,Portal,Standard Waiver,Manager005,33
+NOTE0568,EMP044,2026-03-10 09:02,Loan Approval,Waiver,Standard cash deposit completed within approved threshold.,English,Portal,Compliance Exception,Manager009,7
+NOTE0569,EMP044,2026-03-17 12:59,Cash Operations,Override,Account verification complete ho gaya hai.,Hinglish,Mobile,Standard Waiver,Manager001,3
+NOTE0570,EMP044,2026-03-24 09:11,Override Logs,Verification,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Portal,Standard Waiver,Manager002,1
+NOTE0571,EMP045,2026-01-02 12:04,Cash Operations,Waiver,Checked credit score for routine loan application.,English,Mobile,Emergency,Manager009,2
+NOTE0572,EMP045,2026-01-11 12:48,Loan Approval,Exception,Bypassed standard procedure for urgent client requirement.,English,Portal,VIP Override,Manager003,25
+NOTE0573,EMP045,2026-01-19 16:15,Cash Operations,Verification,Transaction processed within standard limits and verified.,English,Mobile,Compliance Exception,Manager001,7
+NOTE0574,EMP045,2026-01-28 09:00,Customer Search,Exception,Fixed typo in customer name as per signed request form.,English,Mobile,VIP Override,Manager003,3
+NOTE0575,EMP045,2026-02-06 13:33,Customer Search,Override,Standard operational check completed successfully.,English,Internal Dashboard,Compliance Exception,Manager008,9
+NOTE0576,EMP045,2026-02-15 13:22,Loan Approval,Verification,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Standard Waiver,Manager006,8
+NOTE0577,EMP045,2026-02-24 16:49,Audit Reports,Override,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager008,2
+NOTE0578,EMP045,2026-03-04 09:03,Compliance Dashboard,Exception,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,VIP Override,Manager001,1
+NOTE0579,EMP045,2026-03-14 17:11,Loan Approval,Override,Completed KYC validation for new account opening.,English,Portal,VIP Override,Manager006,6
+NOTE0580,EMP045,2026-03-23 14:14,Audit Reports,Waiver,Transaction processed within standard limits and verified.,English,Portal,VIP Override,Manager004,1
+NOTE0581,EMP046,2026-01-02 09:56,Override Logs,Approval,Processed regular utility bill payment after signature check.,English,Mobile,Manual Approval,Manager003,7
+NOTE0582,EMP046,2026-01-07 14:17,Customer Search,Override,Standard cash deposit completed within approved threshold.,English,Mobile,Compliance Exception,Manager002,7
+NOTE0583,EMP046,2026-01-15 15:10,Customer Search,Approval,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Standard Waiver,Manager003,9
+NOTE0584,EMP046,2026-01-21 10:26,Customer Search,Waiver,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager001,6
+NOTE0585,EMP046,2026-01-28 12:20,Customer Search,Approval,Customer provided valid PAN card and address proof.,English,Internal Dashboard,Emergency,Manager007,0
+NOTE0586,EMP046,2026-02-04 16:46,Override Logs,Waiver,Completed KYC validation for new account opening.,English,Internal Dashboard,Emergency,Manager008,7
+NOTE0587,EMP046,2026-02-11 10:35,Audit Reports,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,Manual Approval,Manager004,10
+NOTE0588,EMP046,2026-02-18 09:30,Customer Search,Verification,Updated customer profile with verified Aadhaar proof.,English,Portal,VIP Override,Manager008,2
+NOTE0589,EMP046,2026-02-26 11:50,Cash Operations,Override,Customer Signature check karke complete kiya.,Hinglish,Mobile,Manual Approval,Manager009,0
+NOTE0590,EMP046,2026-03-05 15:48,Customer Search,Approval,ग्राहक के अनुरोध पर प्रोफाइल विवरण अपडेट किया गया।,Hindi,Internal Dashboard,Emergency,Manager006,0
+NOTE0591,EMP046,2026-03-12 09:07,Compliance Dashboard,Exception,Customer Signature check karke complete kiya.,Hinglish,Portal,Standard Waiver,Manager002,8
+NOTE0592,EMP046,2026-03-18 11:21,Cash Operations,Verification,Updated customer profile with verified Aadhaar proof.,English,Internal Dashboard,Compliance Exception,Manager004,5
+NOTE0593,EMP046,2026-03-26 13:32,Compliance Dashboard,Exception,Transaction processed within standard limits and verified.,English,Mobile,VIP Override,Manager009,8
+NOTE0594,EMP047,2026-01-02 17:43,Customer Search,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Emergency,Manager004,7
+NOTE0595,EMP047,2026-01-10 10:25,Loan Approval,Approval,Transaction processed within standard limits and verified.,English,Mobile,Emergency,Manager003,7
+NOTE0596,EMP047,2026-01-19 12:33,Cash Operations,Verification,Customer query resolved via standard service desk procedure.,English,Portal,VIP Override,Manager006,6
+NOTE0597,EMP047,2026-01-29 09:18,Audit Reports,Verification,Checked credit score for routine loan application.,English,Internal Dashboard,Manual Approval,Manager007,9
+NOTE0598,EMP047,2026-02-07 14:31,Override Logs,Waiver,Branch regular audit record update kiya.,Hinglish,Mobile,Standard Waiver,Manager003,4
+NOTE0599,EMP047,2026-02-15 13:14,Audit Reports,Exception,ग्राहक के पहचान पत्र और हस्ताक्षर का सत्यापन किया गया।,Hindi,Mobile,VIP Override,Manager003,9
+NOTE0600,EMP047,2026-02-24 17:18,Cash Operations,Approval,Standard cash deposit completed within approved threshold.,English,Portal,Compliance Exception,Manager002,0
+NOTE0601,EMP047,2026-03-05 11:28,Cash Operations,Override,Completed KYC validation for new account opening.,English,Internal Dashboard,Manual Approval,Manager006,2
+NOTE0602,EMP047,2026-03-15 16:34,Loan Approval,Waiver,Customer Signature check karke complete kiya.,Hinglish,Mobile,Compliance Exception,Manager008,5
+NOTE0603,EMP047,2026-03-23 09:47,Override Logs,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Compliance Exception,Manager008,5
+NOTE0604,EMP048,2026-01-02 09:08,Override Logs,Verification,Verified customer ID card and signature for loan document.,English,Portal,VIP Override,Manager006,1
+NOTE0605,EMP048,2026-01-11 09:38,Compliance Dashboard,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Portal,Emergency,Manager009,7
+NOTE0606,EMP048,2026-01-19 17:25,Customer Search,Override,Processed regular utility bill payment after signature check.,English,Internal Dashboard,Manual Approval,Manager007,2
+NOTE0607,EMP048,2026-01-29 14:24,Compliance Dashboard,Waiver,Checked account balance before processing transaction.,English,Internal Dashboard,Emergency,Manager004,7
+NOTE0608,EMP048,2026-02-07 16:18,Cash Operations,Waiver,Account verification complete ho gaya hai.,Hinglish,Portal,Standard Waiver,Manager002,2
+NOTE0609,EMP048,2026-02-15 13:30,Loan Approval,Verification,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Emergency,Manager001,6
+NOTE0610,EMP048,2026-02-25 15:11,Audit Reports,Approval,Standard process follow kiya and limits verify kiye.,Hinglish,Mobile,Manual Approval,Manager009,7
+NOTE0611,EMP048,2026-03-04 13:53,Audit Reports,Override,Account verification complete ho gaya hai.,Hinglish,Portal,Compliance Exception,Manager005,4
+NOTE0612,EMP048,2026-03-15 10:41,Override Logs,Approval,Standard operational check completed successfully.,English,Portal,Emergency,Manager005,7
+NOTE0613,EMP048,2026-03-23 14:37,Cash Operations,Waiver,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Emergency,Manager006,8
+NOTE0614,EMP049,2026-01-01 13:10,Cash Operations,Approval,Updated customer profile with verified Aadhaar proof.,English,Mobile,Compliance Exception,Manager001,4
+NOTE0615,EMP049,2026-01-08 15:40,Compliance Dashboard,Verification,Routine documentation generated and filed with compliance.,English,Internal Dashboard,Emergency,Manager009,3
+NOTE0616,EMP049,2026-01-13 10:38,Cash Operations,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Mobile,Manual Approval,Manager002,8
+NOTE0617,EMP049,2026-01-21 11:00,Override Logs,Waiver,Checked credit score for routine loan application.,English,Mobile,Compliance Exception,Manager002,3
+NOTE0618,EMP049,2026-01-26 17:14,Customer Search,Verification,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager002,6
+NOTE0619,EMP049,2026-02-03 10:07,Compliance Dashboard,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Internal Dashboard,Manual Approval,Manager003,7
+NOTE0620,EMP049,2026-02-09 11:45,Audit Reports,Approval,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Compliance Exception,Manager004,4
+NOTE0621,EMP049,2026-02-15 12:08,Loan Approval,Override,Checked credit score for routine loan application.,English,Portal,VIP Override,Manager007,0
+NOTE0622,EMP049,2026-02-21 10:02,Override Logs,Override,Customer Signature check karke complete kiya.,Hinglish,Mobile,Emergency,Manager002,4
+NOTE0623,EMP049,2026-02-27 10:50,Audit Reports,Approval,Branch regular audit record update kiya.,Hinglish,Internal Dashboard,Manual Approval,Manager001,1
+NOTE0624,EMP049,2026-03-06 13:37,Cash Operations,Verification,Completed KYC validation for new account opening.,English,Portal,Standard Waiver,Manager002,1
+NOTE0625,EMP049,2026-03-12 17:13,Customer Search,Override,मानक प्रक्रिया के अनुसार लेनदेन की पुष्टि की गई।,Hindi,Internal Dashboard,Emergency,Manager004,8
+NOTE0626,EMP049,2026-03-20 14:44,Audit Reports,Exception,Transaction processed within standard limits and verified.,English,Mobile,VIP Override,Manager004,8
+NOTE0627,EMP049,2026-03-25 15:07,Loan Approval,Verification,Updated customer profile with verified Aadhaar proof.,English,Portal,VIP Override,Manager006,4
+NOTE0628,EMP050,2026-01-01 10:20,Customer Search,Exception,Updated customer profile with verified Aadhaar proof.,English,Internal Dashboard,VIP Override,Manager004,8
+NOTE0629,EMP050,2026-01-08 13:54,Cash Operations,Exception,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Portal,Emergency,Manager008,10
+NOTE0630,EMP050,2026-01-13 15:28,Audit Reports,Waiver,Customer Signature check karke complete kiya.,Hinglish,Mobile,Standard Waiver,Manager002,2
+NOTE0631,EMP050,2026-01-20 14:12,Loan Approval,Approval,Account verification complete ho gaya hai.,Hinglish,Mobile,VIP Override,Manager005,9
+NOTE0632,EMP050,2026-01-27 15:22,Override Logs,Verification,Account verification complete ho gaya hai.,Hinglish,Mobile,Compliance Exception,Manager008,1
+NOTE0633,EMP050,2026-02-02 13:31,Loan Approval,Override,Standard process follow kiya and limits verify kiye.,Hinglish,Internal Dashboard,Emergency,Manager002,7
+NOTE0634,EMP050,2026-02-08 11:24,Customer Search,Verification,Routine documentation generated and filed with compliance.,English,Portal,Emergency,Manager009,7
+NOTE0635,EMP050,2026-02-16 12:18,Customer Search,Exception,KYC document check kar ke system main update kar diya.,Hinglish,Internal Dashboard,Standard Waiver,Manager001,0
+NOTE0636,EMP050,2026-02-22 10:24,Override Logs,Override,खाता खोलने हेतु केवाईसी सत्यापन सफलतापूर्वक पूरा हुआ।,Hindi,Portal,Compliance Exception,Manager009,10
+NOTE0637,EMP050,2026-02-28 11:31,Override Logs,Override,Customer query resolved via standard service desk procedure.,English,Internal Dashboard,VIP Override,Manager009,10
+NOTE0638,EMP050,2026-03-07 16:35,Compliance Dashboard,Waiver,Account verification complete ho gaya hai.,Hinglish,Internal Dashboard,VIP Override,Manager006,4
+NOTE0639,EMP050,2026-03-13 09:01,Compliance Dashboard,Verification,Checked account balance before processing transaction.,English,Portal,Manual Approval,Manager007,1
+NOTE0640,EMP050,2026-03-20 14:22,Audit Reports,Approval,Verified original KYC documents and address proof.,English,Internal Dashboard,Manual Approval,Manager002,1
+NOTE0641,EMP050,2026-03-26 10:21,Override Logs,Waiver,Customer Signature check karke complete kiya.,Hinglish,Internal Dashboard,Standard Waiver,Manager007,4

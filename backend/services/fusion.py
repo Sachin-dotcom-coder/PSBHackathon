@@ -57,6 +57,7 @@ def build_employee_detail(pred: dict) -> dict:
         "chain_score": chain,
         "collusion_score": collusion,
         "language_score": language_score,
+        "nlp_details": pred.get("nlp_details") or data_loader.LANGUAGE_SCORES.get(eid),
         "dits_score": dits_score,
         "composite_trust_score": 100 - dits_score,
         "reasons": [str(r) for r in pred.get("reasons", [])],

@@ -1,0 +1,58 @@
+{
+  "employee_id": "EMP027",
+  "name": "Gaurav Dubey",
+  "role": "Compliance Officer",
+  "branch": "Surat",
+  "dits_score": 68,
+  "risk_level": "High",
+  "report": "# Executive Summary\n\nGaurav Dubey (EMP027) showed moderate behavioral deviations in oversight module usage. The overall DITS score is **68 (HIGH)**, reflecting mild peer cohort variance that warrants routine monitoring.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Gaurav Dubey |\n| **Employee ID** | EMP027 |\n| **Role** | Compliance Officer |\n| **Branch** | Surat |\n| **DITS Score** | **68/100** (HIGH) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit Reports access declined by **100%**.\n- Compliance Dashboard absent for **17 days**.\n- Primary activity remains steady.\n\n*Assessment:* Moderate deviation from peer cohort average. Monitor for further trend progression.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 19/100\n- **Policy Bypass Score:** 32/100\n- **Urgency Language Score:** 27/100\n- **Template Reuse Score:** 6/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 100/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 70.0/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 47/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 37/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **Routine Monitoring:** Schedule automated follow-up scan in 14 days.\n2. **Peer Cohort Baseline Check:** Re-evaluate activity against department averages.\n3. **Verify Compliance Submissions:** Confirm monthly compliance checklist submission status.",
+  "generated_at": "05 August 2026",
+  "confidence": 96,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 17 days",
+    "Compliance Dashboard usage reduced by 51%",
+    "Override Logs not accessed for 17 days",
+    "Minor deviation from peer cohort baseline \u2014 monitoring recommended"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Gaurav Dubey",
+      "employee_id": "EMP027",
+      "role": "Compliance Officer",
+      "branch": "Surat",
+      "department": "Compliance",
+      "tenure": "9 Years"
+    },
+    "scores": {
+      "DITS": 68,
+      "risk_level": "High",
+      "engine1_chain": 100,
+      "engine2_avoidance": 70.0,
+      "engine3_collusion": 47,
+      "engine4_language": 37
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 17,
+      "override_absent_days": 17,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 19,
+      "urgency": 27,
+      "policy_bypass": 32,
+      "vagueness": 27,
+      "responsibility_shift": 37,
+      "template_reuse": 6
+    },
+    "findings": [
+      "Audit Reports absent for 17 days",
+      "Compliance Dashboard usage reduced by 51%",
+      "Override Logs not accessed for 17 days",
+      "Minor deviation from peer cohort baseline \u2014 monitoring recommended"
+    ]
+  }
+}

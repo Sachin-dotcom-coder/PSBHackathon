@@ -201,7 +201,7 @@ function NoteAnalyzer() {
             <div className="space-y-3 border-t border-border pt-4">
               <div className="text-[14px] font-semibold text-foreground">Category Breakdown</div>
               {NLP_CATEGORY_META.map(({ key, label, color }) => {
-                const val = (result as Record<string, number>)[key] ?? 0;
+                const val = (result as unknown as Record<string, number>)[key] ?? 0;
                 return <ScoreBar key={key} label={label} value={val} color={color} />;
               })}
             </div>
@@ -460,7 +460,7 @@ function PayloadSimulator() {
               <div className="rounded-xl border border-border bg-surface-2 p-5 space-y-3">
                 <div className="text-[15px] font-bold">Engine 4 NLP Breakdown</div>
                 {NLP_CATEGORY_META.map(({ key, label, color }) => {
-                  const val = (result.nlp_details as Record<string, number>)[key] ?? 0;
+                  const val = (result.nlp_details as unknown as Record<string, number>)[key] ?? 0;
                   return val > 0 ? <ScoreBar key={key} label={label} value={val} color={color} /> : null;
                 })}
               </div>
