@@ -326,6 +326,14 @@ def analyze_justification(text: str, history: List[str] = None, system_event: Di
     }
 
 
+def score_justification_text(text: str) -> Dict[str, Any]:
+    """Backward-compatibility wrapper for backend API integration."""
+    res = analyze_justification(text)
+    res["vagueness"] = res["categories"].get("Vagueness", 0)
+    res["urgency"] = res["categories"].get("Urgency", 0)
+    return res
+
+
 # ---------------------------------------------------------------------------
 # 6. Model Evaluation Function
 # ---------------------------------------------------------------------------
