@@ -119,7 +119,7 @@ function Leaderboard() {
 
       {/* Page Header */}
       <div className="border-b border-border/60 bg-surface/30 px-6 py-6">
-        <div className="w-full px-8">
+        <div className="w-full px-10">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <div className="text-mono mb-1 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
@@ -147,10 +147,10 @@ function Leaderboard() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-6">
+      <div className="w-full px-10 py-6">
         {isError && <OfflineBanner />}
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_280px]">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_400px]">
           {/* Main table area */}
           <div>
             {/* Search + Filter Toolbar */}

@@ -1,0 +1,64 @@
+{
+  "employee_id": "EMP031",
+  "name": "Ashok Yadav",
+  "role": "Relationship Manager",
+  "branch": "Surat",
+  "dits_score": 35,
+  "risk_level": "Low",
+  "report": "# Executive Summary\n\nAshok Yadav (EMP031) maintains a stable behavioral profile within normal operational parameters. DITS score is **35 (LOW)**. No elevated threat signals detected.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Ashok Yadav |\n| **Employee ID** | EMP031 |\n| **Role** | Relationship Manager |\n| **Branch** | Surat |\n| **DITS Score** | **35/100** (LOW) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit and compliance access levels align with peer cohort averages.\n- Standard operational activity recorded across all modules.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 23/100\n- **Policy Bypass Score:** 21/100\n- **Urgency Language Score:** 35/100\n- **Template Reuse Score:** 48/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 27/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 21.5/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 53/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 49/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **No Action Required:** Maintain standard security posture.\n2. **Standard Audit Cycle:** Next routine review scheduled automatically.",
+  "generated_at": "06 August 2026",
+  "confidence": 92,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 90 days",
+    "Compliance Dashboard usage reduced by 100%",
+    "Override Logs not accessed for 90 days",
+    "Audit Reports not accessed for 90 consecutive days",
+    "Compliance Dashboard absent for 90 consecutive days",
+    "Override Logs absent for 90 consecutive days",
+    "Selective avoidance: core work (Loan Approvals 42/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Ashok Yadav",
+      "employee_id": "EMP031",
+      "role": "Relationship Manager",
+      "branch": "Surat",
+      "department": "Retail Banking",
+      "tenure": "15 Years"
+    },
+    "scores": {
+      "DITS": 35,
+      "risk_level": "Low",
+      "engine1_chain": 27,
+      "engine2_avoidance": 21.5,
+      "engine3_collusion": 53,
+      "engine4_language": 49
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 90,
+      "override_absent_days": 90,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 23,
+      "urgency": 35,
+      "policy_bypass": 21,
+      "vagueness": 15,
+      "responsibility_shift": 49,
+      "template_reuse": 48
+    },
+    "findings": [
+      "Audit Reports absent for 90 days",
+      "Compliance Dashboard usage reduced by 100%",
+      "Override Logs not accessed for 90 days",
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 42/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance"
+    ]
+  }
+}

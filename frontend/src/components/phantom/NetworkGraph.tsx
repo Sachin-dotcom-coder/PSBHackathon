@@ -39,7 +39,7 @@ interface Props {
 
 type EdgeFilterMode = "collusion" | "strong" | "all";
 
-// Compute well-spaced departmental cluster positions
+// Compute well-spaced departmental cluster positions with zero overlapping nodes
 function computeClusterPositions(nodes: NetworkNode[], width: number, height: number) {
   if (nodes.length === 0) return [];
 
@@ -76,6 +76,28 @@ function computeClusterPositions(nodes: NetworkNode[], width: number, height: nu
       positions.push({ id: node.id, x, y, group: gKey });
     });
   });
+
+  // Iterative collision resolution pass to eliminate node overlap
+  const minDistance = 54;
+  for (let iter = 0; iter < 40; iter++) {
+    for (let i = 0; i < positions.length; i++) {
+      for (let j = i + 1; j < positions.length; j++) {
+        const dx = positions[j].x - positions[i].x;
+        const dy = positions[j].y - positions[i].y;
+        const dist = Math.hypot(dx, dy) || 1;
+        if (dist < minDistance) {
+          const overlap = (minDistance - dist) / 2;
+          const nx = (dx / dist) * overlap;
+          const ny = (dy / dist) * overlap;
+
+          positions[i].x = Math.max(50, Math.min(width - 50, positions[i].x - nx));
+          positions[i].y = Math.max(50, Math.min(height - 50, positions[i].y - ny));
+          positions[j].x = Math.max(50, Math.min(width - 50, positions[j].x + nx));
+          positions[j].y = Math.max(50, Math.min(height - 50, positions[j].y + ny));
+        }
+      }
+    }
+  }
 
   return positions;
 }
@@ -333,6 +355,14 @@ export function NetworkGraph({ nodes, links, date, onSelectEmployee, selectedEmp
           <rect width="100%" height="100%" fill="url(#bgGrad)" />
           <rect width="100%" height="100%" fill="url(#gridPattern)" />
 
+          {/* Tactical Radar Grid Backdrop */}
+          <g opacity={0.12} pointerEvents="none">
+            <circle cx={dimensions.width / 2} cy={dimensions.height / 2} r={dimensions.height * 0.22} fill="none" stroke="var(--cyan)" strokeDasharray="3 3" />
+            <circle cx={dimensions.width / 2} cy={dimensions.height / 2} r={dimensions.height * 0.42} fill="none" stroke="var(--cyan)" strokeDasharray="4 4" />
+            <line x1={dimensions.width / 2} y1={0} x2={dimensions.width / 2} y2={dimensions.height} stroke="var(--cyan)" strokeDasharray="2 4" />
+            <line x1={0} y1={dimensions.height / 2} x2={dimensions.width} y2={dimensions.height / 2} stroke="var(--cyan)" strokeDasharray="2 4" />
+          </g>
+
           {/* Scalable Group */}
           <g transform={`translate(${pan.x}, ${pan.y}) scale(${scale})`}>
             
@@ -442,7 +472,9 @@ export function NetworkGraph({ nodes, links, date, onSelectEmployee, selectedEmp
 
               const showLabel = isHot || isSelected || isHovered || (searchMatchedIds && searchMatchedIds.has(node.id));
 
-              const r = isSelected || isHovered ? 24 : 19;
+              // Dynamic risk-based node radius
+              const baseR = node.risk_level === "Critical" ? 22 : node.risk_level === "High" ? 20 : node.risk_level === "Medium" ? 18 : 16;
+              const r = isSelected || isHovered ? baseR + 5 : baseR;
 
               return (
                 <g
@@ -620,8 +652,8 @@ export function NetworkGraph({ nodes, links, date, onSelectEmployee, selectedEmp
             </motion.div>
           )}
 
-          {/* Employee List Grid */}
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+          {/* Employee List Grid — Sleek borderless glass cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
             {nodes.map(node => {
               const color = RISK_NODE_COLORS[node.risk_level] ?? "#737373";
               const isSelected = selectedEmployeeId === node.id;
@@ -629,24 +661,28 @@ export function NetworkGraph({ nodes, links, date, onSelectEmployee, selectedEmp
                 <button
                   key={node.id}
                   onClick={() => onSelectEmployee(node.id)}
-                  className={`rounded-lg border px-3 py-2 text-left transition-all hover:scale-[1.02] ${
-                    isSelected ? "ring-2" : ""
+                  className={`group relative flex flex-col justify-between rounded-xl p-4.5 text-left transition-all backdrop-blur-md shadow-md ${
+                    isSelected
+                      ? "bg-white/[0.08] ring-2 ring-[color:var(--cyan)] shadow-[0_0_20px_rgba(6,182,212,0.25)] border border-[color:var(--cyan)]/40"
+                      : "bg-[#10131e]/90 border border-white/[0.05] hover:border-white/20 hover:bg-white/[0.04] hover:-translate-y-0.5"
                   }`}
-                  style={{
-                    borderColor: isSelected ? color : `${color}25`,
-                    background: isSelected ? `${color}15` : "var(--surface-2)",
-                    ringColor: color,
-                  }}
                 >
-                  <div className="text-[13px] font-semibold text-foreground truncate">{node.label}</div>
-                  <div className="text-mono text-[10px] text-muted-foreground">{node.employee_id} · {node.role}</div>
-                  <div className="mt-1 flex items-center justify-between">
-                    <span className="text-mono text-[12px] font-bold" style={{ color }}>
+                  <div>
+                    <div className="text-[15px] font-bold text-white group-hover:text-cyan-300 transition-colors truncate">
+                      {node.label}
+                    </div>
+                    <div className="text-mono text-[11px] text-muted-foreground mt-0.5 truncate">
+                      {node.employee_id} · {node.role}
+                    </div>
+                  </div>
+
+                  <div className="mt-3 flex items-center justify-between border-t border-white/[0.06] pt-2.5">
+                    <span className="text-mono text-[13px] font-extrabold tabular-nums" style={{ color }}>
                       DITS: {node.access_void_score.toFixed(0)}
                     </span>
                     <span
-                      className="text-mono rounded-full px-1.5 py-0.5 text-[9px] uppercase font-bold"
-                      style={{ background: `${color}15`, color }}
+                      className="text-mono rounded-md px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider"
+                      style={{ background: `${color}18`, color, border: `1px solid ${color}30` }}
                     >
                       {node.risk_level}
                     </span>

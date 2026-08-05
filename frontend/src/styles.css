@@ -34,42 +34,42 @@
   --color-elevated: var(--elevated);
   --color-cyan: var(--cyan);
   --color-emerald: var(--emerald);
-  --font-display: "Inter", "SF Pro Display", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
 }
 
 :root {
-  --radius: 0.5rem;
-  --background: #0A0A0A;
-  --foreground: #FFFFFF;
-  --surface: #111111;
-  --surface-2: #151515;
-  --card: #151515;
-  --card-foreground: #FFFFFF;
-  --popover: #151515;
-  --popover-foreground: #FFFFFF;
-  --primary: #FFFFFF;
-  --primary-foreground: #0A0A0A;
-  --secondary: #1F1F1F;
-  --secondary-foreground: #FFFFFF;
-  --muted: #1A1A1A;
-  --muted-foreground: #737373;
-  --accent: #1F1F1F;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #262626;
-  --input: #262626;
-  --ring: #404040;
-  --critical: #E5484D;
-  --elevated: #E8E8E8;
-  --cyan: #00f2fe;
+  --radius: 0.75rem;
+  --background: #090a0f;
+  --foreground: #f3f4f6;
+  --surface: #10131d;
+  --surface-2: #161b27;
+  --card: #111420;
+  --card-foreground: #f3f4f6;
+  --popover: #111420;
+  --popover-foreground: #f3f4f6;
+  --primary: #ffffff;
+  --primary-foreground: #090a0f;
+  --secondary: #1a1e2e;
+  --secondary-foreground: #ffffff;
+  --muted: #151926;
+  --muted-foreground: #9ca3af;
+  --accent: #1e2436;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: rgba(0, 242, 254, 0.4);
+  --critical: #ef4444;
+  --elevated: #f3f4f6;
+  --cyan: #06b6d4;
   --emerald: #10b981;
 }
 
 .dark {
-  --background: #0A0A0A;
-  --foreground: #FFFFFF;
+  --background: #090a0f;
+  --foreground: #f3f4f6;
 }
 
 @layer base {
@@ -81,13 +81,13 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 15px;
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01", "cv11";
   }
 
   ::selection {
-    background-color: rgba(0,242,254,0.15);
+    background-color: rgba(6, 182, 212, 0.25);
   }
 }
 
@@ -96,57 +96,33 @@
   font-feature-settings: "tnum", "zero";
 }
 
+@utility surface-card {
+  background-color: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
 @utility surface-grain {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.025) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
-@utility hairline {
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-}
-
 @utility glow-cyan {
-  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6), 0 0 40px rgba(0, 242, 254, 0.2);
+  text-shadow: 0 0 16px rgba(6, 182, 212, 0.5);
 }
 
 @utility glow-red {
-  text-shadow: 0 0 20px rgba(229, 72, 77, 0.7), 0 0 40px rgba(229, 72, 77, 0.3);
+  text-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
 }
 
 @utility glow-emerald {
-  text-shadow: 0 0 20px rgba(16, 185, 129, 0.6), 0 0 40px rgba(16, 185, 129, 0.2);
+  text-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
 }
 
 @utility card-glow-cyan {
-  box-shadow: 0 0 0 1px rgba(0, 242, 254, 0.15), 0 0 24px rgba(0, 242, 254, 0.06);
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.25), 0 8px 30px rgba(6, 182, 212, 0.08);
 }
 
 @utility card-glow-red {
-  box-shadow: 0 0 0 1px rgba(229, 72, 77, 0.25), 0 0 24px rgba(229, 72, 77, 0.08);
-}
-
-@keyframes phantom-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-@keyframes phantom-scan {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes blink-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.25), 0 8px 30px rgba(239, 68, 68, 0.08);
 }

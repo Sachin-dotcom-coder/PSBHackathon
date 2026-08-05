@@ -11,12 +11,13 @@ import {
 import { useEffect, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { SplashScreen } from "../components/phantom/SplashScreen";
+import { IntroPage } from "../components/phantom/IntroPage";
 import { PhantomLogo } from "../components/phantom/PhantomLogo";
 import {
   LayoutDashboard,
   Users,
   Network,
-  Terminal,
+  LogOut,
 } from "lucide-react";
 
 import appCss from "../styles.css?url";
@@ -122,43 +123,42 @@ const NAV_ITEMS = [
   { to: "/", label: "SOC Overview", icon: LayoutDashboard },
   { to: "/leaderboard", label: "Leaderboard", icon: Users },
   { to: "/investigation", label: "Graph Viz", icon: Network },
-  { to: "/simulator", label: "Simulator", icon: Terminal },
 ] as const;
 
-function GlobalNav() {
+function GlobalNav({ onOpenIntro }: { onOpenIntro: () => void }) {
   const routerState = useRouterState();
   const currentPath = routerState.location.pathname;
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-background/95 px-8 py-3 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-white/[0.08] bg-[#090a0f]/95 px-10 py-4 backdrop-blur-md">
       {/* Brand */}
-      <Link to="/" className="flex items-center gap-3 group">
+      <Link to="/" className="flex items-center gap-3 group z-10">
         <PhantomLogo className="h-7 w-7 text-white" />
         <span className="text-mono text-[14px] font-extrabold tracking-[0.2em] text-white">
           PHANTOM
         </span>
       </Link>
 
-      {/* Nav Links */}
-      <div className="flex items-center gap-1">
+      {/* Nav Links — Centered in Middle */}
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => {
           const isActive = currentPath === to || (to !== "/" && currentPath.startsWith(to));
           return (
             <Link
               key={to}
               to={to}
-              className={`relative flex items-center gap-2 rounded-md px-3.5 py-1.5 text-[13px] font-medium transition-all ${
+              className={`relative flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold transition-all ${
                 isActive
-                  ? "bg-surface-2 text-white"
-                  : "text-muted-foreground hover:text-white hover:bg-surface/50"
+                  ? "bg-white/[0.08] text-white shadow-sm"
+                  : "text-muted-foreground hover:text-white hover:bg-white/[0.04]"
               }`}
             >
-              <Icon className={`h-3.5 w-3.5 ${isActive ? "text-[color:var(--cyan)]" : ""}`} />
-              <span className="hidden sm:block">{label}</span>
+              <Icon className={`h-4 w-4 ${isActive ? "text-[color:var(--cyan)]" : ""}`} />
+              <span className="hidden sm:block tracking-wide">{label}</span>
               {isActive && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute inset-0 rounded-md border border-[color:var(--cyan)]/30"
+                  className="absolute inset-0 rounded-lg border border-[color:var(--cyan)]/40"
                   transition={{ duration: 0.2 }}
                 />
               )}
@@ -167,42 +167,57 @@ function GlobalNav() {
         })}
       </div>
 
-      {/* Status */}
-      <div className="flex items-center gap-2 text-mono text-[11px] text-muted-foreground">
-        <span className="relative flex h-1.5 w-1.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--emerald)]/60" />
-          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[color:var(--emerald)]" />
-        </span>
-        <span className="hidden sm:block uppercase tracking-widest font-semibold text-emerald-400">Live</span>
-      </div>
+      {/* Exit Button — Returns to Intro Screen */}
+      <button
+        onClick={onOpenIntro}
+        className="z-10 flex items-center gap-2 rounded-lg border border-white/[0.12] bg-white/[0.04] px-3.5 py-1.5 text-[12px] font-semibold text-muted-foreground hover:text-white hover:bg-white/[0.08] hover:border-white/20 transition-all"
+        title="Return to System Overview"
+      >
+        <LogOut className="h-3.5 w-3.5 text-white/70" />
+        <span className="hidden sm:inline">Exit</span>
+      </button>
     </nav>
   );
 }
 
+type BootStage = "splash" | "intro" | "dashboard";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const [showSplash, setShowSplash] = useState(false);
-
-  useEffect(() => {
+  const [bootStage, setBootStage] = useState<BootStage>(() => {
     if (typeof window !== "undefined" && !sessionStorage.getItem("phantom_sentinel_booted")) {
-      setShowSplash(true);
+      return "splash";
     }
-  }, []);
+    return "dashboard";
+  });
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AnimatePresence mode="wait">
-        {showSplash && (
-          <SplashScreen
-            onComplete={() => {
-              sessionStorage.setItem("phantom_sentinel_booted", "true");
-              setShowSplash(false);
-            }}
-          />
-        )}
-      </AnimatePresence>
-      <GlobalNav />
-      <Outlet />
+      {bootStage === "splash" && (
+        <SplashScreen
+          onComplete={() => setBootStage("intro")}
+        />
+      )}
+
+      {bootStage === "intro" && (
+        <IntroPage
+          onEnterDashboard={() => {
+            sessionStorage.setItem("phantom_sentinel_booted", "true");
+            setBootStage("dashboard");
+          }}
+        />
+      )}
+
+      {bootStage === "dashboard" && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+        >
+          <GlobalNav onOpenIntro={() => setBootStage("intro")} />
+          <Outlet />
+        </motion.div>
+      )}
     </QueryClientProvider>
   );
 }

@@ -155,18 +155,15 @@ function InvestigationGraph() {
   return (
     <main className="min-h-[calc(100vh-53px)] bg-background text-foreground">
       {/* Page Header */}
-      <div
-        className="border-b border-border/60 px-6 py-5"
-        style={{ background: "linear-gradient(135deg, rgba(168,85,247,0.04) 0%, transparent 60%)" }}
-      >
-        <div className="w-full px-8">
+      <div className="border-b border-white/[0.08] bg-[#10131e]/90 px-8 py-6 backdrop-blur-md">
+        <div className="w-full px-10">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <div className="text-mono mb-1 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              <div className="text-mono mb-1 text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold">
                 PHANTOM · Interactive Investigation Graph
               </div>
-              <h1 className="flex items-center gap-3 text-[28px] font-bold tracking-tight">
-                <Network className="h-6 w-6 text-[#a855f7]" />
+              <h1 className="flex items-center gap-3 text-[28px] font-bold tracking-tight text-white">
+                <Network className="h-6 w-6 text-[color:var(--cyan)]" />
                 Multi-Level Graph Visualizer
               </h1>
             </div>
@@ -188,21 +185,21 @@ function InvestigationGraph() {
       </div>
 
       {/* Content */}
-      <div className="w-full px-8 py-8">
+      <div className="w-full px-10 py-8">
         {/* Level guide */}
-        <div className="mb-6 rounded-xl border border-border bg-surface/40 px-5 py-4">
-          <div className="flex flex-wrap items-center gap-6 text-[13px] text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[color:var(--cyan)]" />
-              <strong className="text-foreground">Level 1:</strong> Click a day node to see employee activity
+        <div className="mb-6 rounded-2xl border border-white/[0.08] bg-[#10131e]/90 shadow-xl backdrop-blur-md px-6 py-4">
+          <div className="flex flex-wrap items-center gap-8 text-[13px] text-muted-foreground">
+            <div className="flex items-center gap-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[color:var(--cyan)] shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
+              <strong className="text-white font-semibold">Level 1:</strong> Click a day node to see daily activity
             </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#a855f7]" />
-              <strong className="text-foreground">Level 2:</strong> Click an employee to view their action chain
+            <div className="flex items-center gap-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#facc15] shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
+              <strong className="text-white font-semibold">Level 2:</strong> Click an employee node to view action logs
             </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[color:var(--emerald)]" />
-              <strong className="text-foreground">Level 3:</strong> Engine 1 sequence risk + timestamped actions
+            <div className="flex items-center gap-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[color:var(--emerald)] shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+              <strong className="text-white font-semibold">Level 3:</strong> Engine 1 sequence risk + timestamped actions
             </div>
           </div>
         </div>

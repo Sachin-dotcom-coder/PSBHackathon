@@ -16,7 +16,6 @@ import {
 import { useEmployee, useTimeline, useCollusion } from "@/hooks/usePhantomApi";
 import { RiskBadge } from "@/components/phantom/RiskBadge";
 import { TimelineChart } from "@/components/phantom/TimelineChart";
-import { EngineDetailTabs } from "@/components/phantom/EngineDetailTabs";
 import { AIInvestigationPanel } from "@/components/phantom/AIInvestigationPanel";
 import {
   TrustNumber,
@@ -258,7 +257,7 @@ function EmployeePage() {
     <main className="min-h-[calc(100vh-53px)] bg-background text-foreground">
       {/* Top bar */}
       <div className="border-b border-border bg-surface/30 px-6 py-4">
-        <div className="mx-auto max-w-7xl flex items-center justify-between">
+        <div className="w-full px-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
               to="/leaderboard"
@@ -287,7 +286,7 @@ function EmployeePage() {
       </div>
 
       {isLoading ? (
-        <div className="mx-auto max-w-7xl grid gap-6 p-6 lg:grid-cols-3">
+        <div className="w-full grid gap-6 p-10 lg:grid-cols-3">
           <SkeletonCard className="h-72" />
           <SkeletonCard className="lg:col-span-2 h-72" />
         </div>
@@ -302,9 +301,9 @@ function EmployeePage() {
           </div>
         </div>
       ) : (
-        <div className="mx-auto max-w-7xl p-6">
+        <div className="w-full p-10">
           {/* TOP ROW: Profile + Score + Timeline */}
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[300px_1fr]">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[340px_1fr]">
             {/* LEFT — Profile card */}
             <div className="space-y-4">
               {/* Profile */}
@@ -456,14 +455,6 @@ function EmployeePage() {
             <AIInvestigationPanel employee={employee} timeline={timeline} />
           </div>
 
-          {/* Engine detail tabs (full width) */}
-          <div className="mt-6">
-            <EngineDetailTabs
-              employee={employee}
-              timeline={timeline}
-              collusion={collusion}
-            />
-          </div>
         </div>
       )}
     </main>
