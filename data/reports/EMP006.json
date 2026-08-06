@@ -1,0 +1,58 @@
+{
+  "employee_id": "EMP006",
+  "name": "Meena Joshi",
+  "role": "Loan Officer",
+  "branch": "Ahmedabad",
+  "dits_score": 39,
+  "risk_level": "Low",
+  "report": "# Executive Summary\n\nMeena Joshi (EMP006) maintains a stable behavioral profile within normal operational parameters. DITS score is **39 (LOW)**. No elevated threat signals detected.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Meena Joshi |\n| **Employee ID** | EMP006 |\n| **Role** | Loan Officer |\n| **Branch** | Ahmedabad |\n| **DITS Score** | **39/100** (LOW) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit and compliance access levels align with peer cohort averages.\n- Standard operational activity recorded across all modules.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 17/100\n- **Policy Bypass Score:** 19/100\n- **Urgency Language Score:** 14/100\n- **Template Reuse Score:** 13/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 60/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 23.6/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 47/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 24/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **No Action Required:** Maintain standard security posture.\n2. **Standard Audit Cycle:** Next routine review scheduled automatically.",
+  "generated_at": "07 August 2026",
+  "confidence": 92,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 19 days",
+    "Compliance Dashboard usage reduced by 57%",
+    "Override Logs not accessed for 21 days",
+    "Minor deviation from peer cohort baseline \u2014 monitoring recommended"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Meena Joshi",
+      "employee_id": "EMP006",
+      "role": "Loan Officer",
+      "branch": "Ahmedabad",
+      "department": "Loans",
+      "tenure": "8 Years"
+    },
+    "scores": {
+      "DITS": 39,
+      "risk_level": "Low",
+      "engine1_chain": 60,
+      "engine2_avoidance": 23.6,
+      "engine3_collusion": 47,
+      "engine4_language": 24
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 19,
+      "override_absent_days": 21,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 17,
+      "urgency": 14,
+      "policy_bypass": 19,
+      "vagueness": 15,
+      "responsibility_shift": 24,
+      "template_reuse": 13
+    },
+    "findings": [
+      "Audit Reports absent for 19 days",
+      "Compliance Dashboard usage reduced by 57%",
+      "Override Logs not accessed for 21 days",
+      "Minor deviation from peer cohort baseline \u2014 monitoring recommended"
+    ]
+  }
+}

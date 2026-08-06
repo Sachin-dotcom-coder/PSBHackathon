@@ -1,13 +1,46 @@
 import { motion } from "motion/react";
-import { ShieldCheck, Activity, Network, Terminal, ArrowRight, Cpu } from "lucide-react";
+import { ShieldCheck, Activity, Network, Terminal, ArrowRight, Cpu, Lock } from "lucide-react";
 import { PhantomLogo } from "./PhantomLogo";
 import { NetworkBackground } from "./NetworkBackground";
+import { useState } from "react";
 
 interface IntroPageProps {
   onEnterDashboard: () => void;
 }
 
 export function IntroPage({ onEnterDashboard }: IntroPageProps) {
+  const [showLogin, setShowLogin] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isAuthenticating, setIsAuthenticating] = useState(false);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsAuthenticating(true);
+    setError("");
+    
+    try {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+      
+      const expectedUsername = import.meta.env.VITE_APP_USERNAME;
+      const expectedHash = import.meta.env.VITE_APP_PASSWORD_HASH;
+      
+      if (username === expectedUsername && hashHex === expectedHash) {
+        onEnterDashboard();
+      } else {
+        setError("Invalid credentials. Access denied.");
+        setIsAuthenticating(false);
+      }
+    } catch (err) {
+      setError("Authentication error.");
+      setIsAuthenticating(false);
+    }
+  };
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
@@ -129,15 +162,45 @@ export function IntroPage({ onEnterDashboard }: IntroPageProps) {
           </div>
         </div>
 
-        {/* Primary Call to Action */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-          <button
-            onClick={onEnterDashboard}
-            className="group relative flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-3.5 rounded-xl bg-white text-slate-950 font-bold text-[14px] tracking-wide shadow-lg hover:bg-neutral-200 hover:scale-[1.02] transition-all"
-          >
-            <span>ENTER SOC DASHBOARD</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+        {/* Primary Call to Action / Login Form */}
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 w-full max-w-[320px] mx-auto">
+          {!showLogin ? (
+            <button
+              onClick={() => setShowLogin(true)}
+              className="group relative flex items-center justify-center gap-3 w-full px-10 py-3.5 rounded-xl bg-white text-slate-950 font-bold text-[14px] tracking-wide shadow-lg hover:bg-neutral-200 hover:scale-[1.02] transition-all"
+            >
+              <Lock className="h-4 w-4" />
+              <span>SECURE LOGIN</span>
+            </button>
+          ) : (
+            <form onSubmit={handleLogin} className="w-full flex flex-col gap-3">
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full rounded-lg border border-white/[0.12] bg-[#090a0f]/80 px-4 py-2.5 text-[14px] text-white placeholder-muted-foreground focus:outline-none focus:border-white/30 transition-colors"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full rounded-lg border border-white/[0.12] bg-[#090a0f]/80 px-4 py-2.5 text-[14px] text-white placeholder-muted-foreground focus:outline-none focus:border-white/30 transition-colors"
+                required
+              />
+              {error && <div className="text-red-400 text-xs text-center font-medium">{error}</div>}
+              <button
+                type="submit"
+                disabled={isAuthenticating}
+                className="group relative mt-1 flex items-center justify-center gap-3 w-full px-10 py-3 rounded-lg bg-white text-slate-950 font-bold text-[14px] tracking-wide shadow-lg hover:bg-neutral-200 hover:scale-[1.02] transition-all disabled:opacity-70 disabled:hover:scale-100"
+              >
+                <span>{isAuthenticating ? "AUTHENTICATING..." : "AUTHENTICATE"}</span>
+                {!isAuthenticating && <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </motion.div>

@@ -77,7 +77,7 @@ export function ActionChain({ data }: Props) {
             <span className="flex items-center gap-1.5"><Layers className="h-3 w-3" /> Access Sequence</span>
             <span className="text-[10px] font-normal text-muted-foreground">{data.sequence_tokens.length} tokens</span>
           </div>
-          <div className="max-h-[100px] overflow-y-auto pr-1 flex flex-wrap gap-1.5">
+          <div className="max-h-[250px] overflow-y-auto pr-1 flex flex-wrap gap-1.5">
             {data.sequence_tokens.map((token, i) => (
               <motion.span
                 key={`${token}-${i}`}
