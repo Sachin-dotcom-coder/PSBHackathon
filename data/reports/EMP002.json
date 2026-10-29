@@ -1,0 +1,60 @@
+{
+  "employee_id": "EMP002",
+  "name": "Priya Joshi",
+  "role": "Loan Officer",
+  "branch": "Surat",
+  "dits_score": 49,
+  "risk_level": "Low",
+  "report": "# Executive Summary\n\nPriya Joshi (EMP002) showed moderate behavioral deviations in oversight module usage. The overall DITS score is **49 (LOW)**, reflecting mild peer cohort variance that warrants routine monitoring.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Priya Joshi |\n| **Employee ID** | EMP002 |\n| **Role** | Loan Officer |\n| **Branch** | Surat |\n| **DITS Score** | **49/100** (LOW) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit Reports access declined by **100%**.\n- Compliance Dashboard absent for **18 days**.\n- Primary activity remains steady.\n\n*Assessment:* Moderate deviation from peer cohort average. Monitor for further trend progression.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 20/100\n- **Policy Bypass Score:** 50/100\n- **Urgency Language Score:** 32/100\n- **Template Reuse Score:** 44/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 66/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 24.6/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 47/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 64/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **Routine Monitoring:** Schedule automated follow-up scan in 14 days.\n2. **Peer Cohort Baseline Check:** Re-evaluate activity against department averages.\n3. **Verify Compliance Submissions:** Confirm monthly compliance checklist submission status.",
+  "generated_at": "29 October 2026",
+  "confidence": 92,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 18 days",
+    "Compliance Dashboard usage reduced by 54%",
+    "Override Logs not accessed for 19 days",
+    "Minor deviation from peer cohort baseline \u2014 monitoring recommended",
+    "Repeated use of policy bypass and authority language in overrides"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Priya Joshi",
+      "employee_id": "EMP002",
+      "role": "Loan Officer",
+      "branch": "Surat",
+      "department": "Loans",
+      "tenure": "3 Years"
+    },
+    "scores": {
+      "DITS": 49,
+      "risk_level": "Low",
+      "engine1_chain": 66,
+      "engine2_avoidance": 24.6,
+      "engine3_collusion": 47,
+      "engine4_language": 64
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 18,
+      "override_absent_days": 19,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 20,
+      "urgency": 32,
+      "policy_bypass": 50,
+      "vagueness": 21,
+      "responsibility_shift": 45,
+      "template_reuse": 44
+    },
+    "findings": [
+      "Audit Reports absent for 18 days",
+      "Compliance Dashboard usage reduced by 54%",
+      "Override Logs not accessed for 19 days",
+      "Minor deviation from peer cohort baseline \u2014 monitoring recommended",
+      "Repeated use of policy bypass and authority language in overrides"
+    ]
+  }
+}

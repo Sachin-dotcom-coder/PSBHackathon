@@ -1,0 +1,12 @@
+{
+  "name": "phantom-autonomous-soc",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PHANTOM — Privileged-access Holistic Anomaly & Multi-party Threat Operations Network",
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "preview": "npm --prefix frontend run preview"
+  }
+}
+

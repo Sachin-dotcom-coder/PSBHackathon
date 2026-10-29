@@ -1,0 +1,66 @@
+{
+  "employee_id": "EMP032",
+  "name": "Madhuri Singh",
+  "role": "Relationship Manager",
+  "branch": "Bangalore",
+  "dits_score": 38,
+  "risk_level": "Low",
+  "report": "# Executive Summary\n\nMadhuri Singh (EMP032) maintains a stable behavioral profile within normal operational parameters. DITS score is **38 (LOW)**. No elevated threat signals detected.\n\n---\n\n# Employee Overview\n\n| Attribute | Value |\n|---|---|\n| **Employee Name** | Madhuri Singh |\n| **Employee ID** | EMP032 |\n| **Role** | Relationship Manager |\n| **Branch** | Bangalore |\n| **DITS Score** | **38/100** (LOW) |\n| **Observation Window** | 90 Days |\n\n---\n\n# Behavioural Findings\n\n- Audit and compliance access levels align with peer cohort averages.\n- Standard operational activity recorded across all modules.\n\n---\n\n# Language Findings\n\n- **Authority References Score:** 55/100\n- **Policy Bypass Score:** 57/100\n- **Urgency Language Score:** 29/100\n- **Template Reuse Score:** 40/100\n\n*Linguistic Signature:* Override notes contain phrases indicating reliance on verbal approval, supervisor insistence, or urgent exceptions rather than documented business justifications.\n\n---\n\n# Timeline Summary\n\n- **Phase 1 (Days 1\u201330):** Baseline operational activity across primary and compliance modules.\n- **Phase 2 (Days 31\u201360):** First reduction in Audit Reports access noticed (**\u2192 Stable**).\n- **Phase 3 (Days 61\u201390):** Compliance Dashboard and Override Logs reach zero activity while primary transaction approvals remain active.\n\n---\n\n# Engine Contributions\n\n| Engine | Risk Domain | Score | Risk Contribution |\n|---|---|---|---|\n| **Engine 1** | Temporal Causal Chain | 41/100 | Sequence Anomaly |\n| **Engine 2** | Access Void Profiler | 24.9/100 | Negative Access / Avoidance |\n| **Engine 3** | Collusion Graph | 32/100 | Co-Access Network Risk |\n| **Engine 4** | NLP Justification Scanner | 57/100 | Linguistic Threat Score |\n\n---\n\n# Analyst Recommendations\n\n1. **No Action Required:** Maintain standard security posture.\n2. **Standard Audit Cycle:** Next routine review scheduled automatically.",
+  "generated_at": "29 October 2026",
+  "confidence": 92,
+  "version": "v1.0",
+  "used_live_gemini": false,
+  "key_evidence": [
+    "Audit Reports absent for 90 days",
+    "Compliance Dashboard usage reduced by 100%",
+    "Override Logs not accessed for 90 days",
+    "Audit Reports not accessed for 90 consecutive days",
+    "Compliance Dashboard absent for 90 consecutive days",
+    "Override Logs absent for 90 consecutive days",
+    "Selective avoidance: core work (Loan Approvals 38/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance",
+    "Repeated use of policy bypass and authority language in overrides"
+  ],
+  "schema_input": {
+    "employee": {
+      "name": "Madhuri Singh",
+      "employee_id": "EMP032",
+      "role": "Relationship Manager",
+      "branch": "Bangalore",
+      "department": "Retail Banking",
+      "tenure": "12 Years"
+    },
+    "scores": {
+      "DITS": 38,
+      "risk_level": "Low",
+      "engine1_chain": 41,
+      "engine2_avoidance": 24.9,
+      "engine3_collusion": 32,
+      "engine4_language": 57
+    },
+    "timeline": {
+      "observation_period": "90 Days",
+      "audit_drop": "100%",
+      "compliance_absent_days": 90,
+      "override_absent_days": 90,
+      "trend": "\u2192 Stable"
+    },
+    "language": {
+      "authority": 55,
+      "urgency": 29,
+      "policy_bypass": 57,
+      "vagueness": 38,
+      "responsibility_shift": 48,
+      "template_reuse": 40
+    },
+    "findings": [
+      "Audit Reports absent for 90 days",
+      "Compliance Dashboard usage reduced by 100%",
+      "Override Logs not accessed for 90 days",
+      "Audit Reports not accessed for 90 consecutive days",
+      "Compliance Dashboard absent for 90 consecutive days",
+      "Override Logs absent for 90 consecutive days",
+      "Selective avoidance: core work (Loan Approvals 38/day) remains HIGH while oversight modules near zero \u2014 indicates deliberate avoidance",
+      "Repeated use of policy bypass and authority language in overrides"
+    ]
+  }
+}

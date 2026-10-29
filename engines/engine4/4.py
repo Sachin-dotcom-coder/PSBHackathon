@@ -161,10 +161,7 @@ _st_seed_embeddings = {}
 def _check_hf_reachable() -> bool:
     import socket
     try:
-        # Try to connect to huggingface.co on port 443 with a 1-second timeout
-        socket.setdefaulttimeout(1.0)
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect(("huggingface.co", 443))
+        s = socket.create_connection(("huggingface.co", 443), timeout=1.0)
         s.close()
         return True
     except Exception:
